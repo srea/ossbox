@@ -7,10 +7,10 @@
 //
 
 #import <QuartzCore/QuartzCore.h>
-#import "DemoTableViewController.h"
+#import "ZGParallelViewController.h"
 #import "UITableView+ZGParallelView.h"
 
-@interface DemoTableViewController ()
+@interface ZGParallelViewController ()
 @property (strong, nonatomic) IBOutlet UIView *awesomeZG;
 @property (strong, nonatomic) IBOutlet UIScrollView *headerScrollView;
 @property (strong, nonatomic) IBOutlet UIPageControl *headerPageControl;
@@ -19,14 +19,20 @@
 @property (nonatomic) BOOL usedPageControl;
 @end
 
-@implementation DemoTableViewController
+@implementation ZGParallelViewController
+
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    NSLog(@"asd");
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
     [self customizeUI];
-    
+    [self awakeFromNib];    
     //[self.tableView addParallelViewWithUIView:self.awesomeZG];
     [self.tableView addParallelViewWithUIView:self.awesomeZG withDisplayRadio:0.8 headerViewStyle:ZGScrollViewStyleCutOffAtMax];
     

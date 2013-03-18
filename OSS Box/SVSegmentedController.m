@@ -6,11 +6,11 @@
 //  Copyright 2011 Sam Vermette. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "SVSegmentedController.h"
 
 #import <QuartzCore/QuartzCore.h>
 
-@implementation ViewController
+@implementation SVSegmentedController
 
 
 - (void)viewDidLoad {

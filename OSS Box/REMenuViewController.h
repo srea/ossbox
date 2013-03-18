@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "REMenu.h"
 
-@interface RootViewController : UIViewController
+@interface REMenuViewController : UIViewController
 
 @property (strong, nonatomic) REMenu *menu;
 

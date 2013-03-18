@@ -1,16 +1,8 @@
-//
-//  OSSDetailViewController.h
-//  OSS Box
-//
-//  Created by tamazawayuuki on 2013/03/16.
-//  Copyright (c) 2013年 srea. All rights reserved.
-//
+@class MGBox;
 
-#import <UIKit/UIKit.h>
+@interface OSSDetailViewController : UIViewController <UIScrollViewDelegate>
 
-@interface OSSDetailViewController : UIViewController
+@property (strong, nonatomic) NSArray  *detailItem;
+- (MGBox *)parentBoxOf:(UIView *)view;
 
-@property (strong, nonatomic) id detailItem;
-
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 @end

@@ -10,7 +10,7 @@
 
 #import "SVSegmentedControl.h"
 
-@interface ViewController : UIViewController {
+@interface SVSegmentedController : UIViewController <SVSegmentedControlDelegate> {
 
 }
 

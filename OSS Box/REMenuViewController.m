@@ -6,16 +6,38 @@
 //  Copyright (c) 2013 Roman Efimov. All rights reserved.
 //
 
-#import "RootViewController.h"
+#import "REMenuViewController.h"
 
-@implementation RootViewController
+@implementation REMenuViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithWhite:0.902 alpha:1.000];
-    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:0 green:179/255.0 blue:134/255.0 alpha:1];
+//    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:0 green:179/255.0 blue:134/255.0 alpha:1];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Menu" style:UIBarButtonItemStyleBordered target:self action:@selector(showMenu)];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self backBtn]; // MARK:add
+}
+
+-(void)backBtn{
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn setFrame:CGRectMake(0, 0, 100, 100)];
+    [btn setTitle:@"Back" forState:UIControlStateNormal];
+    [btn setBackgroundColor:[UIColor blackColor]];
+    [btn addTarget:self action:@selector(backBtnDidPush) forControlEvents:UIControlEventTouchUpInside];
+    btn.center = self.view.center;
+    btn.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleLeftMargin;
+    [self.view addSubview:btn];
+}
+
+-(void)backBtnDidPush
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)showMenu

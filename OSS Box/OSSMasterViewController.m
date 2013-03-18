@@ -7,21 +7,24 @@
 //
 
 #import "OSSMasterViewController.h"
-
 #import "OSSDetailViewController.h"
+#import "OSSAboutViewController.h"
 
-@interface OSSMasterViewController () {
+@interface OSSMasterViewController () <UINavigationBarDelegate,UINavigationControllerDelegate> {
     NSMutableArray *_objects;
+    NSArray *_title;
 }
 @end
 
 @implementation OSSMasterViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)init
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super init];
     if (self) {
-        self.title = NSLocalizedString(@"Master", @"Master");
+        self.title = @"OSS Box";
+
+        [self initDataSource];
     }
     return self;
 }
@@ -29,96 +32,106 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    self.navigationController.navigationBar.tintColor = [UIColor darkGrayColor];    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"About" style:UIBarButtonItemStyleBordered target:self action:@selector(aboutButtonDidPush:)];
+}
 
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
+- (void)aboutButtonDidPush:(id)sender
+{
+    OSSAboutViewController *aboutController = [[OSSAboutViewController alloc]init];
+    aboutController.view.backgroundColor = [UIColor whiteColor];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:aboutController];
+    [self presentModalViewController:nav animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-- (void)insertNewObject:(id)sender
+#pragma mark - data source
+
+- (void)initDataSource
 {
-    if (!_objects) {
-        _objects = [[NSMutableArray alloc] init];
-    }
-    [_objects insertObject:[NSDate date] atIndex:0];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    _objects = [NSMutableArray array];
+    
+    NSMutableArray * layout = [NSMutableArray array];
+    [layout addObject:@[@"MGBox",@"簡単にレイアウトが出来る",@""]];
+    [layout addObject:@[@"MGBox",@"簡単にレイアウトが出来る",@""]];
+    [_objects addObject:layout];
+    
+    NSMutableArray * button = [NSMutableArray array];
+    [button addObject:@[@"UIBlossyButton",@"綺麗なボタン",@""]];
+    [button addObject:@[@"QBFlatButton",@"フラットで綺麗なボタン",@""]];
+    [_objects addObject:button];
+    
+    NSMutableArray * hud = [NSMutableArray array];
+    [hud addObject:@[@"MBProgressHUD",@"",@""]];
+    [hud addObject:@[@"SVProgressHUD",@"",@""]];
+    [_objects addObject:hud];
+
+    NSMutableArray * view = [NSMutableArray array];
+    [view addObject:@[@"KLNoteViewController",@"",@""]];
+    [view addObject:@[@"MCSwipeTableViewCell",@"",@""]];
+    [view addObject:@[@"SVSegmentedControl",@"",@""]];
+    [view addObject:@[@"ZGParallelView",@"",@""]];
+    [_objects addObject:view];
+
+    NSMutableArray * other = [NSMutableArray array];
+    [other addObject:@[@"iCarousel",@"",@""]];
+    [other addObject:@[@"REMenu",@"",@""]];
+    [_objects addObject:other];
+
+    NSMutableArray * notification = [NSMutableArray array];
+    [notification addObject:@[@"NoticeView",@"",@""]];
+    [notification addObject:@[@"AJNotificationView",@"",@""]];
+    [notification addObject:@[@"KGStatusBar",@"",@""]];
+    [_objects addObject:notification];
+    
+    _title = @[@"Layout",@"Button",@"Hud",@"View",@"Notification",@"Other"];
+    
 }
 
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return [_objects count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _objects.count;
+    return [[_objects objectAtIndex:section] count];
 }
 
-// Customize the appearance of table view cells.
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return [_title objectAtIndex:section];
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
 
-
-    NSDate *object = _objects[indexPath.row];
-    cell.textLabel.text = [object description];
+    NSArray* plugin = _objects[indexPath.section][indexPath.row];
+    cell.textLabel.text = [plugin objectAtIndex:0];
+    cell.detailTextLabel.text = [plugin objectAtIndex:1];
     return cell;
 }
 
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [_objects removeObjectAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-    }
-}
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (!self.detailViewController) {
-        self.detailViewController = [[OSSDetailViewController alloc] initWithNibName:@"OSSDetailViewController" bundle:nil];
-    }
-    NSDate *object = _objects[indexPath.row];
+// viewDidLoadが呼ばれなくなるのでコメントアウト
+//    if (!self.detailViewController) {
+        self.detailViewController = [[OSSDetailViewController alloc] init];
+//    }
+    NSArray *object = _objects[indexPath.section][indexPath.row];
     self.detailViewController.detailItem = object;
     [self.navigationController pushViewController:self.detailViewController animated:YES];
 }

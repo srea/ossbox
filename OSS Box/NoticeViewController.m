@@ -25,18 +25,18 @@
 // THE SOFTWARE
 //
 
-#import "WBViewController.h"
+#import "NoticeViewController.h"
 #import "WBNoticeView.h"
 #import "WBErrorNoticeView.h"
 #import "WBSuccessNoticeView.h"
 #import "WBStickyNoticeView.h"
 #import "NSOperationQueue+WBNoticeExtensions.h"
 
-@interface WBViewController ()
+@interface NoticeViewController ()
 @property (nonatomic, readwrite, weak) WBNoticeView *currentNoticeView;
 @end
 
-@implementation WBViewController
+@implementation NoticeViewController
 
 @synthesize headerView;
 
@@ -149,7 +149,7 @@
     WBErrorNoticeView *notice = [WBErrorNoticeView errorNoticeInView:self.view title:@"Network Error" message:@"Check your network connection."];
     [notice show];
     
-    [self.navigationController pushViewController: [[WBViewController alloc] init] animated:YES];
+    [self.navigationController pushViewController: [[NoticeViewController alloc] init] animated:YES];
 }
 
 - (IBAction)showStickyNoticeAndPush:(id)sender
@@ -157,7 +157,7 @@
     WBStickyNoticeView *notice = [WBStickyNoticeView stickyNoticeInView:self.view title:@"7 New Tweets arrived somewhere from the intertubes."];
     [notice show];
     
-    [self.navigationController pushViewController: [[WBViewController alloc] init] animated:YES];
+    [self.navigationController pushViewController: [[NoticeViewController alloc] init] animated:YES];
 }
 
 - (IBAction)showStickyError:(id)sender
@@ -176,7 +176,7 @@
     notice.sticky = YES;
     [notice show];
     
-    [self.navigationController pushViewController: [[WBViewController alloc] init] animated:YES];
+    [self.navigationController pushViewController: [[NoticeViewController alloc] init] animated:YES];
 }
 
 #pragma mark -

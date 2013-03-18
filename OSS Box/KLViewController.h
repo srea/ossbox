@@ -10,6 +10,6 @@
 #import "KLNoteViewController.h"
 
 @interface KLViewController : KLNoteViewController
-- (IBAction)reloadCardData:(id)sender;
+- (IBAction)Back:(id)sender;
 @property (nonatomic, strong) NSArray* viewControllerData;
 @end

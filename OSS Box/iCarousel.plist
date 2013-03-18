@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>iCarousel</string>
+	<key>author</key>
+	<string>Nick Lockwood</string>
+	<key>url</key>
+	<string>https://github.com/nicklockwood/iCarousel</string>
+	<key>version</key>
+	<string>1.7.4</string>
+	<key>arc</key>
+	<false/>
+	<key>targetOS</key>
+	<string>&gt;= iOS 4.3 </string>
+	<key>licenseType</key>
+	<string>zlib</string>
+	<key>licenseBody</key>
+	<string>iCarousel
+
+Version 1.7.4, February 1st, 2013
+
+Copyright (C) 2011 Charcoal Design
+
+This software is provided &apos;as-is&apos;, without any express or implied warranty. In no event will the authors be held liable for any damages arising from the use of this software.
+
+Permission is granted to anyone to use this software for any purpose, including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions:
+
+The origin of this software must not be misrepresented; you must not claim that you wrote the original software. If you use this software in a product, an acknowledgment in the product documentation would be appreciated but is not required.
+
+Altered source versions must be plainly marked as such, and must not be misrepresented as being the original software.
+
+This notice may not be removed or altered from any source distribution.</string>
+	<key>detailText</key>
+	<string>A class designed to simplify the implementation of various types of carousel.</string>
+	<key>controller</key>
+	<string>iCarouselExampleViewController</string>
+</dict>
+</plist>

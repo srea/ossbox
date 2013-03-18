@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>KLNoteViewController</string>
+	<key>author</key>
+	<string>Kieran Lafferty</string>
+	<key>url</key>
+	<string>https://github.com/KieranLafferty/KLNoteViewController</string>
+	<key>version</key>
+	<string>0.0.1</string>
+	<key>arc</key>
+	<true/>
+	<key>targetOS</key>
+	<string>&gt;= iOS 5.0 </string>
+	<key>licenseType</key>
+	<string>Apache 2.0</string>
+	<key>licenseBody</key>
+	<string>
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+Copyright [yyyy] [name of copyright owner]
+
+   Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.</string>
+	<key>detailText</key>
+	<string>A control that organizes multiple navigation controllers in a stack inspired by Evernote 5.0 app</string>
+	<key>controller</key>
+	<string>KLViewController</string>
+</dict>
+</plist>

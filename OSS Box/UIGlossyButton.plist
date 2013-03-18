@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict/>
+<dict>
+	<key>name</key>
+	<string>UIGlossyButton</string>
+	<key>author</key>
+	<string>tamazawa</string>
+	<key>url</key>
+	<string>http://github.com/</string>
+	<key>version</key>
+	<string>0.0.1</string>
+	<key>arc</key>
+	<true/>
+	<key>targetOS</key>
+	<string>iOS6</string>
+	<key>licenseType</key>
+	<string>BSD Lisence</string>
+	<key>licenseBody</key>
+	<string>alsdkjfals;dkfa</string>
+	<key>detailText</key>
+	<string>asdfsafa</string>
+</dict>
 </plist>

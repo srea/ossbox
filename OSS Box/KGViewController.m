@@ -7,6 +7,7 @@
 //
 
 #import "KGViewController.h"
+#import <KGStatusBar.h> // MARK:追加した。
 
 @interface KGViewController ()
 

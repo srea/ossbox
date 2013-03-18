@@ -6,16 +6,16 @@
 //  Copyright (c) 2012 CodeApps. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "AJNotificationViewController.h"
 #import "AJNotificationView.h"
-#import "AppDelegate.h"
-@interface ViewController (){
+#import "OSSAppDelegate.h"
+@interface AJNotificationViewController (){
     BOOL isDarkBackground;
     AJNotificationView *panel;
 }
 @end
 
-@implementation ViewController
+@implementation AJNotificationViewController
 @synthesize secondView;
 
 - (void)viewDidLoad{
@@ -49,7 +49,7 @@
 ////////////////////////////////////////////////////////////////////////
 
 - (IBAction)showNotificaction:(id)sender {
-    [AJNotificationView showNoticeInView:[(AppDelegate *)[[UIApplication sharedApplication] delegate] window]
+    [AJNotificationView showNoticeInView:[(OSSAppDelegate *)[[UIApplication sharedApplication] delegate] window]
                                            title:@"Information notification"
                                        hideAfter:0];
     

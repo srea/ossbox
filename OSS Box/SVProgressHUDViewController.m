@@ -6,10 +6,10 @@
 //  Copyright 2011 Sam Vermette. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "SVProgressHUDViewController.h"
 #import "SVProgressHUD.h"
 
-@implementation ViewController {
+@implementation SVProgressHUDViewController {
     NSTimer *timer;
 }
 

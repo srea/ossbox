@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface AJNotificationViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIView *secondView;
 - (IBAction)showNotificaction:(id)sender;
 - (IBAction)hideNotification:(id)sender;

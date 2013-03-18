@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--Demo Table View Controller-->
+        <!--Parallel View Controller-->
         <scene sceneID="AOJ-ig-fad">
             <objects>
-                <tableViewController id="gTM-y4-tcx" customClass="DemoTableViewController" sceneMemberID="viewController">
+                <tableViewController id="gTM-y4-tcx" customClass="ZGParallelViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="8bH-TK-Vsl">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -48,7 +48,7 @@
                     </tableView>
                     <connections>
                         <outlet property="avatar" destination="yPA-eL-TPW" id="iAb-Pc-PBK"/>
-                        <outlet property="awesomeZG" destination="bee-LU-tfe" id="3eJ-kL-azb"/>
+                        <outlet property="awesomeZG" destination="bee-LU-tfe" id="ijV-cl-IKF"/>
                         <outlet property="contontView" destination="aPQ-p0-eIt" id="bZE-pf-c43"/>
                         <outlet property="headerPageControl" destination="D9H-RK-jzY" id="w6F-Qm-beI"/>
                         <outlet property="headerScrollView" destination="2Ks-F2-Hb5" id="hco-v4-NmU"/>
@@ -121,6 +121,9 @@ as long as you don't stop.</string>
                         </pageControl>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <accessibility key="accessibilityConfiguration">
+                        <bool key="isElement" value="YES"/>
+                    </accessibility>
                 </view>
             </objects>
             <point key="canvasLocation" x="389" y="73"/>
@@ -130,11 +133,9 @@ as long as you don't stop.</string>
         <image name="ZG.png" width="1024" height="1024"/>
     </resources>
     <classes>
-        <class className="DemoTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DemoTableViewController.h"/>
+        <class className="ZGParallelViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ZGParallelViewController.h"/>
             <relationships>
-                <relationship kind="action" name="SwitchParallelViewStyle:" candidateClass="UISegmentedControl"/>
-                <relationship kind="action" name="pageChanged:" candidateClass="UIPageControl"/>
                 <relationship kind="outlet" name="avatar" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="awesomeZG" candidateClass="UIView"/>
                 <relationship kind="outlet" name="contontView" candidateClass="UIView"/>

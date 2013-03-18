@@ -8,15 +8,24 @@
 
 #import "KLViewController.h"
 #import "KLCustomViewController.h"
+#import <KLNoteViewController.h>
+
 @interface KLViewController ()
 
 @end
 
 @implementation KLViewController
 
+- (void)loadView
+{
+    // MARK: superの前に書かないとviewのframeサイズがnavigationも含まれてしまう。　
+    //self.navigationController.navigationBarHidden = YES;
+    [super loadView];
+}
+
 - (void)viewDidLoad
 {
-
+    
 	// Do any additional setup after loading the view, typically from a nib.
     [self.view setBackgroundColor: [UIColor colorWithPatternImage:[UIImage imageNamed:@"background-dark-gray-tex.png"]]];
     
@@ -42,12 +51,8 @@
     //Get the relevant data for the navigation controller
     NSDictionary* navDict = [self.viewControllerData objectAtIndex: indexPath.row];
     
-    //Initialize a blank uiviewcontroller for display purposes
-    UIStoryboard *st = [UIStoryboard storyboardWithName:[[NSBundle mainBundle].infoDictionary objectForKey:@"UIMainStoryboardFile"] bundle:[NSBundle mainBundle]];
-    
-    KLCustomViewController* viewController = [st instantiateViewControllerWithIdentifier:@"RootViewController"];
+    KLCustomViewController* viewController = [[KLCustomViewController alloc]init];
     [viewController setInfo: navDict];
-
     //Return the custom view controller
     return viewController;
 }
@@ -61,8 +66,9 @@
     NSLog(@"%@ changed state %ld", [navDict objectForKey:@"title"], toState);
     
 }
-- (IBAction)reloadCardData:(id)sender {
-    [self reloadDataAnimated:YES];
-    
+
+// MARK: 戻る追加
+- (IBAction)Back:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 @end

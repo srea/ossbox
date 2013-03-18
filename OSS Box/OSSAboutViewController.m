@@ -8,31 +8,23 @@
 
 #import "OSSAboutViewController.h"
 
-@interface OSSAboutViewController ()
+@interface OSSAboutViewController () <UINavigationControllerDelegate,UINavigationBarDelegate>
 
 @end
 
 @implementation OSSAboutViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    self.title = @"About";
+    self.navigationController.navigationBar.tintColor = [UIColor darkGrayColor];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(closeBtnDidPush:)];
 }
 
-- (void)didReceiveMemoryWarning
+- (void)closeBtnDidPush:(id)sender
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [self.navigationController dismissModalViewControllerAnimated:YES];
 }
 
 @end

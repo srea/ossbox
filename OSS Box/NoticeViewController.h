@@ -27,7 +27,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WBViewController : UIViewController
+@interface NoticeViewController : UIViewController
 
 @property(nonatomic, strong) IBOutlet UIImageView *headerView;
 
@@ -41,6 +41,11 @@
 - (IBAction)showSmallErrorNoticeAndPush:(id)sender;
 - (IBAction)showStickyNoticeAndPush:(id)sender;
 
+// add
+- (IBAction)showQueuedErrorNotice:(id)sender;
+- (IBAction)showSmallStickyNotice:(id)sender;
+- (IBAction)showStickyError:(id)sender;
+- (IBAction)showStickyErrorNoticeAndPush:(id)sender;
 
 - (IBAction)dismissStickyNotice:(id)sender;
 

@@ -7,54 +7,246 @@
 //
 
 #import "OSSDetailViewController.h"
+#import "OSSLibrary.h"
+
+#import <MGBox/MGBox.h>
+#import <MGScrollView.h>
+#import <MGBoxLine.h>
+#import <MGStyledBox.h>
+
+#import "HudDemoViewController.h"
+#import "iCarouselExampleViewController.h"
+#import "NoticeViewController.h"
+#import "SVProgressHUDViewController.h"
+#import "AJNotificationViewController.h"
+
+#define ANIM_SPEED 0
 
 @interface OSSDetailViewController ()
-- (void)configureView;
+@property(nonatomic, strong) MGScrollView *scroller;
+@property (nonatomic, strong) OSSLibrary *library;
+@property (nonatomic, strong) NSMutableArray *objects;
 @end
 
 @implementation OSSDetailViewController
+
+- (id)init
+{
+    if (self = [super init]) {
+        _objects = [[NSMutableArray alloc]init];
+        _library = [[OSSLibrary alloc]init];
+        self.navigationController.navigationBar.tintColor = [UIColor darkGrayColor];
+    }
+    return self;
+}
 
 #pragma mark - Managing the detail item
 
 - (void)setDetailItem:(id)newDetailItem
 {
     if (_detailItem != newDetailItem) {
-        _detailItem = newDetailItem;
-        
-        // Update the view.
-        [self configureView];
+        _detailItem = [NSArray arrayWithArray:newDetailItem ];
+        [_library setName:[_detailItem objectAtIndex:0]];
+        [self makeDataSource];
     }
 }
 
-- (void)configureView
+- (void)makeDataSource
 {
-    // Update the user interface for the detail item.
+    [_objects removeAllObjects];
+    [_objects addObject:@[[_library name]]];
+    [_objects addObject:@[[_library controller], [_library version]]];
+    [_objects addObject:@[[_library detailText]]];
+    [_objects addObject:@[[_library url], [_library arc], [_library targetOS]]];
+    [_objects addObject:@[[_library licenseType], [_library licenseBody]]];
+}
 
-    if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
-    }
+- (void)loadView
+{
+    [super loadView];
+    _scroller = [[MGScrollView alloc] initWithFrame:self.view.frame];
+    self.view = _scroller;
+
+}
+
+- (UIButton *)button:(NSString *)title for:(SEL)selector {
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:16];
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [button setTitleShadowColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+    button.titleLabel.shadowOffset = CGSizeMake(0, -1);
+    CGSize size = [title sizeWithFont:button.titleLabel.font];
+    button.frame = CGRectMake(0, 0, size.width + 20, 26);
+    [button setTitle:title forState:UIControlStateNormal];
+    [button addTarget:self action:selector forControlEvents:UIControlEventTouchUpInside];
+    button.layer.cornerRadius = 3;
+    button.backgroundColor = [UIColor whiteColor];
+    button.layer.shadowColor = [UIColor blackColor].CGColor;
+    button.layer.shadowOffset = CGSizeMake(0, 1);
+    button.layer.shadowRadius = 0.8;
+    button.layer.shadowOpacity = 0.6;
+    return button;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    [self configureView];
+    [self.view setBackgroundColor: [UIColor colorWithPatternImage:[UIImage imageNamed:@"background-dark-gray-tex.png"]]];
+    
+    UIFont *headerFont = [UIFont fontWithName:@"HelveticaNeue-Bold" size:16];
+    
+    _scroller.alwaysBounceVertical = YES;
+    _scroller.delegate = self;
+    
+    //[self addBox:nil];
+    
+    // new section
+    MGStyledBox *box1 = [MGStyledBox box];
+    [_scroller.boxes addObject:box1];
+    MGBoxLine *head1 = [MGBoxLine lineWithLeft:[_library name] right:[self button:@"Demo" for:@selector(demoView:)]];
+    head1.font = headerFont;
+    [box1.topLines addObject:head1];
+    MGBoxLine *author = [MGBoxLine lineWithLeft:@"Author" right:[_library author]];
+    author.font = headerFont;
+    [box1.topLines addObject:author];
+    //    MGBoxLine *author_url = [MGBoxLine lineWithLeft:nil right:[self button:@"Github" for:@selector(demoView:)]];
+    //    author_url.font = headerFont;
+    //    [box1.topLines addObject:author_url];
+    
+    MGStyledBox *info = [MGStyledBox box];
+    [_scroller.boxes addObject:info];
+    MGBoxLine *arc = [MGBoxLine lineWithLeft:@"ARC" right:[_library arc]];
+    arc.font = headerFont;
+    [info.topLines addObject:arc];
+    MGBoxLine *version = [MGBoxLine lineWithLeft:@"VERSION" right:[_library version]];
+    version.font = headerFont;
+    [info.topLines addObject:version];
+    MGBoxLine *target = [MGBoxLine lineWithLeft:@"TARGET" right:[_library targetOS]];
+    target.font = headerFont;
+    [info.topLines addObject:target];
+    
+    
+    
+    MGStyledBox *box2 = [MGStyledBox box];
+    [_scroller.boxes addObject:box2];
+    
+    MGBoxLine *head2 = [MGBoxLine lineWithLeft:@"Description" right:nil];
+    head2.font = headerFont;
+    [box2.topLines addObject:head2];
+    
+    MGBoxLine *multi = [MGBoxLine multilineWithText:[_library detailText] font:nil padding:24];
+    [box2.topLines addObject:multi];
+    
+    MGStyledBox *box3 = [MGStyledBox box];
+    [_scroller.boxes addObject:box3];
+    
+    MGBoxLine *head3 = [MGBoxLine lineWithLeft:@"Lisence Type" right:[_library licenseType]];
+    head3.font = headerFont;
+    [box3.topLines addObject:head3];
+    
+        UIFont *lisence = [UIFont fontWithName:@"HelveticaNeue" size:10];
+    MGBoxLine *wordsLine = [MGBoxLine multilineWithText:[_library licenseBody] font:lisence padding:0];
+    [box3.topLines addObject:wordsLine];
+    
+    [_scroller drawBoxesWithSpeed:ANIM_SPEED];
+    [_scroller flashScrollIndicators];
+    
+}
+
+- (void)addBox:(UIButton *)sender {
+    MGStyledBox *box = [MGStyledBox box];
+    MGBox *parentBox = [self parentBoxOf:sender];
+    if (parentBox) {
+        int i = [_scroller.boxes indexOfObject:parentBox];
+        [_scroller.boxes insertObject:box atIndex:i + 1];
+    } else {
+        [_scroller.boxes addObject:box];
+    }
+    
+    
+    [_scroller drawBoxesWithSpeed:ANIM_SPEED];
+    [_scroller flashScrollIndicators];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    self.title = [_detailItem objectAtIndex:0];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+#pragma mark - delegate
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        self.title = NSLocalizedString(@"Detail", @"Detail");
-    }
-    return self;
+    return [_objects count];
 }
-							
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [[_objects objectAtIndex:section] count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+    
+    cell.detailTextLabel.text = _objects[indexPath.section][indexPath.row];
+    if (indexPath.section == 0) {
+        cell.textLabel.text = _objects[indexPath.section][indexPath.row];
+    } else if (indexPath.section == 1) {
+        if (indexPath.row == 0) {
+            cell.textLabel.text = @"Demo";
+        } else if (indexPath.row == 1) {
+            cell.textLabel.text = @"Version";
+        }
+    } else if (indexPath.section == 2) {
+    } else if (indexPath.section == 3) {
+        if (indexPath.row == 0) {
+            cell.textLabel.text = @"Source";
+        } else if (indexPath.row == 1) {
+            cell.textLabel.text = @"ARC";
+        } else if (indexPath.row == 2) {
+            cell.textLabel.text = @"Target";
+        }
+    } else if (indexPath.section == 4) {
+        if (indexPath.row == 0) {
+            cell.textLabel.text = @"License";
+        } else if (indexPath.row == 1) {
+            
+        }
+    }
+    
+    return cell;
+}
+
+- (void)demoView:(id)sender
+{
+    Class class = NSClassFromString([_library controller]);
+    id controller = [[class alloc]init];
+    [controller setTitle:[_library name]];
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
+- (MGBox *)parentBoxOf:(UIView *)view {
+    while (![view.superview isKindOfClass:[MGBox class]]) {
+        if (!view.superview) {
+            return nil;
+        }
+        view = view.superview;
+    }
+    return (MGBox *)view.superview;
+}
+
 @end
