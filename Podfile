@@ -15,8 +15,11 @@ platform :ios, '5.0'
   pod 'KGNoise'
   pod 'AKTabBarController', '~> 1.0.1'
   pod 'UIGlossyButton', '0.0.7'
+#progress
+pod 'DDProgressView','0.1'
 #menu
 pod 'REMenu', '1.2.4'
+pod 'MFSideMenu', '0.4.1'
 #status bar
 pod 'KGStatusBar', '1.0'
 #
@@ -44,3 +47,6 @@ pod 'BCGenieEffect', '1.0'
 
 #notification
 pod 'AJNotificationView', '0.7'
+
+#other
+pod 'InAppSettingsKit', '1.0'

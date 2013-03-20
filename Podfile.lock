@@ -1,70 +1,10 @@
 
-DEPENDENCIES: 
-- AFNetworking (> 1.0)
-- AJNotificationView (= 0.7)
-- AKTabBarController (~> 1.0.1)
-- BCGenieEffect (= 1.0)
-- EGOTableViewPullRefresh (= 0.1.0)
-- Facebook-iOS-SDK (= 3.1.1)
-- GoogleAnalytics-iOS-SDK (= 2.0beta4)
-- KGNoise
-- KGStatusBar (= 1.0)
-- KLNoteViewController (= 0.0.1)
-- LKbadgeView (= 1.1.0)
-- MBProgressHUD (= 0.6)
-- MCSwipeTableViewCell (= 1.0.0)
-- MGBox (= 0.0.1)
-- MGBox2 (= 2.0.0)
-- MLPSpotlight (= 1.2)
-- NoticeView (= 3.0.3)
-- ODRefreshControl (= 1.1.0)
-- REMenu (= 1.2.4)
-- Reachability (= 3.1.0)
-- SDWebImage (= 3.1)
-- SVProgressHUD (= 0.9)
-- SVSegmentedControl (= 0.1)
-- TTTAttributedLabel (= 1.5.1)
-- UIGlossyButton (= 0.0.7)
-- ZGParallelView (= 0.1.5)
-- iCarousel (= 1.7.4)
-
-SPEC CHECKSUMS: 
-  TTTAttributedLabel: 76843e36f992fddc1f9f8071ca29528761db629f
-  AJNotificationView: 2d69a3105d6f604e041bac46bbe1525650ee74b9
-  ZGParallelView: 54602683323ecaace9229249de2ed6358e15881c
-  UIGlossyButton/Core: ac45013a4cf79d80dd3a2c137f4d36baf7058b17
-  MGBox: 0a23444f3eff2da8ca538df21837ff5754ffc6b4
-  MCSwipeTableViewCell: 3779b743bf5fa5a73f4f9e6eb0ddc907bffb829f
-  KLNoteViewController: f73e9045f06d8a4cb1d0e71e362da43d8a4e10b5
-  UIGlossyButton/LayerEffects: ac45013a4cf79d80dd3a2c137f4d36baf7058b17
-  SVProgressHUD: 98935fbafaf0031df4a9cafca3c66eaf3da06967
-  SDWebImage/Main: 9e70e5dd0c69d1a043180cd2c5e1d0cd1e4ebcd7
-  MGBox2: 7c09e36c2271f9af16fdb5141a0ca554ecee4d8d
-  MBProgressHUD: 9b55a90566fb5d07df0602f6fd9fa04510ad5d52
-  EGOTableViewPullRefresh: 6ba637ce6dd3186b503d2d91e6b3a08a26d650f5
-  NoticeView: 1fa3bb0a88d4995e04ca4894213dc25105a60153
-  LKbadgeView: 484f871824ac2e132878bd866449d221640590dc
-  UIGlossyButton: ac45013a4cf79d80dd3a2c137f4d36baf7058b17
-  SDWebImage: 9e70e5dd0c69d1a043180cd2c5e1d0cd1e4ebcd7
-  BCGenieEffect: bc00729f71206c7fbcaed5c90215f957dbd786b1
-  Facebook-iOS-SDK: 5fc068ebfd8c8c9b0fad476bc36dbbf1fffeebc8
-  Reachability: 1c8584c5f26fa776695efef95caaa50402c94cfb
-  ODRefreshControl: 886e323a7c25114b9e5c397a9eefbebc034224a9
-  GoogleAnalytics-iOS-SDK: 11332eedcffb0c88b2dd9bff0ac1444e3a85e890
-  AFNetworking: 761a418233d280c1e0580bcb76ff9cb4c3073d17
-  iCarousel: 7f260b9f829005bb32d72ad19376a2a32ae3e418
-  SVSegmentedControl: a71dd845e6264af87c644e2d90cf32be1cb1665b
-  AKTabBarController: d3876684504512be83b90b5eabefce3853af043f
-  REMenu: 21a0090837b10547f7d32626a068762574321ffa
-  MLPSpotlight: 5849d61d603394d94094052dd5aa55dc7a2e7737
-  KGStatusBar: e47f19745f6aeb0fabe37e8360df26bf87b1e2ff
-  KGNoise: 8ebc646c982cf468f01b4789e4ab1cf849eb413d
-
 PODS: 
 - AFNetworking (1.1.0)
 - AJNotificationView (0.7)
 - AKTabBarController (1.0.1)
 - BCGenieEffect (1.0)
+- DDProgressView (0.1)
 - EGOTableViewPullRefresh (0.1.0)
 - Facebook-iOS-SDK (3.1.1)
 - GoogleAnalytics-iOS-SDK (2.0beta4)
@@ -74,6 +14,7 @@ PODS:
 - LKbadgeView (1.1.0)
 - MBProgressHUD (0.6)
 - MCSwipeTableViewCell (1.0.0)
+- MFSideMenu (0.4.1)
 - MGBox (0.0.1)
 - MGBox2 (2.0.0)
 - MLPSpotlight (1.2)
@@ -95,4 +36,69 @@ PODS:
 - ZGParallelView (0.1.5)
 - iCarousel (1.7.4)
 
-COCOAPODS: 0.16.1
+COCOAPODS: 0.16.4
+
+SPEC CHECKSUMS: 
+  ZGParallelView: 54602683323ecaace9229249de2ed6358e15881c
+  AKTabBarController: d3876684504512be83b90b5eabefce3853af043f
+  NoticeView: 1fa3bb0a88d4995e04ca4894213dc25105a60153
+  EGOTableViewPullRefresh: 6ba637ce6dd3186b503d2d91e6b3a08a26d650f5
+  AFNetworking: 761a418233d280c1e0580bcb76ff9cb4c3073d17
+  iCarousel: 7f260b9f829005bb32d72ad19376a2a32ae3e418
+  SVSegmentedControl: a71dd845e6264af87c644e2d90cf32be1cb1665b
+  UIGlossyButton: ac45013a4cf79d80dd3a2c137f4d36baf7058b17
+  MFSideMenu: fb75eaacf2d48350ec2d3f508d6f6e465db0c8b9
+  KGStatusBar: e47f19745f6aeb0fabe37e8360df26bf87b1e2ff
+  Facebook-iOS-SDK: 5fc068ebfd8c8c9b0fad476bc36dbbf1fffeebc8
+  TTTAttributedLabel: 76843e36f992fddc1f9f8071ca29528761db629f
+  SVProgressHUD: 98935fbafaf0031df4a9cafca3c66eaf3da06967
+  ODRefreshControl: 886e323a7c25114b9e5c397a9eefbebc034224a9
+  MGBox: 0a23444f3eff2da8ca538df21837ff5754ffc6b4
+  DDProgressView: 6dd7fa77900e3dc140b816dddc5616382c124b54
+  AJNotificationView: 2d69a3105d6f604e041bac46bbe1525650ee74b9
+  UIGlossyButton/Core: ac45013a4cf79d80dd3a2c137f4d36baf7058b17
+  Reachability: 1c8584c5f26fa776695efef95caaa50402c94cfb
+  MBProgressHUD: 9b55a90566fb5d07df0602f6fd9fa04510ad5d52
+  GoogleAnalytics-iOS-SDK: 11332eedcffb0c88b2dd9bff0ac1444e3a85e890
+  MCSwipeTableViewCell: 3779b743bf5fa5a73f4f9e6eb0ddc907bffb829f
+  SDWebImage: 9e70e5dd0c69d1a043180cd2c5e1d0cd1e4ebcd7
+  LKbadgeView: 484f871824ac2e132878bd866449d221640590dc
+  BCGenieEffect: bc00729f71206c7fbcaed5c90215f957dbd786b1
+  KLNoteViewController: f73e9045f06d8a4cb1d0e71e362da43d8a4e10b5
+  UIGlossyButton/LayerEffects: ac45013a4cf79d80dd3a2c137f4d36baf7058b17
+  SDWebImage/Main: 9e70e5dd0c69d1a043180cd2c5e1d0cd1e4ebcd7
+  REMenu: 21a0090837b10547f7d32626a068762574321ffa
+  MLPSpotlight: 5849d61d603394d94094052dd5aa55dc7a2e7737
+  MGBox2: 7c09e36c2271f9af16fdb5141a0ca554ecee4d8d
+  KGNoise: 8ebc646c982cf468f01b4789e4ab1cf849eb413d
+
+DEPENDENCIES: 
+- AFNetworking (> 1.0)
+- AJNotificationView (= 0.7)
+- AKTabBarController (~> 1.0.1)
+- BCGenieEffect (= 1.0)
+- DDProgressView (= 0.1)
+- EGOTableViewPullRefresh (= 0.1.0)
+- Facebook-iOS-SDK (= 3.1.1)
+- GoogleAnalytics-iOS-SDK (= 2.0beta4)
+- KGNoise
+- KGStatusBar (= 1.0)
+- KLNoteViewController (= 0.0.1)
+- LKbadgeView (= 1.1.0)
+- MBProgressHUD (= 0.6)
+- MCSwipeTableViewCell (= 1.0.0)
+- MFSideMenu (= 0.4.1)
+- MGBox (= 0.0.1)
+- MGBox2 (= 2.0.0)
+- MLPSpotlight (= 1.2)
+- NoticeView (= 3.0.3)
+- ODRefreshControl (= 1.1.0)
+- REMenu (= 1.2.4)
+- Reachability (= 3.1.0)
+- SDWebImage (= 3.1)
+- SVProgressHUD (= 0.9)
+- SVSegmentedControl (= 0.1)
+- TTTAttributedLabel (= 1.5.1)
+- UIGlossyButton (= 0.0.7)
+- ZGParallelView (= 0.1.5)
+- iCarousel (= 1.7.4)

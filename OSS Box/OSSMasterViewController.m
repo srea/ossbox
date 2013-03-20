@@ -39,8 +39,8 @@
 - (void)aboutButtonDidPush:(id)sender
 {
     OSSAboutViewController *aboutController = [[OSSAboutViewController alloc]init];
-    aboutController.view.backgroundColor = [UIColor whiteColor];
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:aboutController];
+    nav.navigationBar.tintColor = [UIColor darkGrayColor];
     [self presentModalViewController:nav animated:YES];
 }
 
@@ -53,42 +53,43 @@
 
 - (void)initDataSource
 {
-    _objects = [NSMutableArray array];
-    
-    NSMutableArray * layout = [NSMutableArray array];
-    [layout addObject:@[@"MGBox",@"簡単にレイアウトが出来る",@""]];
-    [layout addObject:@[@"MGBox",@"簡単にレイアウトが出来る",@""]];
-    [_objects addObject:layout];
-    
-    NSMutableArray * button = [NSMutableArray array];
-    [button addObject:@[@"UIBlossyButton",@"綺麗なボタン",@""]];
-    [button addObject:@[@"QBFlatButton",@"フラットで綺麗なボタン",@""]];
-    [_objects addObject:button];
-    
-    NSMutableArray * hud = [NSMutableArray array];
-    [hud addObject:@[@"MBProgressHUD",@"",@""]];
-    [hud addObject:@[@"SVProgressHUD",@"",@""]];
-    [_objects addObject:hud];
-
-    NSMutableArray * view = [NSMutableArray array];
-    [view addObject:@[@"KLNoteViewController",@"",@""]];
-    [view addObject:@[@"MCSwipeTableViewCell",@"",@""]];
-    [view addObject:@[@"SVSegmentedControl",@"",@""]];
-    [view addObject:@[@"ZGParallelView",@"",@""]];
-    [_objects addObject:view];
-
-    NSMutableArray * other = [NSMutableArray array];
-    [other addObject:@[@"iCarousel",@"",@""]];
-    [other addObject:@[@"REMenu",@"",@""]];
-    [_objects addObject:other];
-
-    NSMutableArray * notification = [NSMutableArray array];
-    [notification addObject:@[@"NoticeView",@"",@""]];
-    [notification addObject:@[@"AJNotificationView",@"",@""]];
-    [notification addObject:@[@"KGStatusBar",@"",@""]];
-    [_objects addObject:notification];
-    
-    _title = @[@"Layout",@"Button",@"Hud",@"View",@"Notification",@"Other"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"OSSList" ofType:@"plist"];
+    _objects = [NSArray arrayWithContentsOfFile:path];
+    NSLog(@"%@", _objects);
+//    NSMutableArray * layout = [NSMutableArray array];
+//    [layout addObject:@[@"MGBox",@"簡単にレイアウトが出来る",@""]];
+//    [layout addObject:@[@"MGBox",@"簡単にレイアウトが出来る",@""]];
+//    [_objects addObject:layout];
+//    
+//    NSMutableArray * button = [NSMutableArray array];
+//    [button addObject:@[@"UIBlossyButton",@"綺麗なボタン",@""]];
+//    [button addObject:@[@"QBFlatButton",@"フラットで綺麗なボタン",@""]];
+//    [_objects addObject:button];
+//    
+//    NSMutableArray * hud = [NSMutableArray array];
+//    [hud addObject:@[@"MBProgressHUD",@"",@""]];
+//    [hud addObject:@[@"SVProgressHUD",@"",@""]];
+//    [_objects addObject:hud];
+//
+//    NSMutableArray * view = [NSMutableArray array];
+//    [view addObject:@[@"KLNoteViewController",@"",@""]];
+//    [view addObject:@[@"MCSwipeTableViewCell",@"",@""]];
+//    [view addObject:@[@"SVSegmentedControl",@"",@""]];
+//    [view addObject:@[@"ZGParallelView",@"",@""]];
+//    [_objects addObject:view];
+//
+//    NSMutableArray * other = [NSMutableArray array];
+//    [other addObject:@[@"iCarousel",@"",@""]];
+//    [other addObject:@[@"REMenu",@"",@""]];
+//    [_objects addObject:other];
+//
+//    NSMutableArray * notification = [NSMutableArray array];
+//    [notification addObject:@[@"NoticeView",@"",@""]];
+//    [notification addObject:@[@"AJNotificationView",@"",@""]];
+//    [notification addObject:@[@"KGStatusBar",@"",@""]];
+//    [_objects addObject:notification];
+//    
+//    _title = @[@"Layout",@"Button",@"Hud",@"View",@"Notification",@"Other"];
     
 }
 
@@ -101,12 +102,12 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[_objects objectAtIndex:section] count];
+    return [[[_objects objectAtIndex:section] objectForKey:@"rows"] count];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    return [_title objectAtIndex:section];
+    return [[_objects objectAtIndex:section] objectForKey:@"section"];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -119,9 +120,9 @@
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
 
-    NSArray* plugin = _objects[indexPath.section][indexPath.row];
-    cell.textLabel.text = [plugin objectAtIndex:0];
-    cell.detailTextLabel.text = [plugin objectAtIndex:1];
+    NSDictionary* cellData = [_objects[indexPath.section] objectForKey:@"rows"][indexPath.row];
+    cell.textLabel.text = [cellData objectForKey:@"name"];
+    cell.detailTextLabel.text = [cellData objectForKey:@"detail"];
     return cell;
 }
 
@@ -131,7 +132,7 @@
 //    if (!self.detailViewController) {
         self.detailViewController = [[OSSDetailViewController alloc] init];
 //    }
-    NSArray *object = _objects[indexPath.section][indexPath.row];
+    NSDictionary *object = [_objects[indexPath.section] objectForKey:@"rows"][indexPath.row];
     self.detailViewController.detailItem = object;
     [self.navigationController pushViewController:self.detailViewController animated:YES];
 }

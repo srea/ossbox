@@ -45,8 +45,8 @@
 - (void)setDetailItem:(id)newDetailItem
 {
     if (_detailItem != newDetailItem) {
-        _detailItem = [NSArray arrayWithArray:newDetailItem ];
-        [_library setName:[_detailItem objectAtIndex:0]];
+        _detailItem = [NSDictionary dictionaryWithDictionary:newDetailItem];
+        [_library setName:[_detailItem objectForKey:@"name"]];
         [self makeDataSource];
     }
 }
@@ -172,7 +172,7 @@
 {
     [super viewWillAppear:animated];
     
-    self.title = [_detailItem objectAtIndex:0];
+    self.title = [_detailItem objectForKey:@"name"];
 }
 
 - (void)didReceiveMemoryWarning
