@@ -39,7 +39,7 @@
 }
 
 - (IBAction)SwitchParallelViewStyle:(UISegmentedControl *)sender {
-    ZGScrollViewStyle PVStyle = nil;
+    ZGScrollViewStyle PVStyle = 0;
     switch (sender.selectedSegmentIndex) {
         case 0:
             PVStyle = ZGScrollViewStyleDefault;

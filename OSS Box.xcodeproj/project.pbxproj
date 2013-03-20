@@ -85,15 +85,10 @@
 		DA486D4416F9634F00ACA3C9 /* launchIcon3.5retina.png in Resources */ = {isa = PBXBuildFile; fileRef = DA486D4116F9634F00ACA3C9 /* launchIcon3.5retina.png */; };
 		DA486D4516F9634F00ACA3C9 /* launchIcon4retina.png in Resources */ = {isa = PBXBuildFile; fileRef = DA486D4216F9634F00ACA3C9 /* launchIcon4retina.png */; };
 		DA486D4616F9634F00ACA3C9 /* launchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = DA486D4316F9634F00ACA3C9 /* launchImage.png */; };
-		DA486D4816F963A100ACA3C9 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DA486D4716F963A100ACA3C9 /* Default.png */; };
-		DA486D4A16F963A500ACA3C9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA486D4916F963A500ACA3C9 /* Default-568h@2x.png */; };
-		DA486D4C16F963B400ACA3C9 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA486D4B16F963B400ACA3C9 /* Default@2x.png */; };
 		DA6BB2E116F93DAC0078350E /* OSSList.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA6BB2E016F93DAB0078350E /* OSSList.plist */; };
 		DA6BB2E416F9478E0078350E /* DDProgressView.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA6BB2E316F9478E0078350E /* DDProgressView.plist */; };
 		DA83121E16F9493800B18B80 /* DDProgressViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA83121C16F9493800B18B80 /* DDProgressViewViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DA83121F16F9493800B18B80 /* DDProgressViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA83121D16F9493800B18B80 /* DDProgressViewViewController.xib */; };
-		DAB8396B16F8D474000447D7 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DAB8396A16F8D474000447D7 /* Icon.png */; };
-		DAB8396D16F8D48A000447D7 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAB8396C16F8D48A000447D7 /* Icon@2x.png */; };
 		DAD963FE16F9593E00E00D9E /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = DAD963F416F9593E00E00D9E /* Icon-72.png */; };
 		DAD963FF16F9593E00E00D9E /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAD963F516F9593E00E00D9E /* Icon-72@2x.png */; };
 		DAD9640016F9593E00E00D9E /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = DAD963F616F9593E00E00D9E /* Icon-Small-50.png */; };
@@ -675,8 +670,6 @@
 				7850372116F604150045510D /* ZGParallelView.plist in Resources */,
 				7850372316F606010045510D /* ZG.png in Resources */,
 				7850372C16F6106C0045510D /* ZGParallelViewController.storyboard in Resources */,
-				DAB8396B16F8D474000447D7 /* Icon.png in Resources */,
-				DAB8396D16F8D48A000447D7 /* Icon@2x.png in Resources */,
 				DA6BB2E116F93DAC0078350E /* OSSList.plist in Resources */,
 				DA6BB2E416F9478E0078350E /* DDProgressView.plist in Resources */,
 				DA83121F16F9493800B18B80 /* DDProgressViewViewController.xib in Resources */,
@@ -694,9 +687,6 @@
 				DA486D4416F9634F00ACA3C9 /* launchIcon3.5retina.png in Resources */,
 				DA486D4516F9634F00ACA3C9 /* launchIcon4retina.png in Resources */,
 				DA486D4616F9634F00ACA3C9 /* launchImage.png in Resources */,
-				DA486D4816F963A100ACA3C9 /* Default.png in Resources */,
-				DA486D4A16F963A500ACA3C9 /* Default-568h@2x.png in Resources */,
-				DA486D4C16F963B400ACA3C9 /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
