@@ -4,6 +4,7 @@
 .\#*
 *.swp
 .idea
+xcuserdata
 *.xcodeproj/*
 !*.xcodeproj/project.pbxproj
 !*.xcworkspace/contents.xcworkspacedata
