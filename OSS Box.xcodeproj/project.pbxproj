@@ -27,9 +27,6 @@
 		7841285E16F44F5600AC78B0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7841285C16F44F5600AC78B0 /* InfoPlist.strings */; };
 		7841286016F44F5600AC78B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7841285F16F44F5600AC78B0 /* main.m */; };
 		7841286416F44F5600AC78B0 /* OSSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7841286316F44F5600AC78B0 /* OSSAppDelegate.m */; };
-		7841286616F44F5600AC78B0 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7841286516F44F5600AC78B0 /* Default.png */; };
-		7841286816F44F5600AC78B0 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7841286716F44F5600AC78B0 /* Default@2x.png */; };
-		7841286A16F44F5600AC78B0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7841286916F44F5600AC78B0 /* Default-568h@2x.png */; };
 		7841286D16F44F5600AC78B0 /* OSSMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7841286C16F44F5600AC78B0 /* OSSMasterViewController.m */; };
 		7841287016F44F5600AC78B0 /* OSSDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7841286F16F44F5600AC78B0 /* OSSDetailViewController.m */; };
 		7841287F16F45B7900AC78B0 /* OSSLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 7841287E16F45B7900AC78B0 /* OSSLibrary.m */; };
@@ -99,6 +96,9 @@
 		DAD9640516F9593E00E00D9E /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAD963FB16F9593E00E00D9E /* Icon@2x.png */; };
 		DAD9640616F9593E00E00D9E /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = DAD963FC16F9593E00E00D9E /* iTunesArtwork.png */; };
 		DAD9640716F9593E00E00D9E /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAD963FD16F9593E00E00D9E /* iTunesArtwork@2x.png */; };
+		DAE943AE16FAC8B000CBCD57 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DA486D4716F963A100ACA3C9 /* Default.png */; };
+		DAE943AF16FAC8B500CBCD57 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA486D4B16F963B400ACA3C9 /* Default@2x.png */; };
+		DAE943B016FAC8B800CBCD57 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA486D4916F963A500ACA3C9 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -130,9 +130,6 @@
 		7841286116F44F5600AC78B0 /* OSS Box-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OSS Box-Prefix.pch"; sourceTree = "<group>"; };
 		7841286216F44F5600AC78B0 /* OSSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSSAppDelegate.h; sourceTree = "<group>"; };
 		7841286316F44F5600AC78B0 /* OSSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSSAppDelegate.m; sourceTree = "<group>"; };
-		7841286516F44F5600AC78B0 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		7841286716F44F5600AC78B0 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		7841286916F44F5600AC78B0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		7841286B16F44F5600AC78B0 /* OSSMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSSMasterViewController.h; sourceTree = "<group>"; };
 		7841286C16F44F5600AC78B0 /* OSSMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSSMasterViewController.m; sourceTree = "<group>"; };
 		7841286E16F44F5600AC78B0 /* OSSDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSSDetailViewController.h; sourceTree = "<group>"; };
@@ -203,9 +200,9 @@
 		DA486D4116F9634F00ACA3C9 /* launchIcon3.5retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchIcon3.5retina.png; sourceTree = "<group>"; };
 		DA486D4216F9634F00ACA3C9 /* launchIcon4retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchIcon4retina.png; sourceTree = "<group>"; };
 		DA486D4316F9634F00ACA3C9 /* launchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchImage.png; sourceTree = "<group>"; };
-		DA486D4716F963A100ACA3C9 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		DA486D4916F963A500ACA3C9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		DA486D4B16F963B400ACA3C9 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		DA486D4716F963A100ACA3C9 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
+		DA486D4916F963A500ACA3C9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		DA486D4B16F963B400ACA3C9 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
 		DA6BB2E016F93DAB0078350E /* OSSList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OSSList.plist; sourceTree = "<group>"; };
 		DA6BB2E316F9478E0078350E /* DDProgressView.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DDProgressView.plist; sourceTree = "<group>"; };
 		DA83121B16F9493800B18B80 /* DDProgressViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDProgressViewViewController.h; sourceTree = "<group>"; };
@@ -318,9 +315,6 @@
 		7841284716F44F5600AC78B0 = {
 			isa = PBXGroup;
 			children = (
-				DA486D4B16F963B400ACA3C9 /* Default@2x.png */,
-				DA486D4916F963A500ACA3C9 /* Default-568h@2x.png */,
-				DA486D4716F963A100ACA3C9 /* Default.png */,
 				DAB8396C16F8D48A000447D7 /* Icon@2x.png */,
 				DAB8396A16F8D474000447D7 /* Icon.png */,
 				7841285916F44F5600AC78B0 /* OSS Box */,
@@ -377,9 +371,9 @@
 				7841285C16F44F5600AC78B0 /* InfoPlist.strings */,
 				7841285F16F44F5600AC78B0 /* main.m */,
 				7841286116F44F5600AC78B0 /* OSS Box-Prefix.pch */,
-				7841286516F44F5600AC78B0 /* Default.png */,
-				7841286716F44F5600AC78B0 /* Default@2x.png */,
-				7841286916F44F5600AC78B0 /* Default-568h@2x.png */,
+				DA486D4916F963A500ACA3C9 /* Default-568h@2x.png */,
+				DA486D4B16F963B400ACA3C9 /* Default@2x.png */,
+				DA486D4716F963A100ACA3C9 /* Default.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -621,9 +615,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7841285E16F44F5600AC78B0 /* InfoPlist.strings in Resources */,
-				7841286616F44F5600AC78B0 /* Default.png in Resources */,
-				7841286816F44F5600AC78B0 /* Default@2x.png in Resources */,
-				7841286A16F44F5600AC78B0 /* Default-568h@2x.png in Resources */,
 				7841288216F460A400AC78B0 /* UIGlossyButton.plist in Resources */,
 				7815F08B16F484DD0075C77F /* MBProgressHUD.plist in Resources */,
 				7815F09116F487320075C77F /* HudDemoViewController.xib in Resources */,
@@ -687,6 +678,9 @@
 				DA486D4416F9634F00ACA3C9 /* launchIcon3.5retina.png in Resources */,
 				DA486D4516F9634F00ACA3C9 /* launchIcon4retina.png in Resources */,
 				DA486D4616F9634F00ACA3C9 /* launchImage.png in Resources */,
+				DAE943AE16FAC8B000CBCD57 /* Default.png in Resources */,
+				DAE943AF16FAC8B500CBCD57 /* Default@2x.png in Resources */,
+				DAE943B016FAC8B800CBCD57 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
