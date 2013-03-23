@@ -143,12 +143,11 @@
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    CGRect sbFrame = _searchBar.frame;
-    sbFrame.origin.y = _searchView.frame.origin.y - scrollView.contentOffset.y;
-//    NSLog(@"%f %f %f ",_searchView.frame.origin.y, scrollView.contentOffset.y, sbFrame.origin.y);
-    if (sbFrame.origin.y > 0) {
-        sbFrame.origin.y = scrollView.contentOffset.y;
-        _searchBar.frame = sbFrame;
+    if (scrollView.contentOffset.y <= 0) {
+        [_searchBar setFrame:CGRectMake(0,
+                                        scrollView.contentOffset.y,
+                                        _searchBar.frame.size.width,
+                                        _searchBar.frame.size.height)];
     }
 }
 
