@@ -42,8 +42,8 @@
 
 - (void)viewDidLoad
 {
-    UIImage *bkgImage = [UIImage imageNamed:@"Default.png"];
-    self.view.backgroundColor = [UIColor colorWithPatternImage:bkgImage];
+//    UIImage *bkgImage = [UIImage imageNamed:@"Default.png"];
+    self.view.backgroundColor = [UIColor blackColor];
     self.view.contentMode = UIViewContentModeScaleAspectFill;
     [self.view setOpaque:YES];
 }
