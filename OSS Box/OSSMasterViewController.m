@@ -109,6 +109,7 @@
     NSDictionary* cellData = [_objects[indexPath.section] objectForKey:@"rows"][indexPath.row];
     cell.textLabel.text = [cellData objectForKey:@"name"];
     cell.detailTextLabel.text = [cellData objectForKey:@"detail"];
+
     return cell;
 }
 

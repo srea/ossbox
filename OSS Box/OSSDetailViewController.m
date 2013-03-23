@@ -71,12 +71,12 @@
 
 - (UIButton *)button:(NSString *)title for:(SEL)selector {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:16];
+    button.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:17];
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [button setTitleShadowColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
-    button.titleLabel.shadowOffset = CGSizeMake(0, -1);
+    button.titleLabel.shadowOffset = CGSizeMake(0, 1);
     CGSize size = [title sizeWithFont:button.titleLabel.font];
-    button.frame = CGRectMake(0, 0, size.width + 20, 26);
+    button.frame = CGRectMake(0, 0, size.width + 40, 30);
     [button setTitle:title forState:UIControlStateNormal];
     [button addTarget:self action:selector forControlEvents:UIControlEventTouchUpInside];
     button.layer.cornerRadius = 3;
