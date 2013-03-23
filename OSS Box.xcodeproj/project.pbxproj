@@ -116,6 +116,9 @@
 		DAF6736316FD5A2A000EE8E7 /* EDFourthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAF6735B16FD5A2A000EE8E7 /* EDFourthViewController.xib */; };
 		DAF6736616FD5A61000EE8E7 /* EDColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF6736516FD5A61000EE8E7 /* EDColorViewController.m */; };
 		DAF6736816FD6F8A000EE8E7 /* memo.txt in Resources */ = {isa = PBXBuildFile; fileRef = DAF6736716FD6F8A000EE8E7 /* memo.txt */; };
+		DAF6736B16FD71A7000EE8E7 /* Color-Picker-for-iOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAF6736A16FD71A7000EE8E7 /* Color-Picker-for-iOS.plist */; };
+		DAF6736E16FD7349000EE8E7 /* ColorPickerForiOSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF6736D16FD7349000EE8E7 /* ColorPickerForiOSViewController.m */; };
+		DAF6737016FD7B11000EE8E7 /* memo_Color-Picker-for-iOS.txt in Resources */ = {isa = PBXBuildFile; fileRef = DAF6736F16FD7B11000EE8E7 /* memo_Color-Picker-for-iOS.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -259,6 +262,10 @@
 		DAF6736416FD5A61000EE8E7 /* EDColorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDColorViewController.h; sourceTree = "<group>"; };
 		DAF6736516FD5A61000EE8E7 /* EDColorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDColorViewController.m; sourceTree = "<group>"; };
 		DAF6736716FD6F8A000EE8E7 /* memo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = memo.txt; sourceTree = "<group>"; };
+		DAF6736A16FD71A7000EE8E7 /* Color-Picker-for-iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Color-Picker-for-iOS.plist"; sourceTree = "<group>"; };
+		DAF6736C16FD7349000EE8E7 /* ColorPickerForiOSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorPickerForiOSViewController.h; sourceTree = "<group>"; };
+		DAF6736D16FD7349000EE8E7 /* ColorPickerForiOSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorPickerForiOSViewController.m; sourceTree = "<group>"; };
+		DAF6736F16FD7B11000EE8E7 /* memo_Color-Picker-for-iOS.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "memo_Color-Picker-for-iOS.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -604,6 +611,7 @@
 		DAF6733F16FD5860000EE8E7 /* Color */ = {
 			isa = PBXGroup;
 			children = (
+				DAF6736916FD7176000EE8E7 /* Color-Picker-for-iOS */,
 				DAF6734016FD58FC000EE8E7 /* EDColor */,
 			);
 			name = Color;
@@ -627,8 +635,8 @@
 				DAF6735B16FD5A2A000EE8E7 /* EDFourthViewController.xib */,
 				DAF6736416FD5A61000EE8E7 /* EDColorViewController.h */,
 				DAF6736516FD5A61000EE8E7 /* EDColorViewController.m */,
-				DAF6734316FD5A09000EE8E7 /* image */,
 				DAF6734116FD590A000EE8E7 /* EDColor.plist */,
+				DAF6734316FD5A09000EE8E7 /* image */,
 			);
 			name = EDColor;
 			sourceTree = "<group>";
@@ -644,6 +652,17 @@
 				DAF6734916FD5A16000EE8E7 /* second@2x.png */,
 			);
 			name = image;
+			sourceTree = "<group>";
+		};
+		DAF6736916FD7176000EE8E7 /* Color-Picker-for-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				DAF6736C16FD7349000EE8E7 /* ColorPickerForiOSViewController.h */,
+				DAF6736D16FD7349000EE8E7 /* ColorPickerForiOSViewController.m */,
+				DAF6736A16FD71A7000EE8E7 /* Color-Picker-for-iOS.plist */,
+				DAF6736F16FD7B11000EE8E7 /* memo_Color-Picker-for-iOS.txt */,
+			);
+			name = "Color-Picker-for-iOS";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -778,6 +797,8 @@
 				DAF6736116FD5A2A000EE8E7 /* EDThirdViewController.xib in Resources */,
 				DAF6736316FD5A2A000EE8E7 /* EDFourthViewController.xib in Resources */,
 				DAF6736816FD6F8A000EE8E7 /* memo.txt in Resources */,
+				DAF6736B16FD71A7000EE8E7 /* Color-Picker-for-iOS.plist in Resources */,
+				DAF6737016FD7B11000EE8E7 /* memo_Color-Picker-for-iOS.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -831,6 +852,7 @@
 				DAF6736016FD5A2A000EE8E7 /* EDThirdViewController.m in Sources */,
 				DAF6736216FD5A2A000EE8E7 /* EDFourthViewController.m in Sources */,
 				DAF6736616FD5A61000EE8E7 /* EDColorViewController.m in Sources */,
+				DAF6736E16FD7349000EE8E7 /* ColorPickerForiOSViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
