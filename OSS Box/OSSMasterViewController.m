@@ -10,12 +10,12 @@
 #import "OSSDetailViewController.h"
 #import "OSSAboutViewController.h"
 
-@interface OSSMasterViewController () <UINavigationBarDelegate,UINavigationControllerDelegate> {
+@interface OSSMasterViewController () <UINavigationBarDelegate,UINavigationControllerDelegate,UISearchBarDelegate> {
     NSMutableArray *_objects;
     NSArray *_title;
-//    BOOL _isSearch;
+    BOOL _isSearch;
 }
-//@property (nonatomic,strong)UISearchBar *searchBar;
+@property (nonatomic,strong)UISearchBar *searchBar;
 @end
 
 @implementation OSSMasterViewController
@@ -38,23 +38,23 @@
     self.navigationController.navigationBar.tintColor = [UIColor darkGrayColor];    
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"About" style:UIBarButtonItemStyleBordered target:self action:@selector(aboutButtonDidPush:)];
 
-//    self.searchBar = [[UISearchBar alloc]initWithFrame:CGRectMake(0, 0, self.tableView.frame.size.width, 44.0f)];
-//    [self.searchBar setDelegate:self];
-//    self.searchBar.tintColor = [UIColor darkGrayColor];
-//    self.tableView.tableHeaderView = self.searchBar;
-//    [self.tableView.tableHeaderView sizeToFit];
+    self.searchBar = [[UISearchBar alloc]initWithFrame:CGRectMake(0, 0, self.tableView.frame.size.width, 44.0f)];
+    [self.searchBar setDelegate:self];
+    self.searchBar.tintColor = [UIColor darkGrayColor];
+    self.tableView.tableHeaderView = self.searchBar;
+    [self.tableView.tableHeaderView sizeToFit];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-//    [self.tableView setContentOffset:CGPointMake(0, 44)];
+    [self.tableView setContentOffset:CGPointMake(0, 44)];
 }
 
-//- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
-//    [self.tableView setContentOffset:CGPointMake(0, 44) animated:YES];
-//    [self.searchBar resignFirstResponder];
-//}
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
+    [self.tableView setContentOffset:CGPointMake(0, 44) animated:YES];
+    [self.searchBar resignFirstResponder];
+}
 
 - (void)aboutButtonDidPush:(id)sender
 {
@@ -73,7 +73,7 @@
 
 - (void)initDataSource
 {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"OSSList" ofType:@"plist"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"OSSListDev" ofType:@"plist"];
     _objects = [NSArray arrayWithContentsOfFile:path];
 }
 

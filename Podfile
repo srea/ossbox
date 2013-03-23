@@ -50,3 +50,7 @@ pod 'AJNotificationView', '0.7'
 
 #other
 pod 'InAppSettingsKit', '1.0'
+
+#color
+pod 'EDColor', '0.2.0'
+ 

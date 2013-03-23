@@ -165,5 +165,28 @@
 			</dict>
 		</array>
 	</dict>
+	<dict>
+		<key>section</key>
+		<string>Color</string>
+		<key>rows</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>EDColor</string>
+				<key>detail</key>
+				<string></string>
+				<key>New item</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>KZColorPicker</string>
+				<key>detail</key>
+				<string></string>
+				<key>New item</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
 </array>
 </plist>

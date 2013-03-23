@@ -99,6 +99,23 @@
 		DAE943AE16FAC8B000CBCD57 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DA486D4716F963A100ACA3C9 /* Default.png */; };
 		DAE943AF16FAC8B500CBCD57 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA486D4B16F963B400ACA3C9 /* Default@2x.png */; };
 		DAE943B016FAC8B800CBCD57 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA486D4916F963A500ACA3C9 /* Default-568h@2x.png */; };
+		DAF6734216FD590A000EE8E7 /* EDColor.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAF6734116FD590A000EE8E7 /* EDColor.plist */; };
+		DAF6734A16FD5A16000EE8E7 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = DAF6734416FD5A16000EE8E7 /* background.png */; };
+		DAF6734B16FD5A16000EE8E7 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAF6734516FD5A16000EE8E7 /* background@2x.png */; };
+		DAF6734C16FD5A16000EE8E7 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = DAF6734616FD5A16000EE8E7 /* first.png */; };
+		DAF6734D16FD5A16000EE8E7 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAF6734716FD5A16000EE8E7 /* first@2x.png */; };
+		DAF6734E16FD5A16000EE8E7 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = DAF6734816FD5A16000EE8E7 /* second.png */; };
+		DAF6734F16FD5A16000EE8E7 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAF6734916FD5A16000EE8E7 /* second@2x.png */; };
+		DAF6735C16FD5A2A000EE8E7 /* EDFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF6735116FD5A2A000EE8E7 /* EDFirstViewController.m */; };
+		DAF6735D16FD5A2A000EE8E7 /* EDFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAF6735216FD5A2A000EE8E7 /* EDFirstViewController.xib */; };
+		DAF6735E16FD5A2A000EE8E7 /* EDSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF6735416FD5A2A000EE8E7 /* EDSecondViewController.m */; };
+		DAF6735F16FD5A2A000EE8E7 /* EDSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAF6735516FD5A2A000EE8E7 /* EDSecondViewController.xib */; };
+		DAF6736016FD5A2A000EE8E7 /* EDThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF6735716FD5A2A000EE8E7 /* EDThirdViewController.m */; };
+		DAF6736116FD5A2A000EE8E7 /* EDThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAF6735816FD5A2A000EE8E7 /* EDThirdViewController.xib */; };
+		DAF6736216FD5A2A000EE8E7 /* EDFourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF6735A16FD5A2A000EE8E7 /* EDFourthViewController.m */; };
+		DAF6736316FD5A2A000EE8E7 /* EDFourthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAF6735B16FD5A2A000EE8E7 /* EDFourthViewController.xib */; };
+		DAF6736616FD5A61000EE8E7 /* EDColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF6736516FD5A61000EE8E7 /* EDColorViewController.m */; };
+		DAF6736816FD6F8A000EE8E7 /* memo.txt in Resources */ = {isa = PBXBuildFile; fileRef = DAF6736716FD6F8A000EE8E7 /* memo.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -220,6 +237,28 @@
 		DAD963FB16F9593E00E00D9E /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		DAD963FC16F9593E00E00D9E /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		DAD963FD16F9593E00E00D9E /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		DAF6734116FD590A000EE8E7 /* EDColor.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EDColor.plist; sourceTree = "<group>"; };
+		DAF6734416FD5A16000EE8E7 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		DAF6734516FD5A16000EE8E7 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
+		DAF6734616FD5A16000EE8E7 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		DAF6734716FD5A16000EE8E7 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		DAF6734816FD5A16000EE8E7 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		DAF6734916FD5A16000EE8E7 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		DAF6735016FD5A2A000EE8E7 /* EDFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDFirstViewController.h; sourceTree = "<group>"; };
+		DAF6735116FD5A2A000EE8E7 /* EDFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDFirstViewController.m; sourceTree = "<group>"; };
+		DAF6735216FD5A2A000EE8E7 /* EDFirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EDFirstViewController.xib; sourceTree = "<group>"; };
+		DAF6735316FD5A2A000EE8E7 /* EDSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDSecondViewController.h; sourceTree = "<group>"; };
+		DAF6735416FD5A2A000EE8E7 /* EDSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDSecondViewController.m; sourceTree = "<group>"; };
+		DAF6735516FD5A2A000EE8E7 /* EDSecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EDSecondViewController.xib; sourceTree = "<group>"; };
+		DAF6735616FD5A2A000EE8E7 /* EDThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDThirdViewController.h; sourceTree = "<group>"; };
+		DAF6735716FD5A2A000EE8E7 /* EDThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDThirdViewController.m; sourceTree = "<group>"; };
+		DAF6735816FD5A2A000EE8E7 /* EDThirdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EDThirdViewController.xib; sourceTree = "<group>"; };
+		DAF6735916FD5A2A000EE8E7 /* EDFourthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDFourthViewController.h; sourceTree = "<group>"; };
+		DAF6735A16FD5A2A000EE8E7 /* EDFourthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDFourthViewController.m; sourceTree = "<group>"; };
+		DAF6735B16FD5A2A000EE8E7 /* EDFourthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EDFourthViewController.xib; sourceTree = "<group>"; };
+		DAF6736416FD5A61000EE8E7 /* EDColorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDColorViewController.h; sourceTree = "<group>"; };
+		DAF6736516FD5A61000EE8E7 /* EDColorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDColorViewController.m; sourceTree = "<group>"; };
+		DAF6736716FD6F8A000EE8E7 /* memo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = memo.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -390,6 +429,7 @@
 		7841288016F4607D00AC78B0 /* library */ = {
 			isa = PBXGroup;
 			children = (
+				DAF6733F16FD5860000EE8E7 /* Color */,
 				DA6BB2E216F9477B0078350E /* DDProgressView */,
 				7850371F16F603FC0045510D /* ZGParallelView */,
 				7850371916F5FE0C0045510D /* REMenu */,
@@ -561,6 +601,51 @@
 			name = icon;
 			sourceTree = "<group>";
 		};
+		DAF6733F16FD5860000EE8E7 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				DAF6734016FD58FC000EE8E7 /* EDColor */,
+			);
+			name = Color;
+			sourceTree = "<group>";
+		};
+		DAF6734016FD58FC000EE8E7 /* EDColor */ = {
+			isa = PBXGroup;
+			children = (
+				DAF6736716FD6F8A000EE8E7 /* memo.txt */,
+				DAF6735016FD5A2A000EE8E7 /* EDFirstViewController.h */,
+				DAF6735116FD5A2A000EE8E7 /* EDFirstViewController.m */,
+				DAF6735216FD5A2A000EE8E7 /* EDFirstViewController.xib */,
+				DAF6735316FD5A2A000EE8E7 /* EDSecondViewController.h */,
+				DAF6735416FD5A2A000EE8E7 /* EDSecondViewController.m */,
+				DAF6735516FD5A2A000EE8E7 /* EDSecondViewController.xib */,
+				DAF6735616FD5A2A000EE8E7 /* EDThirdViewController.h */,
+				DAF6735716FD5A2A000EE8E7 /* EDThirdViewController.m */,
+				DAF6735816FD5A2A000EE8E7 /* EDThirdViewController.xib */,
+				DAF6735916FD5A2A000EE8E7 /* EDFourthViewController.h */,
+				DAF6735A16FD5A2A000EE8E7 /* EDFourthViewController.m */,
+				DAF6735B16FD5A2A000EE8E7 /* EDFourthViewController.xib */,
+				DAF6736416FD5A61000EE8E7 /* EDColorViewController.h */,
+				DAF6736516FD5A61000EE8E7 /* EDColorViewController.m */,
+				DAF6734316FD5A09000EE8E7 /* image */,
+				DAF6734116FD590A000EE8E7 /* EDColor.plist */,
+			);
+			name = EDColor;
+			sourceTree = "<group>";
+		};
+		DAF6734316FD5A09000EE8E7 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				DAF6734416FD5A16000EE8E7 /* background.png */,
+				DAF6734516FD5A16000EE8E7 /* background@2x.png */,
+				DAF6734616FD5A16000EE8E7 /* first.png */,
+				DAF6734716FD5A16000EE8E7 /* first@2x.png */,
+				DAF6734816FD5A16000EE8E7 /* second.png */,
+				DAF6734916FD5A16000EE8E7 /* second@2x.png */,
+			);
+			name = image;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -681,6 +766,18 @@
 				DAE943AE16FAC8B000CBCD57 /* Default.png in Resources */,
 				DAE943AF16FAC8B500CBCD57 /* Default@2x.png in Resources */,
 				DAE943B016FAC8B800CBCD57 /* Default-568h@2x.png in Resources */,
+				DAF6734216FD590A000EE8E7 /* EDColor.plist in Resources */,
+				DAF6734A16FD5A16000EE8E7 /* background.png in Resources */,
+				DAF6734B16FD5A16000EE8E7 /* background@2x.png in Resources */,
+				DAF6734C16FD5A16000EE8E7 /* first.png in Resources */,
+				DAF6734D16FD5A16000EE8E7 /* first@2x.png in Resources */,
+				DAF6734E16FD5A16000EE8E7 /* second.png in Resources */,
+				DAF6734F16FD5A16000EE8E7 /* second@2x.png in Resources */,
+				DAF6735D16FD5A2A000EE8E7 /* EDFirstViewController.xib in Resources */,
+				DAF6735F16FD5A2A000EE8E7 /* EDSecondViewController.xib in Resources */,
+				DAF6736116FD5A2A000EE8E7 /* EDThirdViewController.xib in Resources */,
+				DAF6736316FD5A2A000EE8E7 /* EDFourthViewController.xib in Resources */,
+				DAF6736816FD6F8A000EE8E7 /* memo.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -729,6 +826,11 @@
 				7850371E16F5FF5A0045510D /* REMenuViewController.m in Sources */,
 				7850372616F606290045510D /* ZGParallelViewController.m in Sources */,
 				DA83121E16F9493800B18B80 /* DDProgressViewViewController.m in Sources */,
+				DAF6735C16FD5A2A000EE8E7 /* EDFirstViewController.m in Sources */,
+				DAF6735E16FD5A2A000EE8E7 /* EDSecondViewController.m in Sources */,
+				DAF6736016FD5A2A000EE8E7 /* EDThirdViewController.m in Sources */,
+				DAF6736216FD5A2A000EE8E7 /* EDFourthViewController.m in Sources */,
+				DAF6736616FD5A61000EE8E7 /* EDColorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
