@@ -186,6 +186,14 @@
 				<key>New item</key>
 				<string></string>
 			</dict>
+			<dict>
+				<key>name</key>
+				<string>Color-Picker-for-iOS</string>
+				<key>detail</key>
+				<string></string>
+				<key>New item</key>
+				<string></string>
+			</dict>
 		</array>
 	</dict>
 </array>

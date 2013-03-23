@@ -53,4 +53,4 @@ pod 'InAppSettingsKit', '1.0'
 
 #color
 pod 'EDColor', '0.2.0'
- 
+pod 'Color-Picker-for-iOS', '0.1.1'
