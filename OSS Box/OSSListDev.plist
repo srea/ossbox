@@ -74,28 +74,12 @@
 	</dict>
 	<dict>
 		<key>section</key>
-		<string>Other</string>
+		<string>Camera</string>
 		<key>rows</key>
 		<array>
 			<dict>
 				<key>name</key>
-				<string>iCarousel</string>
-				<key>detail</key>
-				<string></string>
-				<key>New item</key>
-				<string></string>
-			</dict>
-			<dict>
-				<key>name</key>
-				<string>REMenu</string>
-				<key>detail</key>
-				<string></string>
-				<key>New item</key>
-				<string></string>
-			</dict>
-			<dict>
-				<key>name</key>
-				<string>MFSideMenu</string>
+				<string>DLCImagePickerController</string>
 				<key>detail</key>
 				<string></string>
 				<key>New item</key>
@@ -191,6 +175,37 @@
 				<string>Color-Picker-for-iOS</string>
 				<key>detail</key>
 				<string>シンプルで分かりやすいカラーピッカー</string>
+				<key>New item</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>section</key>
+		<string>Other</string>
+		<key>rows</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>iCarousel</string>
+				<key>detail</key>
+				<string></string>
+				<key>New item</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>REMenu</string>
+				<key>detail</key>
+				<string></string>
+				<key>New item</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>MFSideMenu</string>
+				<key>detail</key>
+				<string></string>
 				<key>New item</key>
 				<string></string>
 			</dict>

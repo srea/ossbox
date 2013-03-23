@@ -1,0 +1,9 @@
+pod にもDLCがあったがそれは使わず
+https://github.com/gobackspaces/DLCImagePickerController/tree/0.0.1
+これのプロジェクトのソースをそのまま取り入れた。
+
+ずっとエラーが出てできなかったが、もしかしたら、フレームワークを追加するだけでいけたかもしれない。
+余裕があったら試してみよう。
+
+cocoa podのものと全く同じだからこのままでいいや。
+https://github.com/gobackspaces/DLCImagePickerController.git

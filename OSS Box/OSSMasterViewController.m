@@ -10,7 +10,7 @@
 #import "OSSDetailViewController.h"
 #import "OSSAboutViewController.h"
 
-@interface OSSMasterViewController () <UINavigationBarDelegate,UINavigationControllerDelegate,UISearchBarDelegate,UIScrollViewDelegate> {
+@interface OSSMasterViewController () <UISearchBarDelegate,UIScrollViewDelegate> {
     NSMutableArray *_objects;
     NSArray *_title;
     BOOL _isSearch;
@@ -126,13 +126,25 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-// viewDidLoadが呼ばれなくなるのでコメントアウト
-//    if (!self.detailViewController) {
+    // viewDidLoadが呼ばれなくなるのでコメントアウト
+    if (!self.detailViewController) {
         self.detailViewController = [[OSSDetailViewController alloc] init];
-//    }
+    }
     NSDictionary *object = [_objects[indexPath.section] objectForKey:@"rows"][indexPath.row];
     self.detailViewController.detailItem = object;
     [self.navigationController pushViewController:self.detailViewController animated:YES];
+}
+
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+    
+    if(NO) {
+        return nil;
+    }
+    NSMutableArray *tempArray = [[NSMutableArray alloc] init];
+    for (NSDictionary*section in _objects) {
+        [tempArray addObject:[section objectForKey:@"section"]];
+    }
+    return tempArray;
 }
 
 #pragma mark - UIScrollView Delegate

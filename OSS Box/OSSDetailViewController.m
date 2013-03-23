@@ -14,12 +14,6 @@
 #import <MGBoxLine.h>
 #import <MGStyledBox.h>
 
-#import "HudDemoViewController.h"
-#import "iCarouselExampleViewController.h"
-#import "NoticeViewController.h"
-#import "SVProgressHUDViewController.h"
-#import "AJNotificationViewController.h"
-
 #define ANIM_SPEED 0
 
 @interface OSSDetailViewController ()
@@ -91,10 +85,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.title = [_library name];
     [self.view setBackgroundColor: [UIColor colorWithPatternImage:[UIImage imageNamed:@"background-dark-gray-tex.png"]]];
     
     UIFont *headerFont = [UIFont fontWithName:@"HelveticaNeue-Bold" size:16];
-    
+
+    [_scroller.boxes removeAllObjects];
     _scroller.alwaysBounceVertical = YES;
     _scroller.delegate = self;
     
@@ -150,7 +151,7 @@
     
     [_scroller drawBoxesWithSpeed:ANIM_SPEED];
     [_scroller flashScrollIndicators];
-    
+    [_scroller setContentOffset:CGPointMake(0, 0)];
 }
 
 - (void)addBox:(UIButton *)sender {
@@ -166,13 +167,6 @@
     
     [_scroller drawBoxesWithSpeed:ANIM_SPEED];
     [_scroller flashScrollIndicators];
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    
-    self.title = [_detailItem objectForKey:@"name"];
 }
 
 - (void)didReceiveMemoryWarning
