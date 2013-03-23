@@ -43,12 +43,14 @@
     self.searchBar.tintColor = [UIColor darkGrayColor];
     self.tableView.tableHeaderView = self.searchBar;
     [self.tableView.tableHeaderView sizeToFit];
+    // 検索バーを隠す
+    [self.tableView setContentOffset:CGPointMake(0, 44)];
+
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self.tableView setContentOffset:CGPointMake(0, 44)];
 }
 
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
