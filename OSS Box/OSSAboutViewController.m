@@ -47,7 +47,14 @@
     MGBoxLine *author = [MGBoxLine lineWithLeft:@"Author" right:@"srea"];
     author.font = headerFont;
     [box1.topLines addObject:author];
-
+    
+    // new section
+    MGStyledBox *box2 = [MGStyledBox box];
+    [_scroller.boxes addObject:box2];
+    MGBoxLine *count = [MGBoxLine lineWithLeft:@"Count" right:@"10"];
+    count.font = headerFont;
+    [box2.topLines addObject:count];
+    
     [_scroller drawBoxesWithSpeed:ANIM_SPEED];
     [_scroller flashScrollIndicators];
     

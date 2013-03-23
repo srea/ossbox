@@ -10,12 +10,13 @@
 #import "OSSDetailViewController.h"
 #import "OSSAboutViewController.h"
 
-@interface OSSMasterViewController () <UINavigationBarDelegate,UINavigationControllerDelegate,UISearchBarDelegate> {
+@interface OSSMasterViewController () <UINavigationBarDelegate,UINavigationControllerDelegate,UISearchBarDelegate,UIScrollViewDelegate> {
     NSMutableArray *_objects;
     NSArray *_title;
     BOOL _isSearch;
 }
-@property (nonatomic,strong)UISearchBar *searchBar;
+@property (nonatomic,strong) UISearchBar *searchBar;
+@property (nonatomic,strong) UIView *searchView;
 @end
 
 @implementation OSSMasterViewController
@@ -26,10 +27,16 @@
     self = [super init];
     if (self) {
         self.title = @"OSS Box";
-
+        
         [self initDataSource];
     }
     return self;
+}
+
+- (void)loadView
+{
+    [super loadView];
+    _searchView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.tableView.frame.size.width, 44.0f)];
 }
 							
 - (void)viewDidLoad
@@ -38,19 +45,23 @@
     self.navigationController.navigationBar.tintColor = [UIColor darkGrayColor];    
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"About" style:UIBarButtonItemStyleBordered target:self action:@selector(aboutButtonDidPush:)];
 
-    self.searchBar = [[UISearchBar alloc]initWithFrame:CGRectMake(0, 0, self.tableView.frame.size.width, 44.0f)];
+    // 検索
+    self.searchBar = [[UISearchBar alloc]initWithFrame:CGRectZero];
     [self.searchBar setDelegate:self];
     self.searchBar.tintColor = [UIColor darkGrayColor];
-    self.tableView.tableHeaderView = self.searchBar;
+    [_searchView addSubview:self.searchBar];
+    
+    self.tableView.tableHeaderView = _searchView;
     [self.tableView.tableHeaderView sizeToFit];
+    
     // 検索バーを隠す
     [self.tableView setContentOffset:CGPointMake(0, 44)];
-
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [_searchBar sizeToFit];
 }
 
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
@@ -122,6 +133,23 @@
     NSDictionary *object = [_objects[indexPath.section] objectForKey:@"rows"][indexPath.row];
     self.detailViewController.detailItem = object;
     [self.navigationController pushViewController:self.detailViewController animated:YES];
+}
+
+#pragma mark - UIScrollView Delegate
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    [self.searchBar resignFirstResponder];
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    CGRect sbFrame = _searchBar.frame;
+    sbFrame.origin.y = _searchView.frame.origin.y - scrollView.contentOffset.y;
+//    NSLog(@"%f %f %f ",_searchView.frame.origin.y, scrollView.contentOffset.y, sbFrame.origin.y);
+    if (sbFrame.origin.y > 0) {
+        sbFrame.origin.y = scrollView.contentOffset.y;
+        _searchBar.frame = sbFrame;
+    }
 }
 
 @end
