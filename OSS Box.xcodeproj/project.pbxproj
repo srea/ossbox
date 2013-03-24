@@ -78,6 +78,18 @@
 		787B098916F4D4290099D96D /* premium-header-mid-skinny.png in Resources */ = {isa = PBXBuildFile; fileRef = 787B098216F4D4240099D96D /* premium-header-mid-skinny.png */; };
 		787B098A16F4D4290099D96D /* premium-header-mid-skinny@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 787B098316F4D4250099D96D /* premium-header-mid-skinny@2x.png */; };
 		D089809BEB2D4EDD828FFF4C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E63AF5263EF4C9F972C5B83 /* libPods.a */; };
+		DA231A8716FEB0E2003CF385 /* Icon_Activity.png in Resources */ = {isa = PBXBuildFile; fileRef = DA231A7F16FEB0E2003CF385 /* Icon_Activity.png */; };
+		DA231A8816FEB0E2003CF385 /* Icon_Activity@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA231A8016FEB0E2003CF385 /* Icon_Activity@2x.png */; };
+		DA231A8916FEB0E2003CF385 /* Icon_Explore.png in Resources */ = {isa = PBXBuildFile; fileRef = DA231A8116FEB0E2003CF385 /* Icon_Explore.png */; };
+		DA231A8A16FEB0E2003CF385 /* Icon_Explore@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA231A8216FEB0E2003CF385 /* Icon_Explore@2x.png */; };
+		DA231A8B16FEB0E2003CF385 /* Icon_Home.png in Resources */ = {isa = PBXBuildFile; fileRef = DA231A8316FEB0E2003CF385 /* Icon_Home.png */; };
+		DA231A8C16FEB0E2003CF385 /* Icon_Home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA231A8416FEB0E2003CF385 /* Icon_Home@2x.png */; };
+		DA231A8D16FEB0E2003CF385 /* Icon_Profile.png in Resources */ = {isa = PBXBuildFile; fileRef = DA231A8516FEB0E2003CF385 /* Icon_Profile.png */; };
+		DA231A8E16FEB0E2003CF385 /* Icon_Profile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA231A8616FEB0E2003CF385 /* Icon_Profile@2x.png */; };
+		DA231A9516FEB125003CF385 /* FPPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA231A8F16FEB125003CF385 /* FPPopoverController.m */; };
+		DA231A9616FEB125003CF385 /* FPPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA231A9016FEB125003CF385 /* FPPopoverView.m */; };
+		DA231A9716FEB125003CF385 /* FPTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA231A9416FEB125003CF385 /* FPTouchView.m */; };
+		DA231A9916FEB1B7003CF385 /* memo_FPPopover.txt in Resources */ = {isa = PBXBuildFile; fileRef = DA231A9816FEB1B7003CF385 /* memo_FPPopover.txt */; };
 		DA486D4016F95C9900ACA3C9 /* OSSListDev.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA486D3F16F95C9900ACA3C9 /* OSSListDev.plist */; };
 		DA486D4416F9634F00ACA3C9 /* launchIcon3.5retina.png in Resources */ = {isa = PBXBuildFile; fileRef = DA486D4116F9634F00ACA3C9 /* launchIcon3.5retina.png */; };
 		DA486D4516F9634F00ACA3C9 /* launchIcon4retina.png in Resources */ = {isa = PBXBuildFile; fileRef = DA486D4216F9634F00ACA3C9 /* launchIcon4retina.png */; };
@@ -306,6 +318,15 @@
 		DAB9296D16FE0E050055FB36 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB9296C16FE0E050055FB36 /* AVFoundation.framework */; };
 		DAB9296F16FE0E3A0055FB36 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB9296E16FE0E3A0055FB36 /* AssetsLibrary.framework */; };
 		DAB9297116FE0FA20055FB36 /* memo_DLCImagePickerController.txt in Resources */ = {isa = PBXBuildFile; fileRef = DAB9297016FE0FA20055FB36 /* memo_DLCImagePickerController.txt */; };
+		DAB9297516FE9F8C0055FB36 /* ColorPopover.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAB9297416FE9F8C0055FB36 /* ColorPopover.plist */; };
+		DAB9297916FEA0860055FB36 /* ColorPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB9297716FEA0860055FB36 /* ColorPopoverController.m */; };
+		DAB9297A16FEA0860055FB36 /* ColorPopoverController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAB9297816FEA0860055FB36 /* ColorPopoverController.xib */; };
+		DAB9297F16FEA58B0055FB36 /* FPPopover.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAB9297E16FEA58B0055FB36 /* FPPopover.plist */; };
+		DAB9298116FEA5960055FB36 /* WEPopover.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAB9298016FEA5960055FB36 /* WEPopover.plist */; };
+		DAB9298F16FEA9360055FB36 /* FPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAB9298E16FEA9360055FB36 /* FPViewController.xib */; };
+		DAB9299416FEA9810055FB36 /* FPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB9299116FEA9810055FB36 /* FPViewController.m */; };
+		DAB9299516FEA9810055FB36 /* FPDemoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB9299316FEA9810055FB36 /* FPDemoTableViewController.m */; };
+		DAB9299816FEA9890055FB36 /* DemoTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB9299716FEA9890055FB36 /* DemoTableController.m */; };
 		DAD963FE16F9593E00E00D9E /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = DAD963F416F9593E00E00D9E /* Icon-72.png */; };
 		DAD963FF16F9593E00E00D9E /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAD963F516F9593E00E00D9E /* Icon-72@2x.png */; };
 		DAD9640016F9593E00E00D9E /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = DAD963F616F9593E00E00D9E /* Icon-Small-50.png */; };
@@ -436,6 +457,21 @@
 		787B098216F4D4240099D96D /* premium-header-mid-skinny.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "premium-header-mid-skinny.png"; sourceTree = "<group>"; };
 		787B098316F4D4250099D96D /* premium-header-mid-skinny@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "premium-header-mid-skinny@2x.png"; sourceTree = "<group>"; };
 		A662BBC36E794E1F92D28E49 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		DA231A7F16FEB0E2003CF385 /* Icon_Activity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_Activity.png; sourceTree = "<group>"; };
+		DA231A8016FEB0E2003CF385 /* Icon_Activity@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon_Activity@2x.png"; sourceTree = "<group>"; };
+		DA231A8116FEB0E2003CF385 /* Icon_Explore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_Explore.png; sourceTree = "<group>"; };
+		DA231A8216FEB0E2003CF385 /* Icon_Explore@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon_Explore@2x.png"; sourceTree = "<group>"; };
+		DA231A8316FEB0E2003CF385 /* Icon_Home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_Home.png; sourceTree = "<group>"; };
+		DA231A8416FEB0E2003CF385 /* Icon_Home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon_Home@2x.png"; sourceTree = "<group>"; };
+		DA231A8516FEB0E2003CF385 /* Icon_Profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_Profile.png; sourceTree = "<group>"; };
+		DA231A8616FEB0E2003CF385 /* Icon_Profile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon_Profile@2x.png"; sourceTree = "<group>"; };
+		DA231A8F16FEB125003CF385 /* FPPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPPopoverController.m; sourceTree = "<group>"; };
+		DA231A9016FEB125003CF385 /* FPPopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPPopoverView.m; sourceTree = "<group>"; };
+		DA231A9116FEB125003CF385 /* FPPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPPopoverController.h; sourceTree = "<group>"; };
+		DA231A9216FEB125003CF385 /* FPPopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPPopoverView.h; sourceTree = "<group>"; };
+		DA231A9316FEB125003CF385 /* FPTouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPTouchView.h; sourceTree = "<group>"; };
+		DA231A9416FEB125003CF385 /* FPTouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPTouchView.m; sourceTree = "<group>"; };
+		DA231A9816FEB1B7003CF385 /* memo_FPPopover.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = memo_FPPopover.txt; sourceTree = "<group>"; };
 		DA486D3F16F95C9900ACA3C9 /* OSSListDev.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OSSListDev.plist; sourceTree = "<group>"; };
 		DA486D4116F9634F00ACA3C9 /* launchIcon3.5retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchIcon3.5retina.png; sourceTree = "<group>"; };
 		DA486D4216F9634F00ACA3C9 /* launchIcon4retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchIcon4retina.png; sourceTree = "<group>"; };
@@ -818,6 +854,20 @@
 		DAB9296C16FE0E050055FB36 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		DAB9296E16FE0E3A0055FB36 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		DAB9297016FE0FA20055FB36 /* memo_DLCImagePickerController.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = memo_DLCImagePickerController.txt; sourceTree = "<group>"; };
+		DAB9297416FE9F8C0055FB36 /* ColorPopover.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ColorPopover.plist; sourceTree = "<group>"; };
+		DAB9297616FEA0860055FB36 /* ColorPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorPopoverController.h; sourceTree = "<group>"; };
+		DAB9297716FEA0860055FB36 /* ColorPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorPopoverController.m; sourceTree = "<group>"; };
+		DAB9297816FEA0860055FB36 /* ColorPopoverController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorPopoverController.xib; sourceTree = "<group>"; };
+		DAB9297E16FEA58B0055FB36 /* FPPopover.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FPPopover.plist; sourceTree = "<group>"; };
+		DAB9298016FEA5960055FB36 /* WEPopover.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WEPopover.plist; sourceTree = "<group>"; };
+		DAB9298D16FEA77C0055FB36 /* ARCMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARCMacros.h; sourceTree = "<group>"; };
+		DAB9298E16FEA9360055FB36 /* FPViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FPViewController.xib; sourceTree = "<group>"; };
+		DAB9299016FEA9810055FB36 /* FPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPViewController.h; sourceTree = "<group>"; };
+		DAB9299116FEA9810055FB36 /* FPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPViewController.m; sourceTree = "<group>"; };
+		DAB9299216FEA9810055FB36 /* FPDemoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPDemoTableViewController.h; sourceTree = "<group>"; };
+		DAB9299316FEA9810055FB36 /* FPDemoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPDemoTableViewController.m; sourceTree = "<group>"; };
+		DAB9299616FEA9890055FB36 /* DemoTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoTableController.h; sourceTree = "<group>"; };
+		DAB9299716FEA9890055FB36 /* DemoTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoTableController.m; sourceTree = "<group>"; };
 		DAD963F416F9593E00E00D9E /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		DAD963F516F9593E00E00D9E /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
 		DAD963F616F9593E00E00D9E /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
@@ -955,12 +1005,6 @@
 		7841284716F44F5600AC78B0 = {
 			isa = PBXGroup;
 			children = (
-				DAB9296E16FE0E3A0055FB36 /* AssetsLibrary.framework */,
-				DAB9296C16FE0E050055FB36 /* AVFoundation.framework */,
-				DAB9296A16FE0DF80055FB36 /* QuartzCore.framework */,
-				DAB9296816FE0DF00055FB36 /* OpenGLES.framework */,
-				DAB9296616FE0DE90055FB36 /* CoreVideo.framework */,
-				DAB9296416FE0DE00055FB36 /* CoreMedia.framework */,
 				DAB8396C16F8D48A000447D7 /* Icon@2x.png */,
 				DAB8396A16F8D474000447D7 /* Icon.png */,
 				7841285916F44F5600AC78B0 /* OSS Box */,
@@ -981,6 +1025,12 @@
 		7841285216F44F5600AC78B0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DAB9296E16FE0E3A0055FB36 /* AssetsLibrary.framework */,
+				DAB9296C16FE0E050055FB36 /* AVFoundation.framework */,
+				DAB9296A16FE0DF80055FB36 /* QuartzCore.framework */,
+				DAB9296816FE0DF00055FB36 /* OpenGLES.framework */,
+				DAB9296616FE0DE90055FB36 /* CoreVideo.framework */,
+				DAB9296416FE0DE00055FB36 /* CoreMedia.framework */,
 				7841285316F44F5600AC78B0 /* UIKit.framework */,
 				7841285516F44F5600AC78B0 /* Foundation.framework */,
 				7841285716F44F5600AC78B0 /* CoreGraphics.framework */,
@@ -992,16 +1042,7 @@
 		7841285916F44F5600AC78B0 /* OSS Box */ = {
 			isa = PBXGroup;
 			children = (
-				DA6BB2E016F93DAB0078350E /* OSSList.plist */,
-				DA486D3F16F95C9900ACA3C9 /* OSSListDev.plist */,
-				7841286216F44F5600AC78B0 /* OSSAppDelegate.h */,
-				7841286316F44F5600AC78B0 /* OSSAppDelegate.m */,
-				7841286B16F44F5600AC78B0 /* OSSMasterViewController.h */,
-				7841286C16F44F5600AC78B0 /* OSSMasterViewController.m */,
-				7841286E16F44F5600AC78B0 /* OSSDetailViewController.h */,
-				7841286F16F44F5600AC78B0 /* OSSDetailViewController.m */,
-				7850371616F5F6610045510D /* OSSAboutViewController.h */,
-				7850371716F5F6620045510D /* OSSAboutViewController.m */,
+				DAB9297216FE9F650055FB36 /* Classes */,
 				7841288016F4607D00AC78B0 /* library */,
 				7841287C16F45B6900AC78B0 /* model */,
 				DAB8395316F8D435000447D7 /* Image */,
@@ -1036,6 +1077,7 @@
 		7841288016F4607D00AC78B0 /* library */ = {
 			isa = PBXGroup;
 			children = (
+				DAB9297B16FEA5670055FB36 /* Popover */,
 				DAB488BC16FDD5E000DCB55D /* Camera */,
 				DAF6733F16FD5860000EE8E7 /* Color */,
 				DA6BB2E216F9477B0078350E /* DDProgressView */,
@@ -1105,6 +1147,14 @@
 		7850371916F5FE0C0045510D /* REMenu */ = {
 			isa = PBXGroup;
 			children = (
+				DA231A7F16FEB0E2003CF385 /* Icon_Activity.png */,
+				DA231A8016FEB0E2003CF385 /* Icon_Activity@2x.png */,
+				DA231A8116FEB0E2003CF385 /* Icon_Explore.png */,
+				DA231A8216FEB0E2003CF385 /* Icon_Explore@2x.png */,
+				DA231A8316FEB0E2003CF385 /* Icon_Home.png */,
+				DA231A8416FEB0E2003CF385 /* Icon_Home@2x.png */,
+				DA231A8516FEB0E2003CF385 /* Icon_Profile.png */,
+				DA231A8616FEB0E2003CF385 /* Icon_Profile@2x.png */,
 				7850371C16F5FF5A0045510D /* REMenuViewController.h */,
 				7850371D16F5FF5A0045510D /* REMenuViewController.m */,
 				7850371A16F5FE7E0045510D /* REMenu.plist */,
@@ -1641,6 +1691,74 @@
 			name = GPUImage;
 			sourceTree = "<group>";
 		};
+		DAB9297216FE9F650055FB36 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DA6BB2E016F93DAB0078350E /* OSSList.plist */,
+				DA486D3F16F95C9900ACA3C9 /* OSSListDev.plist */,
+				7841286216F44F5600AC78B0 /* OSSAppDelegate.h */,
+				7841286316F44F5600AC78B0 /* OSSAppDelegate.m */,
+				7841286B16F44F5600AC78B0 /* OSSMasterViewController.h */,
+				7841286C16F44F5600AC78B0 /* OSSMasterViewController.m */,
+				7841286E16F44F5600AC78B0 /* OSSDetailViewController.h */,
+				7841286F16F44F5600AC78B0 /* OSSDetailViewController.m */,
+				7850371616F5F6610045510D /* OSSAboutViewController.h */,
+				7850371716F5F6620045510D /* OSSAboutViewController.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		DAB9297316FE9F790055FB36 /* ColorPopover */ = {
+			isa = PBXGroup;
+			children = (
+				DAB9297616FEA0860055FB36 /* ColorPopoverController.h */,
+				DAB9297716FEA0860055FB36 /* ColorPopoverController.m */,
+				DAB9297816FEA0860055FB36 /* ColorPopoverController.xib */,
+				DAB9297416FE9F8C0055FB36 /* ColorPopover.plist */,
+			);
+			name = ColorPopover;
+			sourceTree = "<group>";
+		};
+		DAB9297B16FEA5670055FB36 /* Popover */ = {
+			isa = PBXGroup;
+			children = (
+				DAB9297D16FEA5740055FB36 /* WEPopover */,
+				DAB9297C16FEA56E0055FB36 /* FPPopover */,
+			);
+			name = Popover;
+			sourceTree = "<group>";
+		};
+		DAB9297C16FEA56E0055FB36 /* FPPopover */ = {
+			isa = PBXGroup;
+			children = (
+				DA231A9116FEB125003CF385 /* FPPopoverController.h */,
+				DA231A8F16FEB125003CF385 /* FPPopoverController.m */,
+				DA231A9216FEB125003CF385 /* FPPopoverView.h */,
+				DA231A9016FEB125003CF385 /* FPPopoverView.m */,
+				DA231A9316FEB125003CF385 /* FPTouchView.h */,
+				DA231A9416FEB125003CF385 /* FPTouchView.m */,
+				DAB9299016FEA9810055FB36 /* FPViewController.h */,
+				DAB9299116FEA9810055FB36 /* FPViewController.m */,
+				DAB9299216FEA9810055FB36 /* FPDemoTableViewController.h */,
+				DAB9299316FEA9810055FB36 /* FPDemoTableViewController.m */,
+				DAB9298E16FEA9360055FB36 /* FPViewController.xib */,
+				DAB9298D16FEA77C0055FB36 /* ARCMacros.h */,
+				DAB9299616FEA9890055FB36 /* DemoTableController.h */,
+				DAB9299716FEA9890055FB36 /* DemoTableController.m */,
+				DAB9297E16FEA58B0055FB36 /* FPPopover.plist */,
+				DA231A9816FEB1B7003CF385 /* memo_FPPopover.txt */,
+			);
+			name = FPPopover;
+			sourceTree = "<group>";
+		};
+		DAB9297D16FEA5740055FB36 /* WEPopover */ = {
+			isa = PBXGroup;
+			children = (
+				DAB9298016FEA5960055FB36 /* WEPopover.plist */,
+			);
+			name = WEPopover;
+			sourceTree = "<group>";
+		};
 		DAD963EB16F9583200E00D9E /* icon */ = {
 			isa = PBXGroup;
 			children = (
@@ -1661,6 +1779,7 @@
 		DAF6733F16FD5860000EE8E7 /* Color */ = {
 			isa = PBXGroup;
 			children = (
+				DAB9297316FE9F790055FB36 /* ColorPopover */,
 				DAF6736916FD7176000EE8E7 /* Color-Picker-for-iOS */,
 				DAF6734016FD58FC000EE8E7 /* EDColor */,
 			);
@@ -1916,6 +2035,20 @@
 				DAB9240416FDD8030055FB36 /* 1@2x.jpg in Resources */,
 				DAB927AF16FE02380055FB36 /* DLCImagePicker.xib in Resources */,
 				DAB9297116FE0FA20055FB36 /* memo_DLCImagePickerController.txt in Resources */,
+				DAB9297516FE9F8C0055FB36 /* ColorPopover.plist in Resources */,
+				DAB9297A16FEA0860055FB36 /* ColorPopoverController.xib in Resources */,
+				DAB9297F16FEA58B0055FB36 /* FPPopover.plist in Resources */,
+				DAB9298116FEA5960055FB36 /* WEPopover.plist in Resources */,
+				DAB9298F16FEA9360055FB36 /* FPViewController.xib in Resources */,
+				DA231A8716FEB0E2003CF385 /* Icon_Activity.png in Resources */,
+				DA231A8816FEB0E2003CF385 /* Icon_Activity@2x.png in Resources */,
+				DA231A8916FEB0E2003CF385 /* Icon_Explore.png in Resources */,
+				DA231A8A16FEB0E2003CF385 /* Icon_Explore@2x.png in Resources */,
+				DA231A8B16FEB0E2003CF385 /* Icon_Home.png in Resources */,
+				DA231A8C16FEB0E2003CF385 /* Icon_Home@2x.png in Resources */,
+				DA231A8D16FEB0E2003CF385 /* Icon_Profile.png in Resources */,
+				DA231A8E16FEB0E2003CF385 /* Icon_Profile@2x.png in Resources */,
+				DA231A9916FEB1B7003CF385 /* memo_FPPopover.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2117,6 +2250,13 @@
 				DAB9296116FE0D530055FB36 /* GPUImageMovieWriter.m in Sources */,
 				DAB9296216FE0D530055FB36 /* GPUImageTextureOutput.m in Sources */,
 				DAB9296316FE0D530055FB36 /* GPUImageRawDataOutput.m in Sources */,
+				DAB9297916FEA0860055FB36 /* ColorPopoverController.m in Sources */,
+				DAB9299416FEA9810055FB36 /* FPViewController.m in Sources */,
+				DAB9299516FEA9810055FB36 /* FPDemoTableViewController.m in Sources */,
+				DAB9299816FEA9890055FB36 /* DemoTableController.m in Sources */,
+				DA231A9516FEB125003CF385 /* FPPopoverController.m in Sources */,
+				DA231A9616FEB125003CF385 /* FPPopoverView.m in Sources */,
+				DA231A9716FEB125003CF385 /* FPTouchView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

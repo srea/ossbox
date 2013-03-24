@@ -1,5 +1,6 @@
 platform :ios, '5.0'
 
+pod 'ARCMacro', '1.1'
 
   pod 'AFNetworking', '> 1.0'
   pod 'MBProgressHUD', '0.6'
@@ -54,6 +55,11 @@ pod 'InAppSettingsKit', '1.0'
 #color
 pod 'EDColor', '0.2.0'
 pod 'Color-Picker-for-iOS', '0.1.1'
+pod 'ColorPopover', '0.0.1'
+
+#popover
+pod 'WEPopover', '0.0.1'
+#pod 'FPPopover', '1.4' # 手で入れる 
 
 #camera
 #pod 'DLCImagePickerController', '0.0.1'

@@ -120,12 +120,12 @@
 	</dict>
 	<dict>
 		<key>section</key>
-		<string>Web View</string>
+		<string>Popover</string>
 		<key>rows</key>
 		<array>
 			<dict>
 				<key>name</key>
-				<string>NoticeView</string>
+				<string>FPPopover</string>
 				<key>detail</key>
 				<string></string>
 				<key>New item</key>
@@ -133,21 +133,19 @@
 			</dict>
 			<dict>
 				<key>name</key>
-				<string>AJNotificationView</string>
-				<key>detail</key>
-				<string></string>
-				<key>New item</key>
-				<string></string>
-			</dict>
-			<dict>
-				<key>name</key>
-				<string>KGStatusBar</string>
+				<string>WEPopover</string>
 				<key>detail</key>
 				<string></string>
 				<key>New item</key>
 				<string></string>
 			</dict>
 		</array>
+	</dict>
+	<dict>
+		<key>section</key>
+		<string>Web View</string>
+		<key>rows</key>
+		<array/>
 	</dict>
 	<dict>
 		<key>section</key>
@@ -175,6 +173,14 @@
 				<string>Color-Picker-for-iOS</string>
 				<key>detail</key>
 				<string>シンプルで分かりやすいカラーピッカー</string>
+				<key>New item</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>ColorPopover</string>
+				<key>detail</key>
+				<string></string>
 				<key>New item</key>
 				<string></string>
 			</dict>
