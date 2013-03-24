@@ -90,6 +90,8 @@
 		DA231A9616FEB125003CF385 /* FPPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA231A9016FEB125003CF385 /* FPPopoverView.m */; };
 		DA231A9716FEB125003CF385 /* FPTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA231A9416FEB125003CF385 /* FPTouchView.m */; };
 		DA231A9916FEB1B7003CF385 /* memo_FPPopover.txt in Resources */ = {isa = PBXBuildFile; fileRef = DA231A9816FEB1B7003CF385 /* memo_FPPopover.txt */; };
+		DA231AA416FEB613003CF385 /* WEPopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA231AA316FEB613003CF385 /* WEPopoverViewController.xib */; };
+		DA231AA616FEB8BE003CF385 /* memo_WEPopover.txt in Resources */ = {isa = PBXBuildFile; fileRef = DA231AA516FEB8BE003CF385 /* memo_WEPopover.txt */; };
 		DA486D4016F95C9900ACA3C9 /* OSSListDev.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA486D3F16F95C9900ACA3C9 /* OSSListDev.plist */; };
 		DA486D4416F9634F00ACA3C9 /* launchIcon3.5retina.png in Resources */ = {isa = PBXBuildFile; fileRef = DA486D4116F9634F00ACA3C9 /* launchIcon3.5retina.png */; };
 		DA486D4516F9634F00ACA3C9 /* launchIcon4retina.png in Resources */ = {isa = PBXBuildFile; fileRef = DA486D4216F9634F00ACA3C9 /* launchIcon4retina.png */; };
@@ -472,6 +474,8 @@
 		DA231A9316FEB125003CF385 /* FPTouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPTouchView.h; sourceTree = "<group>"; };
 		DA231A9416FEB125003CF385 /* FPTouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPTouchView.m; sourceTree = "<group>"; };
 		DA231A9816FEB1B7003CF385 /* memo_FPPopover.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = memo_FPPopover.txt; sourceTree = "<group>"; };
+		DA231AA316FEB613003CF385 /* WEPopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WEPopoverViewController.xib; sourceTree = "<group>"; };
+		DA231AA516FEB8BE003CF385 /* memo_WEPopover.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = memo_WEPopover.txt; sourceTree = "<group>"; };
 		DA486D3F16F95C9900ACA3C9 /* OSSListDev.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OSSListDev.plist; sourceTree = "<group>"; };
 		DA486D4116F9634F00ACA3C9 /* launchIcon3.5retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchIcon3.5retina.png; sourceTree = "<group>"; };
 		DA486D4216F9634F00ACA3C9 /* launchIcon4retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchIcon4retina.png; sourceTree = "<group>"; };
@@ -1754,7 +1758,9 @@
 		DAB9297D16FEA5740055FB36 /* WEPopover */ = {
 			isa = PBXGroup;
 			children = (
+				DA231AA316FEB613003CF385 /* WEPopoverViewController.xib */,
 				DAB9298016FEA5960055FB36 /* WEPopover.plist */,
+				DA231AA516FEB8BE003CF385 /* memo_WEPopover.txt */,
 			);
 			name = WEPopover;
 			sourceTree = "<group>";
@@ -2049,6 +2055,8 @@
 				DA231A8D16FEB0E2003CF385 /* Icon_Profile.png in Resources */,
 				DA231A8E16FEB0E2003CF385 /* Icon_Profile@2x.png in Resources */,
 				DA231A9916FEB1B7003CF385 /* memo_FPPopover.txt in Resources */,
+				DA231AA416FEB613003CF385 /* WEPopoverViewController.xib in Resources */,
+				DA231AA616FEB8BE003CF385 /* memo_WEPopover.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

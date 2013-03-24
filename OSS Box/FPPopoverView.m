@@ -57,8 +57,8 @@
         self.backgroundColor = [UIColor clearColor];
         self.clipsToBounds = YES;
         
-//        self.layer.shadowOpacity = 0.7;
-//        self.layer.shadowRadius = 5;
+        self.layer.shadowOpacity = 0.7; // MARK:レスポンス良くするには個々をコメントアウト
+        self.layer.shadowRadius = 5; // MARK:レスポンス良くするには個々をコメントアウト
         self.layer.shadowOffset = CGSizeMake(-3, 3);
 
         //to get working the animations

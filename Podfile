@@ -63,3 +63,6 @@ pod 'WEPopover', '0.0.1'
 
 #camera
 #pod 'DLCImagePickerController', '0.0.1'
+
+#textview
+pod 'HPGrowingTextView', '0.0.1'

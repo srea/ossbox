@@ -110,9 +110,9 @@
     MGBoxLine *author = [MGBoxLine lineWithLeft:@"Author" right:[_library author]];
     author.font = headerFont;
     [box1.topLines addObject:author];
-    //    MGBoxLine *author_url = [MGBoxLine lineWithLeft:nil right:[self button:@"Github" for:@selector(demoView:)]];
-    //    author_url.font = headerFont;
-    //    [box1.topLines addObject:author_url];
+    MGBoxLine *author_url = [MGBoxLine lineWithLeft:nil right:[self button:@"Github" for:@selector(demoView:)]];
+    author_url.font = headerFont;
+    [box1.topLines addObject:author_url];
     
     MGStyledBox *info = [MGStyledBox box];
     [_scroller.boxes addObject:info];

@@ -20,8 +20,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-        [self.view.layer setCornerRadius:6.0f];
-    //self.title = @"Popover Title";
+    [self.view.layer setCornerRadius:6.0f]; // MARK:add
+    self.title = @"Popover Title";
 }
 
 

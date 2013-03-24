@@ -31,14 +31,14 @@
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
-    [self.navigationController setNavigationBarHidden:NO];
+    // MARK:[self.navigationController setNavigationBarHidden:NO];
 
 }
 
 - (void) viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    // MARK:[self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
 - (void)viewDidUnload
