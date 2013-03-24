@@ -38,10 +38,12 @@
     
     //[self addBox:nil];
     
+    NSString *versionString = [NSString stringWithFormat:@"%@",[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"]];
+    
     // new section
     MGStyledBox *box1 = [MGStyledBox box];
     [_scroller.boxes addObject:box1];
-    MGBoxLine *head1 = [MGBoxLine lineWithLeft:@"Version" right:@"1.0.0"];
+    MGBoxLine *head1 = [MGBoxLine lineWithLeft:@"Version" right:versionString];
     head1.font = headerFont;
     [box1.topLines addObject:head1];
     MGBoxLine *author = [MGBoxLine lineWithLeft:@"Author" right:@"srea"];
