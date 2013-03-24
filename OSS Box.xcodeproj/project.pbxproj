@@ -92,6 +92,16 @@
 		DA231A9916FEB1B7003CF385 /* memo_FPPopover.txt in Resources */ = {isa = PBXBuildFile; fileRef = DA231A9816FEB1B7003CF385 /* memo_FPPopover.txt */; };
 		DA231AA416FEB613003CF385 /* WEPopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA231AA316FEB613003CF385 /* WEPopoverViewController.xib */; };
 		DA231AA616FEB8BE003CF385 /* memo_WEPopover.txt in Resources */ = {isa = PBXBuildFile; fileRef = DA231AA516FEB8BE003CF385 /* memo_WEPopover.txt */; };
+		DA231AAB16FEBA65003CF385 /* GrowingTextViewExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA231AAA16FEBA65003CF385 /* GrowingTextViewExampleViewController.m */; };
+		DA231AB416FEBA70003CF385 /* MessageEntrySendButton.png in Resources */ = {isa = PBXBuildFile; fileRef = DA231AAC16FEBA70003CF385 /* MessageEntrySendButton.png */; };
+		DA231AB516FEBA70003CF385 /* MessageEntrySendButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA231AAD16FEBA70003CF385 /* MessageEntrySendButton@2x.png */; };
+		DA231AB616FEBA70003CF385 /* MessageEntrySendButtonPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = DA231AAE16FEBA70003CF385 /* MessageEntrySendButtonPressed.png */; };
+		DA231AB716FEBA70003CF385 /* MessageEntrySendButtonPressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA231AAF16FEBA70003CF385 /* MessageEntrySendButtonPressed@2x.png */; };
+		DA231AB816FEBA70003CF385 /* MessageEntryBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = DA231AB016FEBA70003CF385 /* MessageEntryBackground.png */; };
+		DA231AB916FEBA70003CF385 /* MessageEntryBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA231AB116FEBA70003CF385 /* MessageEntryBackground@2x.png */; };
+		DA231ABA16FEBA70003CF385 /* MessageEntryInputField.png in Resources */ = {isa = PBXBuildFile; fileRef = DA231AB216FEBA70003CF385 /* MessageEntryInputField.png */; };
+		DA231ABB16FEBA70003CF385 /* MessageEntryInputField@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA231AB316FEBA70003CF385 /* MessageEntryInputField@2x.png */; };
+		DA231ABD16FEBA81003CF385 /* GrowingTextView.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA231ABC16FEBA81003CF385 /* GrowingTextView.plist */; };
 		DA486D4016F95C9900ACA3C9 /* OSSListDev.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA486D3F16F95C9900ACA3C9 /* OSSListDev.plist */; };
 		DA486D4416F9634F00ACA3C9 /* launchIcon3.5retina.png in Resources */ = {isa = PBXBuildFile; fileRef = DA486D4116F9634F00ACA3C9 /* launchIcon3.5retina.png */; };
 		DA486D4516F9634F00ACA3C9 /* launchIcon4retina.png in Resources */ = {isa = PBXBuildFile; fileRef = DA486D4216F9634F00ACA3C9 /* launchIcon4retina.png */; };
@@ -476,6 +486,17 @@
 		DA231A9816FEB1B7003CF385 /* memo_FPPopover.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = memo_FPPopover.txt; sourceTree = "<group>"; };
 		DA231AA316FEB613003CF385 /* WEPopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WEPopoverViewController.xib; sourceTree = "<group>"; };
 		DA231AA516FEB8BE003CF385 /* memo_WEPopover.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = memo_WEPopover.txt; sourceTree = "<group>"; };
+		DA231AA916FEBA65003CF385 /* GrowingTextViewExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrowingTextViewExampleViewController.h; sourceTree = "<group>"; };
+		DA231AAA16FEBA65003CF385 /* GrowingTextViewExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrowingTextViewExampleViewController.m; sourceTree = "<group>"; };
+		DA231AAC16FEBA70003CF385 /* MessageEntrySendButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MessageEntrySendButton.png; sourceTree = "<group>"; };
+		DA231AAD16FEBA70003CF385 /* MessageEntrySendButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MessageEntrySendButton@2x.png"; sourceTree = "<group>"; };
+		DA231AAE16FEBA70003CF385 /* MessageEntrySendButtonPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MessageEntrySendButtonPressed.png; sourceTree = "<group>"; };
+		DA231AAF16FEBA70003CF385 /* MessageEntrySendButtonPressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MessageEntrySendButtonPressed@2x.png"; sourceTree = "<group>"; };
+		DA231AB016FEBA70003CF385 /* MessageEntryBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MessageEntryBackground.png; sourceTree = "<group>"; };
+		DA231AB116FEBA70003CF385 /* MessageEntryBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MessageEntryBackground@2x.png"; sourceTree = "<group>"; };
+		DA231AB216FEBA70003CF385 /* MessageEntryInputField.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MessageEntryInputField.png; sourceTree = "<group>"; };
+		DA231AB316FEBA70003CF385 /* MessageEntryInputField@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MessageEntryInputField@2x.png"; sourceTree = "<group>"; };
+		DA231ABC16FEBA81003CF385 /* GrowingTextView.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GrowingTextView.plist; sourceTree = "<group>"; };
 		DA486D3F16F95C9900ACA3C9 /* OSSListDev.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OSSListDev.plist; sourceTree = "<group>"; };
 		DA486D4116F9634F00ACA3C9 /* launchIcon3.5retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchIcon3.5retina.png; sourceTree = "<group>"; };
 		DA486D4216F9634F00ACA3C9 /* launchIcon4retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchIcon4retina.png; sourceTree = "<group>"; };
@@ -1081,6 +1102,7 @@
 		7841288016F4607D00AC78B0 /* library */ = {
 			isa = PBXGroup;
 			children = (
+				DA231AA716FEBA45003CF385 /* TextView */,
 				DAB9297B16FEA5670055FB36 /* Popover */,
 				DAB488BC16FDD5E000DCB55D /* Camera */,
 				DAF6733F16FD5860000EE8E7 /* Color */,
@@ -1222,6 +1244,32 @@
 				787B096916F4C8F20099D96D /* KLNoteViewController.plist */,
 			);
 			name = KLNoteViewController;
+			sourceTree = "<group>";
+		};
+		DA231AA716FEBA45003CF385 /* TextView */ = {
+			isa = PBXGroup;
+			children = (
+				DA231AA816FEBA4A003CF385 /* GrowingTextView */,
+			);
+			name = TextView;
+			sourceTree = "<group>";
+		};
+		DA231AA816FEBA4A003CF385 /* GrowingTextView */ = {
+			isa = PBXGroup;
+			children = (
+				DA231ABC16FEBA81003CF385 /* GrowingTextView.plist */,
+				DA231AAC16FEBA70003CF385 /* MessageEntrySendButton.png */,
+				DA231AAD16FEBA70003CF385 /* MessageEntrySendButton@2x.png */,
+				DA231AAE16FEBA70003CF385 /* MessageEntrySendButtonPressed.png */,
+				DA231AAF16FEBA70003CF385 /* MessageEntrySendButtonPressed@2x.png */,
+				DA231AB016FEBA70003CF385 /* MessageEntryBackground.png */,
+				DA231AB116FEBA70003CF385 /* MessageEntryBackground@2x.png */,
+				DA231AB216FEBA70003CF385 /* MessageEntryInputField.png */,
+				DA231AB316FEBA70003CF385 /* MessageEntryInputField@2x.png */,
+				DA231AA916FEBA65003CF385 /* GrowingTextViewExampleViewController.h */,
+				DA231AAA16FEBA65003CF385 /* GrowingTextViewExampleViewController.m */,
+			);
+			name = GrowingTextView;
 			sourceTree = "<group>";
 		};
 		DA6BB2E216F9477B0078350E /* DDProgressView */ = {
@@ -2057,6 +2105,15 @@
 				DA231A9916FEB1B7003CF385 /* memo_FPPopover.txt in Resources */,
 				DA231AA416FEB613003CF385 /* WEPopoverViewController.xib in Resources */,
 				DA231AA616FEB8BE003CF385 /* memo_WEPopover.txt in Resources */,
+				DA231AB416FEBA70003CF385 /* MessageEntrySendButton.png in Resources */,
+				DA231AB516FEBA70003CF385 /* MessageEntrySendButton@2x.png in Resources */,
+				DA231AB616FEBA70003CF385 /* MessageEntrySendButtonPressed.png in Resources */,
+				DA231AB716FEBA70003CF385 /* MessageEntrySendButtonPressed@2x.png in Resources */,
+				DA231AB816FEBA70003CF385 /* MessageEntryBackground.png in Resources */,
+				DA231AB916FEBA70003CF385 /* MessageEntryBackground@2x.png in Resources */,
+				DA231ABA16FEBA70003CF385 /* MessageEntryInputField.png in Resources */,
+				DA231ABB16FEBA70003CF385 /* MessageEntryInputField@2x.png in Resources */,
+				DA231ABD16FEBA81003CF385 /* GrowingTextView.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2265,6 +2322,7 @@
 				DA231A9516FEB125003CF385 /* FPPopoverController.m in Sources */,
 				DA231A9616FEB125003CF385 /* FPPopoverView.m in Sources */,
 				DA231A9716FEB125003CF385 /* FPTouchView.m in Sources */,
+				DA231AAB16FEBA65003CF385 /* GrowingTextViewExampleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

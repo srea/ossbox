@@ -188,6 +188,21 @@
 	</dict>
 	<dict>
 		<key>section</key>
+		<string>TextView</string>
+		<key>rows</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>GrowingTextView</string>
+				<key>detail</key>
+				<string></string>
+				<key>New item</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>section</key>
 		<string>Other</string>
 		<key>rows</key>
 		<array>
