@@ -339,6 +339,21 @@
 		DAB9299416FEA9810055FB36 /* FPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB9299116FEA9810055FB36 /* FPViewController.m */; };
 		DAB9299516FEA9810055FB36 /* FPDemoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB9299316FEA9810055FB36 /* FPDemoTableViewController.m */; };
 		DAB9299816FEA9890055FB36 /* DemoTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB9299716FEA9890055FB36 /* DemoTableController.m */; };
+		DABC3A2616FEC3A800DB3CFA /* TMQuiltView.plist in Resources */ = {isa = PBXBuildFile; fileRef = DABC3A2516FEC3A800DB3CFA /* TMQuiltView.plist */; };
+		DABC3A2816FEC3D200DB3CFA /* TMDemoQuiltViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DABC3A2716FEC3D200DB3CFA /* TMDemoQuiltViewController.xib */; };
+		DABC3A2D16FEC3E800DB3CFA /* TMPhotoQuiltViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DABC3A2A16FEC3E800DB3CFA /* TMPhotoQuiltViewCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DABC3A2E16FEC3E800DB3CFA /* TMDemoQuiltViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DABC3A2C16FEC3E800DB3CFA /* TMDemoQuiltViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DABC3A3A16FEC48100DB3CFA /* 1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DABC3A3016FEC48000DB3CFA /* 1.jpeg */; };
+		DABC3A3B16FEC48100DB3CFA /* 2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DABC3A3116FEC48000DB3CFA /* 2.jpeg */; };
+		DABC3A3C16FEC48100DB3CFA /* 3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DABC3A3216FEC48000DB3CFA /* 3.jpeg */; };
+		DABC3A3D16FEC48100DB3CFA /* 4.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DABC3A3316FEC48100DB3CFA /* 4.jpeg */; };
+		DABC3A3E16FEC48100DB3CFA /* 5.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DABC3A3416FEC48100DB3CFA /* 5.jpeg */; };
+		DABC3A3F16FEC48100DB3CFA /* 6.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DABC3A3516FEC48100DB3CFA /* 6.jpeg */; };
+		DABC3A4016FEC48100DB3CFA /* 7.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DABC3A3616FEC48100DB3CFA /* 7.jpeg */; };
+		DABC3A4116FEC48100DB3CFA /* 8.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DABC3A3716FEC48100DB3CFA /* 8.jpeg */; };
+		DABC3A4216FEC48100DB3CFA /* 9.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DABC3A3816FEC48100DB3CFA /* 9.jpeg */; };
+		DABC3A4316FEC48100DB3CFA /* 10.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DABC3A3916FEC48100DB3CFA /* 10.jpeg */; };
+		DABC3A4516FEC95900DB3CFA /* memo_TMQuiltView.txt in Resources */ = {isa = PBXBuildFile; fileRef = DABC3A4416FEC95900DB3CFA /* memo_TMQuiltView.txt */; };
 		DAD963FE16F9593E00E00D9E /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = DAD963F416F9593E00E00D9E /* Icon-72.png */; };
 		DAD963FF16F9593E00E00D9E /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAD963F516F9593E00E00D9E /* Icon-72@2x.png */; };
 		DAD9640016F9593E00E00D9E /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = DAD963F616F9593E00E00D9E /* Icon-Small-50.png */; };
@@ -893,6 +908,23 @@
 		DAB9299316FEA9810055FB36 /* FPDemoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPDemoTableViewController.m; sourceTree = "<group>"; };
 		DAB9299616FEA9890055FB36 /* DemoTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoTableController.h; sourceTree = "<group>"; };
 		DAB9299716FEA9890055FB36 /* DemoTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoTableController.m; sourceTree = "<group>"; };
+		DABC3A2516FEC3A800DB3CFA /* TMQuiltView.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TMQuiltView.plist; sourceTree = "<group>"; };
+		DABC3A2716FEC3D200DB3CFA /* TMDemoQuiltViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TMDemoQuiltViewController.xib; sourceTree = "<group>"; };
+		DABC3A2916FEC3E800DB3CFA /* TMPhotoQuiltViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMPhotoQuiltViewCell.h; sourceTree = "<group>"; };
+		DABC3A2A16FEC3E800DB3CFA /* TMPhotoQuiltViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMPhotoQuiltViewCell.m; sourceTree = "<group>"; };
+		DABC3A2B16FEC3E800DB3CFA /* TMDemoQuiltViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDemoQuiltViewController.h; sourceTree = "<group>"; };
+		DABC3A2C16FEC3E800DB3CFA /* TMDemoQuiltViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDemoQuiltViewController.m; sourceTree = "<group>"; };
+		DABC3A3016FEC48000DB3CFA /* 1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpeg; sourceTree = "<group>"; };
+		DABC3A3116FEC48000DB3CFA /* 2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpeg; sourceTree = "<group>"; };
+		DABC3A3216FEC48000DB3CFA /* 3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpeg; sourceTree = "<group>"; };
+		DABC3A3316FEC48100DB3CFA /* 4.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpeg; sourceTree = "<group>"; };
+		DABC3A3416FEC48100DB3CFA /* 5.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpeg; sourceTree = "<group>"; };
+		DABC3A3516FEC48100DB3CFA /* 6.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpeg; sourceTree = "<group>"; };
+		DABC3A3616FEC48100DB3CFA /* 7.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7.jpeg; sourceTree = "<group>"; };
+		DABC3A3716FEC48100DB3CFA /* 8.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.jpeg; sourceTree = "<group>"; };
+		DABC3A3816FEC48100DB3CFA /* 9.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9.jpeg; sourceTree = "<group>"; };
+		DABC3A3916FEC48100DB3CFA /* 10.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10.jpeg; sourceTree = "<group>"; };
+		DABC3A4416FEC95900DB3CFA /* memo_TMQuiltView.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = memo_TMQuiltView.txt; sourceTree = "<group>"; };
 		DAD963F416F9593E00E00D9E /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		DAD963F516F9593E00E00D9E /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
 		DAD963F616F9593E00E00D9E /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
@@ -1102,6 +1134,7 @@
 		7841288016F4607D00AC78B0 /* library */ = {
 			isa = PBXGroup;
 			children = (
+				DABC3A2316FEC36E00DB3CFA /* View */,
 				DA231AA716FEBA45003CF385 /* TextView */,
 				DAB9297B16FEA5670055FB36 /* Popover */,
 				DAB488BC16FDD5E000DCB55D /* Camera */,
@@ -1110,9 +1143,6 @@
 				7850371F16F603FC0045510D /* ZGParallelView */,
 				7850371916F5FE0C0045510D /* REMenu */,
 				7850370D16F58E0A0045510D /* KGStatusBar */,
-				7850370516F585110045510D /* SVSegmentedControl */,
-				785036EE16F5819C0045510D /* MCSwipeTableViewCell */,
-				787B096816F4C8DB0099D96D /* KLNoteViewController */,
 				7815F0AE16F4A7180075C77F /* Notification */,
 				7815F09816F49FA20075C77F /* iCarousel */,
 				7815F08916F484BB0075C77F /* MBProgressHUD */,
@@ -1813,6 +1843,49 @@
 			name = WEPopover;
 			sourceTree = "<group>";
 		};
+		DABC3A2316FEC36E00DB3CFA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DABC3A2416FEC38700DB3CFA /* TMQuiltView */,
+				7850370516F585110045510D /* SVSegmentedControl */,
+				785036EE16F5819C0045510D /* MCSwipeTableViewCell */,
+				787B096816F4C8DB0099D96D /* KLNoteViewController */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		DABC3A2416FEC38700DB3CFA /* TMQuiltView */ = {
+			isa = PBXGroup;
+			children = (
+				DABC3A2F16FEC3F600DB3CFA /* images */,
+				DABC3A2916FEC3E800DB3CFA /* TMPhotoQuiltViewCell.h */,
+				DABC3A2A16FEC3E800DB3CFA /* TMPhotoQuiltViewCell.m */,
+				DABC3A2B16FEC3E800DB3CFA /* TMDemoQuiltViewController.h */,
+				DABC3A2C16FEC3E800DB3CFA /* TMDemoQuiltViewController.m */,
+				DABC3A2716FEC3D200DB3CFA /* TMDemoQuiltViewController.xib */,
+				DABC3A2516FEC3A800DB3CFA /* TMQuiltView.plist */,
+				DABC3A4416FEC95900DB3CFA /* memo_TMQuiltView.txt */,
+			);
+			name = TMQuiltView;
+			sourceTree = "<group>";
+		};
+		DABC3A2F16FEC3F600DB3CFA /* images */ = {
+			isa = PBXGroup;
+			children = (
+				DABC3A3016FEC48000DB3CFA /* 1.jpeg */,
+				DABC3A3116FEC48000DB3CFA /* 2.jpeg */,
+				DABC3A3216FEC48000DB3CFA /* 3.jpeg */,
+				DABC3A3316FEC48100DB3CFA /* 4.jpeg */,
+				DABC3A3416FEC48100DB3CFA /* 5.jpeg */,
+				DABC3A3516FEC48100DB3CFA /* 6.jpeg */,
+				DABC3A3616FEC48100DB3CFA /* 7.jpeg */,
+				DABC3A3716FEC48100DB3CFA /* 8.jpeg */,
+				DABC3A3816FEC48100DB3CFA /* 9.jpeg */,
+				DABC3A3916FEC48100DB3CFA /* 10.jpeg */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		DAD963EB16F9583200E00D9E /* icon */ = {
 			isa = PBXGroup;
 			children = (
@@ -2114,6 +2187,19 @@
 				DA231ABA16FEBA70003CF385 /* MessageEntryInputField.png in Resources */,
 				DA231ABB16FEBA70003CF385 /* MessageEntryInputField@2x.png in Resources */,
 				DA231ABD16FEBA81003CF385 /* GrowingTextView.plist in Resources */,
+				DABC3A2616FEC3A800DB3CFA /* TMQuiltView.plist in Resources */,
+				DABC3A2816FEC3D200DB3CFA /* TMDemoQuiltViewController.xib in Resources */,
+				DABC3A3A16FEC48100DB3CFA /* 1.jpeg in Resources */,
+				DABC3A3B16FEC48100DB3CFA /* 2.jpeg in Resources */,
+				DABC3A3C16FEC48100DB3CFA /* 3.jpeg in Resources */,
+				DABC3A3D16FEC48100DB3CFA /* 4.jpeg in Resources */,
+				DABC3A3E16FEC48100DB3CFA /* 5.jpeg in Resources */,
+				DABC3A3F16FEC48100DB3CFA /* 6.jpeg in Resources */,
+				DABC3A4016FEC48100DB3CFA /* 7.jpeg in Resources */,
+				DABC3A4116FEC48100DB3CFA /* 8.jpeg in Resources */,
+				DABC3A4216FEC48100DB3CFA /* 9.jpeg in Resources */,
+				DABC3A4316FEC48100DB3CFA /* 10.jpeg in Resources */,
+				DABC3A4516FEC95900DB3CFA /* memo_TMQuiltView.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2323,6 +2409,8 @@
 				DA231A9616FEB125003CF385 /* FPPopoverView.m in Sources */,
 				DA231A9716FEB125003CF385 /* FPTouchView.m in Sources */,
 				DA231AAB16FEBA65003CF385 /* GrowingTextViewExampleViewController.m in Sources */,
+				DABC3A2D16FEC3E800DB3CFA /* TMPhotoQuiltViewCell.m in Sources */,
+				DABC3A2E16FEC3E800DB3CFA /* TMDemoQuiltViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

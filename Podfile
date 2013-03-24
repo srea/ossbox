@@ -16,6 +16,8 @@ pod 'ARCMacro', '1.1'
   pod 'KGNoise'
   pod 'AKTabBarController', '~> 1.0.1'
   pod 'UIGlossyButton', '0.0.7'
+#tableview
+pod 'TMQuiltView', '0.0.1'
 #progress
 pod 'DDProgressView','0.1'
 #menu

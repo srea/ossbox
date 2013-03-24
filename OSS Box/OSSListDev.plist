@@ -70,6 +70,14 @@
 				<key>New item</key>
 				<string></string>
 			</dict>
+			<dict>
+				<key>name</key>
+				<string>TMQuiltView</string>
+				<key>detail</key>
+				<string></string>
+				<key>New item</key>
+				<string></string>
+			</dict>
 		</array>
 	</dict>
 	<dict>
