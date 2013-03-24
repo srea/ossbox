@@ -230,7 +230,11 @@
     Class class = NSClassFromString([_library controller]);
     id controller = [[class alloc]init];
     [controller setTitle:[_library name]];
-    [self.navigationController pushViewController:controller animated:YES];
+    if ([_library pageType] == 1) {
+        [self.navigationController presentModalViewController:controller animated:YES];
+    } else {
+        [self.navigationController pushViewController:controller animated:YES];        
+    }
 }
 
 - (MGBox *)parentBoxOf:(UIView *)view {

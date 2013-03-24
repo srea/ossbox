@@ -32,6 +32,11 @@
     _licenseBody = [libraryData objectForKey:@"licenseBody"];
     _detailText = [libraryData objectForKey:@"detailText"];
     _controller = [libraryData objectForKey:@"controller"];
+    if ([libraryData objectForKey:@"pageType"]) {
+        _pageType = [[libraryData objectForKey:@"pageType"] integerValue];        
+    } else {
+        _pageType = 0;
+    }
 }
 
 @end

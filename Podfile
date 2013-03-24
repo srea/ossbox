@@ -68,3 +68,6 @@ pod 'WEPopover', '0.0.1'
 
 #textview
 pod 'HPGrowingTextView', '0.0.1'
+
+#view
+#pod 'KNSemiModalViewController', '0.3' # source

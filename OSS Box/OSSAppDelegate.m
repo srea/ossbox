@@ -7,7 +7,6 @@
 //
 
 #import "OSSAppDelegate.h"
-
 #import "OSSMasterViewController.h"
 
 @implementation OSSAppDelegate

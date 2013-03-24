@@ -2,10 +2,10 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="8.00">
 	<data>
 		<int key="IBDocument.SystemTarget">1552</int>
-		<string key="IBDocument.SystemVersion">12C60</string>
+		<string key="IBDocument.SystemVersion">12D78</string>
 		<string key="IBDocument.InterfaceBuilderVersion">3084</string>
-		<string key="IBDocument.AppKitVersion">1187.34</string>
-		<string key="IBDocument.HIToolboxVersion">625.00</string>
+		<string key="IBDocument.AppKitVersion">1187.37</string>
+		<string key="IBDocument.HIToolboxVersion">626.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			<string key="NS.object.0">2083</string>
@@ -42,6 +42,7 @@
 						<object class="NSPSMatrix" key="NSFrameMatrix"/>
 						<string key="NSFrame">{{170, 64}, {130, 37}}</string>
 						<reference key="NSSuperview" ref="152920436"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="174952692"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -77,6 +78,7 @@
 						<object class="NSPSMatrix" key="NSFrameMatrix"/>
 						<string key="NSFrame">{{170, 109}, {130, 37}}</string>
 						<reference key="NSSuperview" ref="152920436"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="179645954"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -99,6 +101,7 @@
 						<object class="NSPSMatrix" key="NSFrameMatrix"/>
 						<string key="NSFrame">{{170, 154}, {130, 37}}</string>
 						<reference key="NSSuperview" ref="152920436"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="655785997"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -121,6 +124,7 @@
 						<object class="NSPSMatrix" key="NSFrameMatrix"/>
 						<string key="NSFrame">{{0, -3}, {320, 44}}</string>
 						<reference key="NSSuperview" ref="152920436"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="215778909"/>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -135,6 +139,7 @@
 						<object class="NSPSMatrix" key="NSFrameMatrix"/>
 						<string key="NSFrame">{{22, 64}, {130, 37}}</string>
 						<reference key="NSSuperview" ref="152920436"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="25836608"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -157,6 +162,7 @@
 						<object class="NSPSMatrix" key="NSFrameMatrix"/>
 						<string key="NSFrame">{{170, 332}, {130, 37}}</string>
 						<reference key="NSSuperview" ref="152920436"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="949386914"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -179,6 +185,7 @@
 						<object class="NSPSMatrix" key="NSFrameMatrix"/>
 						<string key="NSFrame">{{22, 109}, {130, 37}}</string>
 						<reference key="NSSuperview" ref="152920436"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="472138602"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -201,6 +208,7 @@
 						<object class="NSPSMatrix" key="NSFrameMatrix"/>
 						<string key="NSFrame">{{22, 154}, {130, 37}}</string>
 						<reference key="NSSuperview" ref="152920436"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="473300203"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -223,6 +231,7 @@
 						<object class="NSPSMatrix" key="NSFrameMatrix"/>
 						<string key="NSFrame">{{170, 199}, {130, 37}}</string>
 						<reference key="NSSuperview" ref="152920436"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="454229874"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -245,6 +254,7 @@
 						<object class="NSPSMatrix" key="NSFrameMatrix"/>
 						<string key="NSFrame">{{22, 199}, {130, 37}}</string>
 						<reference key="NSSuperview" ref="152920436"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="565719179"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -267,6 +277,7 @@
 						<object class="NSPSMatrix" key="NSFrameMatrix"/>
 						<string key="NSFrame">{{22, 288}, {130, 37}}</string>
 						<reference key="NSSuperview" ref="152920436"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="856334549"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -289,6 +300,7 @@
 						<object class="NSPSMatrix" key="NSFrameMatrix"/>
 						<string key="NSFrame">{{22, 332}, {130, 37}}</string>
 						<reference key="NSSuperview" ref="152920436"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="560002234"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -311,6 +323,7 @@
 						<object class="NSPSMatrix" key="NSFrameMatrix"/>
 						<string key="NSFrame">{{22, 329}, {130, 37}}</string>
 						<reference key="NSSuperview" ref="152920436"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="2024744"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -333,6 +346,7 @@
 						<object class="NSPSMatrix" key="NSFrameMatrix"/>
 						<string key="NSFrame">{{170, 329}, {130, 37}}</string>
 						<reference key="NSSuperview" ref="152920436"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="417190933"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -355,6 +369,7 @@
 						<object class="NSPSMatrix" key="NSFrameMatrix"/>
 						<string key="NSFrame">{{170, 388}, {130, 37}}</string>
 						<reference key="NSSuperview" ref="152920436"/>
+						<reference key="NSWindow"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -374,6 +389,7 @@
 				<object class="NSPSMatrix" key="NSFrameMatrix"/>
 				<string key="NSFrameSize">{320, 548}</string>
 				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="1036985663"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
@@ -583,11 +599,13 @@
 					<object class="IBObjectRecord">
 						<int key="objectID">116</int>
 						<reference key="object" ref="215778909"/>
+						<array class="NSMutableArray" key="children"/>
 						<reference key="parent" ref="152920436"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">117</int>
 						<reference key="object" ref="949386914"/>
+						<array class="NSMutableArray" key="children"/>
 						<reference key="parent" ref="152920436"/>
 					</object>
 					<object class="IBObjectRecord">
@@ -598,21 +616,25 @@
 					<object class="IBObjectRecord">
 						<int key="objectID">119</int>
 						<reference key="object" ref="856334549"/>
+						<array class="NSMutableArray" key="children"/>
 						<reference key="parent" ref="152920436"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">120</int>
 						<reference key="object" ref="2024744"/>
+						<array class="NSMutableArray" key="children"/>
 						<reference key="parent" ref="152920436"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">121</int>
 						<reference key="object" ref="454229874"/>
+						<array class="NSMutableArray" key="children"/>
 						<reference key="parent" ref="152920436"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">122</int>
 						<reference key="object" ref="655785997"/>
+						<array class="NSMutableArray" key="children"/>
 						<reference key="parent" ref="152920436"/>
 					</object>
 					<object class="IBObjectRecord">
@@ -623,11 +645,13 @@
 					<object class="IBObjectRecord">
 						<int key="objectID">124</int>
 						<reference key="object" ref="179645954"/>
+						<array class="NSMutableArray" key="children"/>
 						<reference key="parent" ref="152920436"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">125</int>
 						<reference key="object" ref="174952692"/>
+						<array class="NSMutableArray" key="children"/>
 						<reference key="parent" ref="152920436"/>
 					</object>
 					<object class="IBObjectRecord">
@@ -653,6 +677,7 @@
 					<object class="IBObjectRecord">
 						<int key="objectID">130</int>
 						<reference key="object" ref="25836608"/>
+						<array class="NSMutableArray" key="children"/>
 						<reference key="parent" ref="152920436"/>
 					</object>
 				</array>
@@ -715,9 +740,105 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">151</int>
+			<int key="maxID">279</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes"/>
+		<object class="IBClassDescriber" key="IBDocument.Classes">
+			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
+				<object class="IBPartialClassDescription">
+					<string key="className">NoticeViewController</string>
+					<string key="superclassName">UIViewController</string>
+					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="dismissStickyNotice:">id</string>
+						<string key="showLargeErrorNotice:">id</string>
+						<string key="showLargeErrorNoticeBelow:">id</string>
+						<string key="showQueuedErrorNotice:">id</string>
+						<string key="showSmallErrorNotice:">id</string>
+						<string key="showSmallErrorNoticeAndPush:">id</string>
+						<string key="showSmallErrorNoticeBelow:">id</string>
+						<string key="showSmallStickyNotice:">id</string>
+						<string key="showSmallStickyNoticeBelow:">id</string>
+						<string key="showSmallSuccessNotice:">id</string>
+						<string key="showSmallSuccessNoticeBelow:">id</string>
+						<string key="showStickyError:">id</string>
+						<string key="showStickyErrorNoticeAndPush:">id</string>
+						<string key="showStickyNoticeAndPush:">id</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="dismissStickyNotice:">
+							<string key="name">dismissStickyNotice:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="showLargeErrorNotice:">
+							<string key="name">showLargeErrorNotice:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="showLargeErrorNoticeBelow:">
+							<string key="name">showLargeErrorNoticeBelow:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="showQueuedErrorNotice:">
+							<string key="name">showQueuedErrorNotice:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="showSmallErrorNotice:">
+							<string key="name">showSmallErrorNotice:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="showSmallErrorNoticeAndPush:">
+							<string key="name">showSmallErrorNoticeAndPush:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="showSmallErrorNoticeBelow:">
+							<string key="name">showSmallErrorNoticeBelow:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="showSmallStickyNotice:">
+							<string key="name">showSmallStickyNotice:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="showSmallStickyNoticeBelow:">
+							<string key="name">showSmallStickyNoticeBelow:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="showSmallSuccessNotice:">
+							<string key="name">showSmallSuccessNotice:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="showSmallSuccessNoticeBelow:">
+							<string key="name">showSmallSuccessNoticeBelow:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="showStickyError:">
+							<string key="name">showStickyError:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="showStickyErrorNoticeAndPush:">
+							<string key="name">showStickyErrorNoticeAndPush:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="showStickyNoticeAndPush:">
+							<string key="name">showStickyNoticeAndPush:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</dictionary>
+					<object class="NSMutableDictionary" key="outlets">
+						<string key="NS.key.0">headerView</string>
+						<string key="NS.object.0">UIImageView</string>
+					</object>
+					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<string key="NS.key.0">headerView</string>
+						<object class="IBToOneOutletInfo" key="NS.object.0">
+							<string key="name">headerView</string>
+							<string key="candidateClassName">UIImageView</string>
+						</object>
+					</object>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/NoticeViewController.h</string>
+					</object>
+				</object>
+			</array>
+		</object>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaTouchFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>KNSemiModalView</string>
+	<key>author</key>
+	<string></string>
+	<key>url</key>
+	<string></string>
+	<key>version</key>
+	<string></string>
+	<key>arc</key>
+	<false/>
+	<key>targetOS</key>
+	<string>&gt;= iOS 5.0 </string>
+	<key>licenseType</key>
+	<string></string>
+	<key>licenseBody</key>
+	<string></string>
+	<key>detailText</key>
+	<string></string>
+	<key>controller</key>
+	<string>KNModalView</string>
+	<key>pageType</key>
+	<string>1</string>
+</dict>
+</plist>
