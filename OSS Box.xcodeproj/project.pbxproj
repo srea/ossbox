@@ -110,6 +110,13 @@
 		DA6BB2E416F9478E0078350E /* DDProgressView.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA6BB2E316F9478E0078350E /* DDProgressView.plist */; };
 		DA83121E16F9493800B18B80 /* DDProgressViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA83121C16F9493800B18B80 /* DDProgressViewViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DA83121F16F9493800B18B80 /* DDProgressViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA83121D16F9493800B18B80 /* DDProgressViewViewController.xib */; };
+		DA8C8E581701B044001F8A6D /* broom.png in Resources */ = {isa = PBXBuildFile; fileRef = DA8C8E541701B044001F8A6D /* broom.png */; };
+		DA8C8E591701B044001F8A6D /* broom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA8C8E551701B044001F8A6D /* broom@2x.png */; };
+		DA8C8E5A1701B044001F8A6D /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = DA8C8E561701B044001F8A6D /* camera.png */; };
+		DA8C8E5B1701B044001F8A6D /* camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA8C8E571701B044001F8A6D /* camera@2x.png */; };
+		DA8C8E5E1701B04E001F8A6D /* CXADemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8C8E5D1701B04E001F8A6D /* CXADemoViewController.m */; };
+		DA8C8E601701B0BC001F8A6D /* CXAImageSupport.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA8C8E5F1701B0BC001F8A6D /* CXAImageSupport.plist */; };
+		DA8C8E631701B13D001F8A6D /* UIMenuItem+CXAImageSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8C8E621701B13D001F8A6D /* UIMenuItem+CXAImageSupport.m */; };
 		DAB9236816FDD6CE0055FB36 /* DLCImagePickerController.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAB9236716FDD6CE0055FB36 /* DLCImagePickerController.plist */; };
 		DAB9238816FDD7990055FB36 /* aqua.acv in Resources */ = {isa = PBXBuildFile; fileRef = DAB9238116FDD7990055FB36 /* aqua.acv */; };
 		DAB9238916FDD7990055FB36 /* 02.acv in Resources */ = {isa = PBXBuildFile; fileRef = DAB9238216FDD7990055FB36 /* 02.acv */; };
@@ -539,6 +546,15 @@
 		DA83121B16F9493800B18B80 /* DDProgressViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDProgressViewViewController.h; sourceTree = "<group>"; };
 		DA83121C16F9493800B18B80 /* DDProgressViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDProgressViewViewController.m; sourceTree = "<group>"; };
 		DA83121D16F9493800B18B80 /* DDProgressViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DDProgressViewViewController.xib; sourceTree = "<group>"; };
+		DA8C8E541701B044001F8A6D /* broom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = broom.png; sourceTree = "<group>"; };
+		DA8C8E551701B044001F8A6D /* broom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "broom@2x.png"; sourceTree = "<group>"; };
+		DA8C8E561701B044001F8A6D /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
+		DA8C8E571701B044001F8A6D /* camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera@2x.png"; sourceTree = "<group>"; };
+		DA8C8E5C1701B04E001F8A6D /* CXADemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXADemoViewController.h; sourceTree = "<group>"; };
+		DA8C8E5D1701B04E001F8A6D /* CXADemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXADemoViewController.m; sourceTree = "<group>"; };
+		DA8C8E5F1701B0BC001F8A6D /* CXAImageSupport.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CXAImageSupport.plist; sourceTree = "<group>"; };
+		DA8C8E611701B13D001F8A6D /* UIMenuItem+CXAImageSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIMenuItem+CXAImageSupport.h"; sourceTree = "<group>"; };
+		DA8C8E621701B13D001F8A6D /* UIMenuItem+CXAImageSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIMenuItem+CXAImageSupport.m"; sourceTree = "<group>"; };
 		DAB8396A16F8D474000447D7 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		DAB8396C16F8D48A000447D7 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		DAB9236716FDD6CE0055FB36 /* DLCImagePickerController.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DLCImagePickerController.plist; sourceTree = "<group>"; };
@@ -1171,6 +1187,7 @@
 		7841288016F4607D00AC78B0 /* library */ = {
 			isa = PBXGroup;
 			children = (
+				DA8C8E511701B009001F8A6D /* Menu */,
 				DABC3A2316FEC36E00DB3CFA /* View */,
 				DA231AA716FEBA45003CF385 /* TextView */,
 				DAB9297B16FEA5670055FB36 /* Popover */,
@@ -1178,7 +1195,6 @@
 				DAF6733F16FD5860000EE8E7 /* Color */,
 				DA6BB2E216F9477B0078350E /* DDProgressView */,
 				7850371F16F603FC0045510D /* ZGParallelView */,
-				7850371916F5FE0C0045510D /* REMenu */,
 				7850370D16F58E0A0045510D /* KGStatusBar */,
 				7815F0AE16F4A7180075C77F /* Notification */,
 				7815F09816F49FA20075C77F /* iCarousel */,
@@ -1348,6 +1364,39 @@
 				DA6BB2E316F9478E0078350E /* DDProgressView.plist */,
 			);
 			name = DDProgressView;
+			sourceTree = "<group>";
+		};
+		DA8C8E511701B009001F8A6D /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				DA8C8E521701B012001F8A6D /* UIMenuItem-CXAImageSupport */,
+				7850371916F5FE0C0045510D /* REMenu */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		DA8C8E521701B012001F8A6D /* UIMenuItem-CXAImageSupport */ = {
+			isa = PBXGroup;
+			children = (
+				DA8C8E611701B13D001F8A6D /* UIMenuItem+CXAImageSupport.h */,
+				DA8C8E621701B13D001F8A6D /* UIMenuItem+CXAImageSupport.m */,
+				DA8C8E5F1701B0BC001F8A6D /* CXAImageSupport.plist */,
+				DA8C8E5C1701B04E001F8A6D /* CXADemoViewController.h */,
+				DA8C8E5D1701B04E001F8A6D /* CXADemoViewController.m */,
+				DA8C8E531701B037001F8A6D /* images */,
+			);
+			name = "UIMenuItem-CXAImageSupport";
+			sourceTree = "<group>";
+		};
+		DA8C8E531701B037001F8A6D /* images */ = {
+			isa = PBXGroup;
+			children = (
+				DA8C8E541701B044001F8A6D /* broom.png */,
+				DA8C8E551701B044001F8A6D /* broom@2x.png */,
+				DA8C8E561701B044001F8A6D /* camera.png */,
+				DA8C8E571701B044001F8A6D /* camera@2x.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 		DAB488BC16FDD5E000DCB55D /* Camera */ = {
@@ -2284,6 +2333,11 @@
 				DABC3A5D16FF558800DB3CFA /* KNThirdViewController.xib in Resources */,
 				DABC3A6816FF57A500DB3CFA /* temp.jpg in Resources */,
 				DABC3A6D16FF612900DB3CFA /* memo_KNSemiModalView.txt in Resources */,
+				DA8C8E581701B044001F8A6D /* broom.png in Resources */,
+				DA8C8E591701B044001F8A6D /* broom@2x.png in Resources */,
+				DA8C8E5A1701B044001F8A6D /* camera.png in Resources */,
+				DA8C8E5B1701B044001F8A6D /* camera@2x.png in Resources */,
+				DA8C8E601701B0BC001F8A6D /* CXAImageSupport.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2503,6 +2557,8 @@
 				DABC3A6316FF559000DB3CFA /* KNModalTableViewController.m in Sources */,
 				DABC3A6616FF55D400DB3CFA /* KNModalView.m in Sources */,
 				DABC3A6B16FF5B9A00DB3CFA /* UIViewController+KNSemiModal.m in Sources */,
+				DA8C8E5E1701B04E001F8A6D /* CXADemoViewController.m in Sources */,
+				DA8C8E631701B13D001F8A6D /* UIMenuItem+CXAImageSupport.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
