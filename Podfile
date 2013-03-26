@@ -71,3 +71,6 @@ pod 'HPGrowingTextView', '0.0.1'
 
 #view
 #pod 'KNSemiModalViewController', '0.3' # source
+
+
+pod 'UIMenuItem-CXAImageSupport', '0.0.1'
