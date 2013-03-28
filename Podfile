@@ -1,7 +1,7 @@
 platform :ios, '5.0'
-
+pod 'GPUImage', '0.1.0'
 pod 'ARCMacro', '1.1'
-
+pod 'ShareThis', '~> 1.0.0'
   pod 'AFNetworking', '> 1.0'
   pod 'MBProgressHUD', '0.6'
   pod 'SVProgressHUD', '0.9'

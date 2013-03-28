@@ -14,6 +14,8 @@
 #import <MGBoxLine.h>
 #import <MGStyledBox.h>
 
+#import <ShareThis.h>
+
 #define ANIM_SPEED 0
 
 @interface OSSDetailViewController ()
@@ -58,9 +60,10 @@
 - (void)loadView
 {
     [super loadView];
+    UIBarButtonItem *shareBtn = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(shareBtn:)];
+    self.navigationItem.rightBarButtonItem = shareBtn;
     _scroller = [[MGScrollView alloc] initWithFrame:self.view.frame];
     self.view = _scroller;
-
 }
 
 - (UIButton *)button:(NSString *)title for:(SEL)selector {
@@ -247,4 +250,10 @@
     return (MGBox *)view.superview;
 }
 
+
+- (void)shareBtn:(id)sender
+{
+    NSURL *url = [[NSURL alloc]initWithString:[_library url]];
+    [ShareThis showShareOptionsToShareUrl:url title:[_library name] image:nil onViewController:self];
+}
 @end
