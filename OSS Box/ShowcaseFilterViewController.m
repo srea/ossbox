@@ -1,3 +1,4 @@
+#import "GPUImage.h"
 #import "ShowcaseFilterViewController.h"
 #import <CoreImage/CoreImage.h>
 
@@ -1291,7 +1292,7 @@
 			
 			if (filterType == GPUIMAGE_MASK) 
 			{
-				inputImage = [UIImage imageNamed:@"mask"];
+				inputImage = [UIImage imageNamed:@"gpu_mask"]; // marks:GPU マスク
 			}
             /*
 			else if (filterType == GPUIMAGE_VORONOI) {
