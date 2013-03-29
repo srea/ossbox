@@ -132,7 +132,7 @@
     NSDictionary* cellData = [_objects[indexPath.section] objectForKey:@"rows"][indexPath.row];
     cell.textLabel.text = [cellData objectForKey:@"name"];
     cell.detailTextLabel.text = [cellData objectForKey:@"detail"];
-    cell.starBtn.selected = ![OSSFavorite getStatusWitLibraryName:cell.textLabel.text]; // TODO:nsuserdefaultsから取得して設定する。
+    cell.starBtn.selected = [OSSFavorite getStatusWitLibraryName:cell.textLabel.text]; // TODO:nsuserdefaultsから取得して設定する。
     return cell;
 }
 
