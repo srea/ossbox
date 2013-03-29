@@ -156,6 +156,15 @@
 		DAA849081705BAA80025542A /* aviary.png in Resources */ = {isa = PBXBuildFile; fileRef = DAA849071705BAA80025542A /* aviary.png */; };
 		DAA8490B1705BAD60025542A /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = DAA849091705BAD60025542A /* splash.png */; };
 		DAA8490C1705BAD60025542A /* splash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAA8490A1705BAD60025542A /* splash@2x.png */; };
+		DAA8490F1705C80F0025542A /* OSSFavoriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA8490E1705C80F0025542A /* OSSFavoriteViewController.m */; };
+		DAA849151705C9350025542A /* noise-dark-blue.png in Resources */ = {isa = PBXBuildFile; fileRef = DAA849111705C9350025542A /* noise-dark-blue.png */; };
+		DAA849161705C9350025542A /* noise-dark-blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAA849121705C9350025542A /* noise-dark-blue@2x.png */; };
+		DAA849171705C9350025542A /* noise-dark-gray.png in Resources */ = {isa = PBXBuildFile; fileRef = DAA849131705C9350025542A /* noise-dark-gray.png */; };
+		DAA849181705C9350025542A /* noise-dark-gray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAA849141705C9350025542A /* noise-dark-gray@2x.png */; };
+		DAA8491B1705CD0C0025542A /* NavBarFavouriteActive.png in Resources */ = {isa = PBXBuildFile; fileRef = DAA849191705CD0C0025542A /* NavBarFavouriteActive.png */; };
+		DAA8491C1705CD0C0025542A /* NavBarFavouriteNonActive.png in Resources */ = {isa = PBXBuildFile; fileRef = DAA8491A1705CD0C0025542A /* NavBarFavouriteNonActive.png */; };
+		DAA8491F1705CD630025542A /* OSSCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA8491E1705CD630025542A /* OSSCell.m */; };
+		DAA849221705D4170025542A /* OSSFavorite.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA849211705D4170025542A /* OSSFavorite.m */; };
 		DAB9236816FDD6CE0055FB36 /* DLCImagePickerController.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAB9236716FDD6CE0055FB36 /* DLCImagePickerController.plist */; };
 		DAB9238816FDD7990055FB36 /* aqua.acv in Resources */ = {isa = PBXBuildFile; fileRef = DAB9238116FDD7990055FB36 /* aqua.acv */; };
 		DAB9238916FDD7990055FB36 /* 02.acv in Resources */ = {isa = PBXBuildFile; fileRef = DAB9238216FDD7990055FB36 /* 02.acv */; };
@@ -499,6 +508,18 @@
 		DAA849071705BAA80025542A /* aviary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aviary.png; sourceTree = "<group>"; };
 		DAA849091705BAD60025542A /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
 		DAA8490A1705BAD60025542A /* splash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash@2x.png"; sourceTree = "<group>"; };
+		DAA8490D1705C80F0025542A /* OSSFavoriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSFavoriteViewController.h; sourceTree = "<group>"; };
+		DAA8490E1705C80F0025542A /* OSSFavoriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSSFavoriteViewController.m; sourceTree = "<group>"; };
+		DAA849111705C9350025542A /* noise-dark-blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "noise-dark-blue.png"; sourceTree = "<group>"; };
+		DAA849121705C9350025542A /* noise-dark-blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "noise-dark-blue@2x.png"; sourceTree = "<group>"; };
+		DAA849131705C9350025542A /* noise-dark-gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "noise-dark-gray.png"; sourceTree = "<group>"; };
+		DAA849141705C9350025542A /* noise-dark-gray@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "noise-dark-gray@2x.png"; sourceTree = "<group>"; };
+		DAA849191705CD0C0025542A /* NavBarFavouriteActive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavBarFavouriteActive.png; sourceTree = "<group>"; };
+		DAA8491A1705CD0C0025542A /* NavBarFavouriteNonActive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavBarFavouriteNonActive.png; sourceTree = "<group>"; };
+		DAA8491D1705CD630025542A /* OSSCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSCell.h; sourceTree = "<group>"; };
+		DAA8491E1705CD630025542A /* OSSCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSSCell.m; sourceTree = "<group>"; };
+		DAA849201705D4170025542A /* OSSFavorite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSFavorite.h; sourceTree = "<group>"; };
+		DAA849211705D4170025542A /* OSSFavorite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSSFavorite.m; sourceTree = "<group>"; };
 		DAB8396A16F8D474000447D7 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		DAB8396C16F8D48A000447D7 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		DAB9236716FDD6CE0055FB36 /* DLCImagePickerController.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DLCImagePickerController.plist; sourceTree = "<group>"; };
@@ -853,6 +874,8 @@
 			children = (
 				7841287D16F45B7900AC78B0 /* OSSLibrary.h */,
 				7841287E16F45B7900AC78B0 /* OSSLibrary.m */,
+				DAA849201705D4170025542A /* OSSFavorite.h */,
+				DAA849211705D4170025542A /* OSSFavorite.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -1158,6 +1181,17 @@
 			name = Aviary;
 			sourceTree = "<group>";
 		};
+		DAA849101705C92A0025542A /* AKTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				DAA849111705C9350025542A /* noise-dark-blue.png */,
+				DAA849121705C9350025542A /* noise-dark-blue@2x.png */,
+				DAA849131705C9350025542A /* noise-dark-gray.png */,
+				DAA849141705C9350025542A /* noise-dark-gray@2x.png */,
+			);
+			name = AKTabBar;
+			sourceTree = "<group>";
+		};
 		DAB488BC16FDD5E000DCB55D /* Camera */ = {
 			isa = PBXGroup;
 			children = (
@@ -1191,6 +1225,9 @@
 		DAB8395316F8D435000447D7 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				DAA849191705CD0C0025542A /* NavBarFavouriteActive.png */,
+				DAA8491A1705CD0C0025542A /* NavBarFavouriteNonActive.png */,
+				DAA849101705C92A0025542A /* AKTabBar */,
 				DA486D4116F9634F00ACA3C9 /* launchIcon3.5retina.png */,
 				DA486D4216F9634F00ACA3C9 /* launchIcon4retina.png */,
 				DA486D4316F9634F00ACA3C9 /* launchImage.png */,
@@ -1338,6 +1375,10 @@
 				7841286F16F44F5600AC78B0 /* OSSDetailViewController.m */,
 				7850371616F5F6610045510D /* OSSAboutViewController.h */,
 				7850371716F5F6620045510D /* OSSAboutViewController.m */,
+				DAA8490D1705C80F0025542A /* OSSFavoriteViewController.h */,
+				DAA8490E1705C80F0025542A /* OSSFavoriteViewController.m */,
+				DAA8491D1705CD630025542A /* OSSCell.h */,
+				DAA8491E1705CD630025542A /* OSSCell.m */,
 				7841287C16F45B6900AC78B0 /* model */,
 			);
 			name = Classes;
@@ -1832,6 +1873,12 @@
 				DAA849081705BAA80025542A /* aviary.png in Resources */,
 				DAA8490B1705BAD60025542A /* splash.png in Resources */,
 				DAA8490C1705BAD60025542A /* splash@2x.png in Resources */,
+				DAA849151705C9350025542A /* noise-dark-blue.png in Resources */,
+				DAA849161705C9350025542A /* noise-dark-blue@2x.png in Resources */,
+				DAA849171705C9350025542A /* noise-dark-gray.png in Resources */,
+				DAA849181705C9350025542A /* noise-dark-gray@2x.png in Resources */,
+				DAA8491B1705CD0C0025542A /* NavBarFavouriteActive.png in Resources */,
+				DAA8491C1705CD0C0025542A /* NavBarFavouriteNonActive.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1913,6 +1960,9 @@
 				78A780381704AD28002B3B82 /* ShowcaseFilterListController.m in Sources */,
 				78A7803A1704AD28002B3B82 /* ShowcaseFilterViewController.m in Sources */,
 				DAA848F01705B9870025542A /* AFSDKDemoViewController.m in Sources */,
+				DAA8490F1705C80F0025542A /* OSSFavoriteViewController.m in Sources */,
+				DAA8491F1705CD630025542A /* OSSCell.m in Sources */,
+				DAA849221705D4170025542A /* OSSFavorite.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,6 +16,8 @@
 
 #import <ShareThis.h>
 
+#import <SVWebViewController.h>
+
 #define ANIM_SPEED 0
 
 @interface OSSDetailViewController ()
@@ -107,13 +109,13 @@
     // new section
     MGStyledBox *box1 = [MGStyledBox box];
     [_scroller.boxes addObject:box1];
-    MGBoxLine *head1 = [MGBoxLine lineWithLeft:[_library name] right:[self button:@"Demo" for:@selector(demoView:)]];
+    MGBoxLine *head1 = [MGBoxLine lineWithLeft:[_library name] right:[self button:@"Run" for:@selector(demoView:)]];
     head1.font = headerFont;
     [box1.topLines addObject:head1];
     MGBoxLine *author = [MGBoxLine lineWithLeft:@"Author" right:[_library author]];
     author.font = headerFont;
     [box1.topLines addObject:author];
-    MGBoxLine *author_url = [MGBoxLine lineWithLeft:nil right:[self button:@"Github" for:@selector(demoView:)]];
+    MGBoxLine *author_url = [MGBoxLine lineWithLeft:@"Link" right:[self button:@"WebPage" for:@selector(webView:)]];
     author_url.font = headerFont;
     [box1.topLines addObject:author_url];
     
@@ -237,6 +239,19 @@
         [self.navigationController presentModalViewController:controller animated:YES];
     } else {
         [self.navigationController pushViewController:controller animated:YES];        
+    }
+}
+
+- (void)webView:(id)sender
+{
+    if ([[_library url] length] > 0) {
+        NSURL *url = [NSURL URLWithString:[_library url]];
+        SVModalWebViewController *webViewController = [[SVModalWebViewController alloc] initWithURL:url];
+        webViewController.modalPresentationStyle = UIModalPresentationPageSheet;
+        webViewController.availableActions = SVWebViewControllerAvailableActionsOpenInSafari | SVWebViewControllerAvailableActionsCopyLink | SVWebViewControllerAvailableActionsMailLink;
+        webViewController.navigationController.navigationBar.tintColor = [UIColor darkGrayColor];
+        webViewController.toolbar.tintColor = [UIColor darkGrayColor];
+        [self presentModalViewController:webViewController animated:YES];
     }
 }
 

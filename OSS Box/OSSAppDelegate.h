@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AKTabBarController.h>
 
 @interface OSSAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) UINavigationController *navigationController;
+@property (strong, nonatomic) AKTabBarController *tabBarController;
+
+//@property (strong, nonatomic) UINavigationController *navigationController;
 
 @end

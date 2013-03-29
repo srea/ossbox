@@ -74,3 +74,7 @@ pod 'HPGrowingTextView', '0.0.1'
 
 
 #pod 'UIMenuItem-CXAImageSupport', '0.0.1' #source
+
+pod 'SVWebViewController', '0.1'
+
+pod 'AKTabBarController', '1.0.1'

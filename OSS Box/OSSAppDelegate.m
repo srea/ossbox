@@ -8,6 +8,7 @@
 
 #import "OSSAppDelegate.h"
 #import "OSSMasterViewController.h"
+#import "OSSFavoriteViewController.h"
 
 #import <ShareThis.h>
 
@@ -20,8 +21,23 @@
     // Override point for customization after application launch.
 
     OSSMasterViewController *masterViewController = [[OSSMasterViewController alloc]init];
-    self.navigationController = [[UINavigationController alloc] initWithRootViewController:masterViewController];
-    self.window.rootViewController = self.navigationController;
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:masterViewController];
+    
+    _tabBarController = [[AKTabBarController alloc] initWithTabBarHeight:(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 70 : 50];
+    [_tabBarController setMinimumHeightToDisplayTitle:40.0];
+    
+    [_tabBarController setViewControllers:[NSMutableArray arrayWithObjects:nav,
+                                           [[OSSFavoriteViewController alloc]init], nil]];
+    
+    // Tab background Image
+    [_tabBarController setBackgroundImageName:@"noise-dark-gray.png"];
+    [_tabBarController setSelectedBackgroundImageName:@"noise-dark-blue.png"];
+    
+    // Tabs top embos Color
+    [_tabBarController setTabEdgeColor:[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:0.8]];
+    [_tabBarController setHidesBottomBarWhenPushed:YES];
+    
+    self.window.rootViewController = _tabBarController;
     [self.window makeKeyAndVisible];
     return YES;
 }

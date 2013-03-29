@@ -9,6 +9,8 @@
 #import "OSSMasterViewController.h"
 #import "OSSDetailViewController.h"
 #import "OSSAboutViewController.h"
+#import "OSSCell.h"
+#import "OSSFavorite.h"
 
 @interface OSSMasterViewController () <UISearchBarDelegate,UIScrollViewDelegate> {
     NSMutableArray *_objects;
@@ -24,13 +26,18 @@
 
 - (id)init
 {
-    self = [super init];
+    self = [super initWithStyle:UITableViewStylePlain];
     if (self) {
         self.title = @"OSS Box";
         
         [self initDataSource];
     }
     return self;
+}
+
+- (NSString *)tabTitle
+{
+    return @"OSS Libraries";
 }
 
 - (void)loadView
@@ -44,6 +51,7 @@
     [super viewDidLoad];
     self.navigationController.navigationBar.tintColor = [UIColor darkGrayColor];    
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"About" style:UIBarButtonItemStyleBordered target:self action:@selector(aboutButtonDidPush:)];
+    [self.tableView setBackgroundView:nil];
 
     // 検索
     self.searchBar = [[UISearchBar alloc]initWithFrame:CGRectZero];
@@ -55,13 +63,16 @@
     [self.tableView.tableHeaderView sizeToFit];
     
     // 検索バーを隠す
-    [self.tableView setContentOffset:CGPointMake(0, 44)];
+//    [self.tableView setContentOffset:CGPointMake(0, 44)];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
+    [_searchView setFrame:CGRectMake(0, 0, self.tableView.frame.size.width, 44.0f)];
     [_searchBar sizeToFit];
+    [self.tableView setContentOffset:CGPointMake(0, 44)];
 }
 
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
@@ -111,17 +122,30 @@
 {
     static NSString *CellIdentifier = @"Cell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    OSSCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        cell = [[OSSCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        [cell.starBtn addTarget:self action:@selector(starTapped:event:) forControlEvents:UIControlEventTouchUpInside];
     }
 
     NSDictionary* cellData = [_objects[indexPath.section] objectForKey:@"rows"][indexPath.row];
     cell.textLabel.text = [cellData objectForKey:@"name"];
     cell.detailTextLabel.text = [cellData objectForKey:@"detail"];
-
+    cell.starBtn.selected = ![OSSFavorite getStatusWitLibraryName:cell.textLabel.text]; // TODO:nsuserdefaultsから取得して設定する。
     return cell;
+}
+
+- (void)starTapped:(id)sender event:(id)event
+{
+    NSSet *touches = [event allTouches];
+    UITouch *touch = [touches anyObject];
+    CGPoint currentTouchPosition = [touch locationInView:self.tableView];
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint: currentTouchPosition];
+    if (indexPath != nil)
+    {
+        [self tableView: self.tableView accessoryButtonTappedForRowWithIndexPath: indexPath];
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -137,7 +161,7 @@
 
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
     
-    if(NO) {
+    if(YES) {
         return nil;
     }
     NSMutableArray *tempArray = [[NSMutableArray alloc] init];
@@ -162,5 +186,14 @@
                                         _searchBar.frame.size.height)];
     }
 }
+- (void) tableView: (UITableView *) tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+    OSSCell *cell = (OSSCell*)[tableView cellForRowAtIndexPath:indexPath];
+    cell.starBtn.selected = !cell.starBtn.selected;
 
+    // 選択した行のお気に入りを解除なり登録なりする。
+    NSString *name = [[_objects[indexPath.section] objectForKey:@"rows"][indexPath.row] objectForKey:@"name"];
+    NSLog(@"save %@, status %@", name, [cell.starBtn isSelected] ? @"YES" : @"NO");
+    [OSSFavorite saveToStatus:[cell.starBtn isSelected] andLibraryName:name];
+}
 @end
