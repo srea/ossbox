@@ -133,6 +133,29 @@
 		DA8C8E5E1701B04E001F8A6D /* CXADemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8C8E5D1701B04E001F8A6D /* CXADemoViewController.m */; };
 		DA8C8E601701B0BC001F8A6D /* CXAImageSupport.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA8C8E5F1701B0BC001F8A6D /* CXAImageSupport.plist */; };
 		DA8C8E631701B13D001F8A6D /* UIMenuItem+CXAImageSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8C8E621701B13D001F8A6D /* UIMenuItem+CXAImageSupport.m */; };
+		DAA848D31705B8A20025542A /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA848D21705B8A20025542A /* Accelerate.framework */; };
+		DAA848D51705B8B20025542A /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA848D41705B8B20025542A /* CoreText.framework */; };
+		DAA848D71705B8B70025542A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA848D61705B8B70025542A /* StoreKit.framework */; };
+		DAA848D91705B8C90025542A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA848D81705B8C90025542A /* SystemConfiguration.framework */; };
+		DAA848E51705B8EC0025542A /* libAviarySDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA848E21705B8EC0025542A /* libAviarySDK.a */; };
+		DAA848E61705B8EC0025542A /* AviarySDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DAA848E41705B8EC0025542A /* AviarySDKResources.bundle */; };
+		DAA848E81705B9500025542A /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA848E71705B9500025542A /* libz.1.2.5.dylib */; };
+		DAA848EA1705B95E0025542A /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA848E91705B95E0025542A /* libsqlite3.0.dylib */; };
+		DAA848F01705B9870025542A /* AFSDKDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA848ED1705B9870025542A /* AFSDKDemoViewController.m */; };
+		DAA848F11705B9870025542A /* AFSDKDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAA848EE1705B9870025542A /* AFSDKDemoViewController.xib */; };
+		DAA848F41705B9D30025542A /* Demo.png in Resources */ = {isa = PBXBuildFile; fileRef = DAA848F31705B9D20025542A /* Demo.png */; };
+		DAA848F61705B9E10025542A /* Aviary.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAA848F51705B9E10025542A /* Aviary.plist */; };
+		DAA848FF1705BA6F0025542A /* blue_button_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = DAA848F71705BA6E0025542A /* blue_button_pressed.png */; };
+		DAA849001705BA6F0025542A /* blue_button_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAA848F81705BA6E0025542A /* blue_button_pressed@2x.png */; };
+		DAA849011705BA6F0025542A /* blue_button.png in Resources */ = {isa = PBXBuildFile; fileRef = DAA848F91705BA6E0025542A /* blue_button.png */; };
+		DAA849021705BA6F0025542A /* blue_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAA848FA1705BA6F0025542A /* blue_button@2x.png */; };
+		DAA849031705BA6F0025542A /* dark_button_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = DAA848FB1705BA6F0025542A /* dark_button_pressed.png */; };
+		DAA849041705BA6F0025542A /* dark_button_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAA848FC1705BA6F0025542A /* dark_button_pressed@2x.png */; };
+		DAA849051705BA6F0025542A /* dark_button.png in Resources */ = {isa = PBXBuildFile; fileRef = DAA848FD1705BA6F0025542A /* dark_button.png */; };
+		DAA849061705BA6F0025542A /* dark_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAA848FE1705BA6F0025542A /* dark_button@2x.png */; };
+		DAA849081705BAA80025542A /* aviary.png in Resources */ = {isa = PBXBuildFile; fileRef = DAA849071705BAA80025542A /* aviary.png */; };
+		DAA8490B1705BAD60025542A /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = DAA849091705BAD60025542A /* splash.png */; };
+		DAA8490C1705BAD60025542A /* splash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAA8490A1705BAD60025542A /* splash@2x.png */; };
 		DAB9236816FDD6CE0055FB36 /* DLCImagePickerController.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAB9236716FDD6CE0055FB36 /* DLCImagePickerController.plist */; };
 		DAB9238816FDD7990055FB36 /* aqua.acv in Resources */ = {isa = PBXBuildFile; fileRef = DAB9238116FDD7990055FB36 /* aqua.acv */; };
 		DAB9238916FDD7990055FB36 /* 02.acv in Resources */ = {isa = PBXBuildFile; fileRef = DAB9238216FDD7990055FB36 /* 02.acv */; };
@@ -446,6 +469,36 @@
 		DA8C8E5F1701B0BC001F8A6D /* CXAImageSupport.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CXAImageSupport.plist; sourceTree = "<group>"; };
 		DA8C8E611701B13D001F8A6D /* UIMenuItem+CXAImageSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIMenuItem+CXAImageSupport.h"; sourceTree = "<group>"; };
 		DA8C8E621701B13D001F8A6D /* UIMenuItem+CXAImageSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIMenuItem+CXAImageSupport.m"; sourceTree = "<group>"; };
+		DAA848D21705B8A20025542A /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		DAA848D41705B8B20025542A /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		DAA848D61705B8B70025542A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		DAA848D81705B8C90025542A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		DAA848DC1705B8EC0025542A /* AFPhotoEditorContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorContext.h; sourceTree = "<group>"; };
+		DAA848DD1705B8EC0025542A /* AFPhotoEditorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorController.h; sourceTree = "<group>"; };
+		DAA848DE1705B8EC0025542A /* AFPhotoEditorControllerOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorControllerOptions.h; sourceTree = "<group>"; };
+		DAA848DF1705B8EC0025542A /* AFPhotoEditorCustomization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorCustomization.h; sourceTree = "<group>"; };
+		DAA848E01705B8EC0025542A /* AFPhotoEditorSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorSession.h; sourceTree = "<group>"; };
+		DAA848E11705B8EC0025542A /* AFPhotoEditorStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorStyle.h; sourceTree = "<group>"; };
+		DAA848E21705B8EC0025542A /* libAviarySDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAviarySDK.a; sourceTree = "<group>"; };
+		DAA848E41705B8EC0025542A /* AviarySDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AviarySDKResources.bundle; sourceTree = "<group>"; };
+		DAA848E71705B9500025542A /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
+		DAA848E91705B95E0025542A /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		DAA848EC1705B9870025542A /* AFSDKDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSDKDemoViewController.h; sourceTree = "<group>"; };
+		DAA848ED1705B9870025542A /* AFSDKDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSDKDemoViewController.m; sourceTree = "<group>"; };
+		DAA848EE1705B9870025542A /* AFSDKDemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AFSDKDemoViewController.xib; sourceTree = "<group>"; };
+		DAA848F31705B9D20025542A /* Demo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Demo.png; sourceTree = "<group>"; };
+		DAA848F51705B9E10025542A /* Aviary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Aviary.plist; sourceTree = "<group>"; };
+		DAA848F71705BA6E0025542A /* blue_button_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue_button_pressed.png; sourceTree = "<group>"; };
+		DAA848F81705BA6E0025542A /* blue_button_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue_button_pressed@2x.png"; sourceTree = "<group>"; };
+		DAA848F91705BA6E0025542A /* blue_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue_button.png; sourceTree = "<group>"; };
+		DAA848FA1705BA6F0025542A /* blue_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue_button@2x.png"; sourceTree = "<group>"; };
+		DAA848FB1705BA6F0025542A /* dark_button_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dark_button_pressed.png; sourceTree = "<group>"; };
+		DAA848FC1705BA6F0025542A /* dark_button_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dark_button_pressed@2x.png"; sourceTree = "<group>"; };
+		DAA848FD1705BA6F0025542A /* dark_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dark_button.png; sourceTree = "<group>"; };
+		DAA848FE1705BA6F0025542A /* dark_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dark_button@2x.png"; sourceTree = "<group>"; };
+		DAA849071705BAA80025542A /* aviary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aviary.png; sourceTree = "<group>"; };
+		DAA849091705BAD60025542A /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
+		DAA8490A1705BAD60025542A /* splash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash@2x.png"; sourceTree = "<group>"; };
 		DAB8396A16F8D474000447D7 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		DAB8396C16F8D48A000447D7 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		DAB9236716FDD6CE0055FB36 /* DLCImagePickerController.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DLCImagePickerController.plist; sourceTree = "<group>"; };
@@ -626,6 +679,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAA848EA1705B95E0025542A /* libsqlite3.0.dylib in Frameworks */,
+				DAA848E81705B9500025542A /* libz.1.2.5.dylib in Frameworks */,
+				DAA848D91705B8C90025542A /* SystemConfiguration.framework in Frameworks */,
+				DAA848D71705B8B70025542A /* StoreKit.framework in Frameworks */,
+				DAA848D51705B8B20025542A /* CoreText.framework in Frameworks */,
+				DAA848D31705B8A20025542A /* Accelerate.framework in Frameworks */,
 				78A780321704AC98002B3B82 /* CoreImage.framework in Frameworks */,
 				DAB9296F16FE0E3A0055FB36 /* AssetsLibrary.framework in Frameworks */,
 				DAB9296D16FE0E050055FB36 /* AVFoundation.framework in Frameworks */,
@@ -637,6 +696,7 @@
 				7841285616F44F5600AC78B0 /* Foundation.framework in Frameworks */,
 				7841285816F44F5600AC78B0 /* CoreGraphics.framework in Frameworks */,
 				D089809BEB2D4EDD828FFF4C /* libPods.a in Frameworks */,
+				DAA848E51705B8EC0025542A /* libAviarySDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -721,7 +781,8 @@
 		7841284716F44F5600AC78B0 = {
 			isa = PBXGroup;
 			children = (
-				78A780311704AC98002B3B82 /* CoreImage.framework */,
+				DAA848E91705B95E0025542A /* libsqlite3.0.dylib */,
+				DAA848E71705B9500025542A /* libz.1.2.5.dylib */,
 				DAB8396C16F8D48A000447D7 /* Icon@2x.png */,
 				DAB8396A16F8D474000447D7 /* Icon.png */,
 				7841285916F44F5600AC78B0 /* OSS Box */,
@@ -742,6 +803,12 @@
 		7841285216F44F5600AC78B0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DAA848DA1705B8EC0025542A /* AviarySDK */,
+				DAA848D81705B8C90025542A /* SystemConfiguration.framework */,
+				DAA848D61705B8B70025542A /* StoreKit.framework */,
+				DAA848D41705B8B20025542A /* CoreText.framework */,
+				DAA848D21705B8A20025542A /* Accelerate.framework */,
+				78A780311704AC98002B3B82 /* CoreImage.framework */,
 				DAB9296E16FE0E3A0055FB36 /* AssetsLibrary.framework */,
 				DAB9296C16FE0E050055FB36 /* AVFoundation.framework */,
 				DAB9296A16FE0DF80055FB36 /* QuartzCore.framework */,
@@ -1037,9 +1104,64 @@
 			name = images;
 			sourceTree = "<group>";
 		};
+		DAA848DA1705B8EC0025542A /* AviarySDK */ = {
+			isa = PBXGroup;
+			children = (
+				DAA848DB1705B8EC0025542A /* Headers */,
+				DAA848E21705B8EC0025542A /* libAviarySDK.a */,
+				DAA848E31705B8EC0025542A /* Resources */,
+			);
+			path = AviarySDK;
+			sourceTree = "<group>";
+		};
+		DAA848DB1705B8EC0025542A /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				DAA848DC1705B8EC0025542A /* AFPhotoEditorContext.h */,
+				DAA848DD1705B8EC0025542A /* AFPhotoEditorController.h */,
+				DAA848DE1705B8EC0025542A /* AFPhotoEditorControllerOptions.h */,
+				DAA848DF1705B8EC0025542A /* AFPhotoEditorCustomization.h */,
+				DAA848E01705B8EC0025542A /* AFPhotoEditorSession.h */,
+				DAA848E11705B8EC0025542A /* AFPhotoEditorStyle.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		DAA848E31705B8EC0025542A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DAA848E41705B8EC0025542A /* AviarySDKResources.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DAA848EB1705B9760025542A /* Aviary */ = {
+			isa = PBXGroup;
+			children = (
+				DAA849091705BAD60025542A /* splash.png */,
+				DAA8490A1705BAD60025542A /* splash@2x.png */,
+				DAA849071705BAA80025542A /* aviary.png */,
+				DAA848F71705BA6E0025542A /* blue_button_pressed.png */,
+				DAA848F81705BA6E0025542A /* blue_button_pressed@2x.png */,
+				DAA848F91705BA6E0025542A /* blue_button.png */,
+				DAA848FA1705BA6F0025542A /* blue_button@2x.png */,
+				DAA848FB1705BA6F0025542A /* dark_button_pressed.png */,
+				DAA848FC1705BA6F0025542A /* dark_button_pressed@2x.png */,
+				DAA848FD1705BA6F0025542A /* dark_button.png */,
+				DAA848FE1705BA6F0025542A /* dark_button@2x.png */,
+				DAA848F51705B9E10025542A /* Aviary.plist */,
+				DAA848F31705B9D20025542A /* Demo.png */,
+				DAA848EC1705B9870025542A /* AFSDKDemoViewController.h */,
+				DAA848ED1705B9870025542A /* AFSDKDemoViewController.m */,
+				DAA848EE1705B9870025542A /* AFSDKDemoViewController.xib */,
+			);
+			name = Aviary;
+			sourceTree = "<group>";
+		};
 		DAB488BC16FDD5E000DCB55D /* Camera */ = {
 			isa = PBXGroup;
 			children = (
+				DAA848EB1705B9760025542A /* Aviary */,
 				78A7802E1704AC62002B3B82 /* GPUImage */,
 				DAB488BD16FDD5E600DCB55D /* DLCImagePickerController */,
 			);
@@ -1695,6 +1817,21 @@
 				78A780511704AD94002B3B82 /* squares.png in Resources */,
 				78A780521704AD94002B3B82 /* voroni_points2.png in Resources */,
 				78A780531704AD94002B3B82 /* WID-small.jpg in Resources */,
+				DAA848E61705B8EC0025542A /* AviarySDKResources.bundle in Resources */,
+				DAA848F11705B9870025542A /* AFSDKDemoViewController.xib in Resources */,
+				DAA848F41705B9D30025542A /* Demo.png in Resources */,
+				DAA848F61705B9E10025542A /* Aviary.plist in Resources */,
+				DAA848FF1705BA6F0025542A /* blue_button_pressed.png in Resources */,
+				DAA849001705BA6F0025542A /* blue_button_pressed@2x.png in Resources */,
+				DAA849011705BA6F0025542A /* blue_button.png in Resources */,
+				DAA849021705BA6F0025542A /* blue_button@2x.png in Resources */,
+				DAA849031705BA6F0025542A /* dark_button_pressed.png in Resources */,
+				DAA849041705BA6F0025542A /* dark_button_pressed@2x.png in Resources */,
+				DAA849051705BA6F0025542A /* dark_button.png in Resources */,
+				DAA849061705BA6F0025542A /* dark_button@2x.png in Resources */,
+				DAA849081705BAA80025542A /* aviary.png in Resources */,
+				DAA8490B1705BAD60025542A /* splash.png in Resources */,
+				DAA8490C1705BAD60025542A /* splash@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1775,6 +1912,7 @@
 				DA8C8E631701B13D001F8A6D /* UIMenuItem+CXAImageSupport.m in Sources */,
 				78A780381704AD28002B3B82 /* ShowcaseFilterListController.m in Sources */,
 				78A7803A1704AD28002B3B82 /* ShowcaseFilterViewController.m in Sources */,
+				DAA848F01705B9870025542A /* AFSDKDemoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1860,6 +1998,10 @@
 				GCC_PREFIX_HEADER = "OSS Box/OSS Box-Prefix.pch";
 				INFOPLIST_FILE = "OSS Box/OSS Box-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/AviarySDK\"",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "E4996DFA-28F3-457F-BBB0-EFDEF794E96E";
@@ -1878,6 +2020,10 @@
 				GCC_PREFIX_HEADER = "OSS Box/OSS Box-Prefix.pch";
 				INFOPLIST_FILE = "OSS Box/OSS Box-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/AviarySDK\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";

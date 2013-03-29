@@ -29,6 +29,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&
 	<key>detailText</key>
 	<string>OpenGL ES 2-based image and real-time camera filters for iOS.</string>
 	<key>controller</key>
-	<string>PhotoViewController</string>
+	<string>ShowcaseFilterListController</string>
 </dict>
 </plist>
