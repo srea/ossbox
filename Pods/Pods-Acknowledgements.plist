@@ -824,6 +824,14 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 		</dict>
 		<dict>
 			<key>FooterText</key>
+			<string>The MHTabBarController source code is copyright 2011 Matthijs Hollemans and is licensed under the terms of the MIT license.</string>
+			<key>Title</key>
+			<string>MHTabBarController</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
 			<string>MIT License
 ----------
 &gt;Copyright (c) 2013, Mainloop LLC

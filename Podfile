@@ -1,4 +1,5 @@
 platform :ios, '5.0'
+pod 'MHTabBarController', '0.0.1'
 pod 'GPUImage', '0.1.0'
 pod 'ARCMacro', '1.1'
 pod 'ShareThis', '~> 1.0.0'

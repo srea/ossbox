@@ -12,13 +12,17 @@
 #import "OSSCell.h"
 #import "OSSFavorite.h"
 
-@interface OSSMasterViewController () <UISearchBarDelegate,UIScrollViewDelegate> {
-    NSMutableArray *_objects;
-    NSArray *_title;
-    BOOL _isSearch;
+#import "UIViewController+HCPushBackAnimation.h"
+
+@interface OSSMasterViewController ()<UINavigationBarDelegate,UINavigationControllerDelegate,UISearchBarDelegate,UIScrollViewDelegate,UISearchDisplayDelegate,UITableViewDataSource,UITableViewDelegate> {
 }
+@property (nonatomic, strong) UISearchDisplayController * ossSearchDisplayController;
 @property (nonatomic,strong) UISearchBar *searchBar;
 @property (nonatomic,strong) UIView *searchView;
+@property (nonatomic,strong) UITableView* tableView;
+@property (nonatomic,strong) NSMutableArray *objects;
+@property (nonatomic,strong) NSMutableArray *searchObjects;
+@property (nonatomic) BOOL isSearch;
 @end
 
 @implementation OSSMasterViewController
@@ -26,10 +30,12 @@
 
 - (id)init
 {
-    self = [super initWithStyle:UITableViewStylePlain];
+    self = [super init];
     if (self) {
-        self.title = @"OSS Box";
-        
+        self.title = @"Libraries";
+        self.tableView = [[UITableView alloc]init];
+        self.tableView.dataSource = self;
+        self.tableView.delegate = self;
         [self initDataSource];
     }
     return self;
@@ -50,42 +56,48 @@
 {
     [super viewDidLoad];
     self.navigationController.navigationBar.tintColor = [UIColor darkGrayColor];    
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"About" style:UIBarButtonItemStyleBordered target:self action:@selector(aboutButtonDidPush:)];
     [self.tableView setBackgroundView:nil];
 
     // 検索
     self.searchBar = [[UISearchBar alloc]initWithFrame:CGRectZero];
     [self.searchBar setDelegate:self];
     self.searchBar.tintColor = [UIColor darkGrayColor];
+    self.searchBar.placeholder = @"Input Text";
+    self.searchBar.keyboardType = UIKeyboardTypeASCIICapable;
     [_searchView addSubview:self.searchBar];
     
-    self.tableView.tableHeaderView = _searchView;
+
+    _ossSearchDisplayController = [[UISearchDisplayController alloc] initWithSearchBar:self.searchBar contentsController:self];
+    _ossSearchDisplayController.delegate = self;
+    _ossSearchDisplayController.searchResultsDelegate = self;
+    _ossSearchDisplayController.searchResultsDataSource = self;
+    
+    self.tableView.tableHeaderView = self.searchView;
     [self.tableView.tableHeaderView sizeToFit];
     
     // 検索バーを隠す
-//    [self.tableView setContentOffset:CGPointMake(0, 44)];
+    [self.tableView setContentOffset:CGPointMake(0, 44)];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [self refresh];
+    [self setView:_tableView];
     
+    [self animationPopFrontScaleUp];
     [_searchView setFrame:CGRectMake(0, 0, self.tableView.frame.size.width, 44.0f)];
     [_searchBar sizeToFit];
-    [self.tableView setContentOffset:CGPointMake(0, 44)];
+
 }
 
+- (void)refresh
+{
+    [self.tableView reloadData];
+}
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
     [self.tableView setContentOffset:CGPointMake(0, 44) animated:YES];
     [self.searchBar resignFirstResponder];
-}
-
-- (void)aboutButtonDidPush:(id)sender
-{
-    OSSAboutViewController *aboutController = [[OSSAboutViewController alloc]init];
-    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:aboutController];
-    nav.navigationBar.tintColor = [UIColor darkGrayColor];
-    [self presentModalViewController:nav animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -93,29 +105,41 @@
     [super didReceiveMemoryWarning];
 }
 
+
 #pragma mark - data source
 
 - (void)initDataSource
 {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"OSSListDev" ofType:@"plist"];
-    _objects = [NSArray arrayWithContentsOfFile:path];
+    _objects = [OSSGlobal getMenuPlist];
 }
 
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return [_objects count];
+    if (tableView == self.ossSearchDisplayController.searchResultsTableView){
+        return [_searchObjects count];
+    } else {
+        return [_objects count];        
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[[_objects objectAtIndex:section] objectForKey:@"rows"] count];
+    if (tableView == self.ossSearchDisplayController.searchResultsTableView) {
+        return [[[_searchObjects objectAtIndex:section] objectForKey:@"rows"] count];
+    } else {
+        return [[[_objects objectAtIndex:section] objectForKey:@"rows"] count];
+    }
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    return [[_objects objectAtIndex:section] objectForKey:@"section"];
+    if (tableView == self.ossSearchDisplayController.searchResultsTableView) {
+        return [[_searchObjects objectAtIndex:section] objectForKey:@"section"];
+    } else {
+        return [[_objects objectAtIndex:section] objectForKey:@"section"];
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -129,10 +153,15 @@
         [cell.starBtn addTarget:self action:@selector(starTapped:event:) forControlEvents:UIControlEventTouchUpInside];
     }
 
-    NSDictionary* cellData = [_objects[indexPath.section] objectForKey:@"rows"][indexPath.row];
+    NSDictionary* cellData;
+    if (tableView == self.ossSearchDisplayController.searchResultsTableView) {
+        cellData = [_searchObjects[indexPath.section] objectForKey:@"rows"][indexPath.row];
+    } else {
+        cellData = [_objects[indexPath.section] objectForKey:@"rows"][indexPath.row];
+    }
     cell.textLabel.text = [cellData objectForKey:@"name"];
     cell.detailTextLabel.text = [cellData objectForKey:@"detail"];
-    cell.starBtn.selected = [OSSFavorite getStatusWitLibraryName:cell.textLabel.text]; // TODO:nsuserdefaultsから取得して設定する。
+    cell.starBtn.selected = [OSSFavorite getStatusWitLibraryName:cell.textLabel.text];
     return cell;
 }
 
@@ -154,7 +183,13 @@
     if (!self.detailViewController) {
         self.detailViewController = [[OSSDetailViewController alloc] init];
     }
-    NSDictionary *object = [_objects[indexPath.section] objectForKey:@"rows"][indexPath.row];
+    
+    NSDictionary *object;
+    if (tableView == self.ossSearchDisplayController.searchResultsTableView) {
+        object = [_searchObjects[indexPath.section] objectForKey:@"rows"][indexPath.row];
+    } else {
+        object = [_objects[indexPath.section] objectForKey:@"rows"][indexPath.row];
+    }
     self.detailViewController.detailItem = object;
     [self.navigationController pushViewController:self.detailViewController animated:YES];
 }
@@ -192,8 +227,35 @@
     cell.starBtn.selected = !cell.starBtn.selected;
 
     // 選択した行のお気に入りを解除なり登録なりする。
-    NSString *name = [[_objects[indexPath.section] objectForKey:@"rows"][indexPath.row] objectForKey:@"name"];
+    NSString *name;
+    if (tableView == self.ossSearchDisplayController.searchResultsTableView) {
+        name = [[_searchObjects[indexPath.section] objectForKey:@"rows"][indexPath.row] objectForKey:@"name"];
+    } else {
+        name = [[_objects[indexPath.section] objectForKey:@"rows"][indexPath.row] objectForKey:@"name"];
+    }
+
     NSLog(@"save %@, status %@", name, [cell.starBtn isSelected] ? @"YES" : @"NO");
     [OSSFavorite saveToStatus:[cell.starBtn isSelected] andLibraryName:name];
+}
+
+- (void)filterContentForSearchText:(NSString*)searchString scope:(NSString*)scope {
+    [_searchObjects removeAllObjects];
+    _searchObjects = [OSSGlobal getMenuPlistWithString:searchString];
+}
+
+- (void)searchDisplayControllerWillBeginSearch:(UISearchDisplayController *)controller
+{
+    NSLog(@"search Display");
+}
+
+- (void)searchDisplayControllerDidEndSearch:(UISearchDisplayController *)controller
+{
+    NSLog(@"search Display Did End Search");
+}
+
+- (BOOL)searchDisplayController:(UISearchDisplayController*)controller shouldReloadTableForSearchString:(NSString*)searchString {
+    [self filterContentForSearchText: searchString
+                               scope: [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
+    return YES;
 }
 @end

@@ -118,6 +118,8 @@
 		DA231ABA16FEBA70003CF385 /* MessageEntryInputField.png in Resources */ = {isa = PBXBuildFile; fileRef = DA231AB216FEBA70003CF385 /* MessageEntryInputField.png */; };
 		DA231ABB16FEBA70003CF385 /* MessageEntryInputField@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA231AB316FEBA70003CF385 /* MessageEntryInputField@2x.png */; };
 		DA231ABD16FEBA81003CF385 /* GrowingTextView.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA231ABC16FEBA81003CF385 /* GrowingTextView.plist */; };
+		DA425E5717070B6700728523 /* UIViewController+HCPushBackAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = DA425E5617070B6700728523 /* UIViewController+HCPushBackAnimation.m */; };
+		DA425E5A17071EBA00728523 /* OSSGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = DA425E5917071EBA00728523 /* OSSGlobal.m */; };
 		DA486D4016F95C9900ACA3C9 /* OSSListDev.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA486D3F16F95C9900ACA3C9 /* OSSListDev.plist */; };
 		DA486D4416F9634F00ACA3C9 /* launchIcon3.5retina.png in Resources */ = {isa = PBXBuildFile; fileRef = DA486D4116F9634F00ACA3C9 /* launchIcon3.5retina.png */; };
 		DA486D4516F9634F00ACA3C9 /* launchIcon4retina.png in Resources */ = {isa = PBXBuildFile; fileRef = DA486D4216F9634F00ACA3C9 /* launchIcon4retina.png */; };
@@ -126,6 +128,7 @@
 		DA6BB2E416F9478E0078350E /* DDProgressView.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA6BB2E316F9478E0078350E /* DDProgressView.plist */; };
 		DA83121E16F9493800B18B80 /* DDProgressViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA83121C16F9493800B18B80 /* DDProgressViewViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DA83121F16F9493800B18B80 /* DDProgressViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA83121D16F9493800B18B80 /* DDProgressViewViewController.xib */; };
+		DA8BC4DE170752C50042403E /* OSSCustomMHTabBarControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BC4DD170752C50042403E /* OSSCustomMHTabBarControllerViewController.m */; };
 		DA8C8E581701B044001F8A6D /* broom.png in Resources */ = {isa = PBXBuildFile; fileRef = DA8C8E541701B044001F8A6D /* broom.png */; };
 		DA8C8E591701B044001F8A6D /* broom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA8C8E551701B044001F8A6D /* broom@2x.png */; };
 		DA8C8E5A1701B044001F8A6D /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = DA8C8E561701B044001F8A6D /* camera.png */; };
@@ -457,6 +460,10 @@
 		DA231AB216FEBA70003CF385 /* MessageEntryInputField.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MessageEntryInputField.png; sourceTree = "<group>"; };
 		DA231AB316FEBA70003CF385 /* MessageEntryInputField@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MessageEntryInputField@2x.png"; sourceTree = "<group>"; };
 		DA231ABC16FEBA81003CF385 /* GrowingTextView.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GrowingTextView.plist; sourceTree = "<group>"; };
+		DA425E5517070B6700728523 /* UIViewController+HCPushBackAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+HCPushBackAnimation.h"; sourceTree = "<group>"; };
+		DA425E5617070B6700728523 /* UIViewController+HCPushBackAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HCPushBackAnimation.m"; sourceTree = "<group>"; };
+		DA425E5817071EBA00728523 /* OSSGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSGlobal.h; sourceTree = "<group>"; };
+		DA425E5917071EBA00728523 /* OSSGlobal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSSGlobal.m; sourceTree = "<group>"; };
 		DA486D3F16F95C9900ACA3C9 /* OSSListDev.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OSSListDev.plist; sourceTree = "<group>"; };
 		DA486D4116F9634F00ACA3C9 /* launchIcon3.5retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchIcon3.5retina.png; sourceTree = "<group>"; };
 		DA486D4216F9634F00ACA3C9 /* launchIcon4retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchIcon4retina.png; sourceTree = "<group>"; };
@@ -469,6 +476,8 @@
 		DA83121B16F9493800B18B80 /* DDProgressViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDProgressViewViewController.h; sourceTree = "<group>"; };
 		DA83121C16F9493800B18B80 /* DDProgressViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDProgressViewViewController.m; sourceTree = "<group>"; };
 		DA83121D16F9493800B18B80 /* DDProgressViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DDProgressViewViewController.xib; sourceTree = "<group>"; };
+		DA8BC4DC170752C50042403E /* OSSCustomMHTabBarControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSCustomMHTabBarControllerViewController.h; sourceTree = "<group>"; };
+		DA8BC4DD170752C50042403E /* OSSCustomMHTabBarControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSSCustomMHTabBarControllerViewController.m; sourceTree = "<group>"; };
 		DA8C8E541701B044001F8A6D /* broom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = broom.png; sourceTree = "<group>"; };
 		DA8C8E551701B044001F8A6D /* broom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "broom@2x.png"; sourceTree = "<group>"; };
 		DA8C8E561701B044001F8A6D /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
@@ -883,6 +892,7 @@
 		7841288016F4607D00AC78B0 /* library */ = {
 			isa = PBXGroup;
 			children = (
+				DA425E5417070B5700728523 /* HCPushBack */,
 				DA8C8E511701B009001F8A6D /* Menu */,
 				DABC3A2316FEC36E00DB3CFA /* View */,
 				DA231AA716FEBA45003CF385 /* TextView */,
@@ -1083,6 +1093,15 @@
 			name = GrowingTextView;
 			sourceTree = "<group>";
 		};
+		DA425E5417070B5700728523 /* HCPushBack */ = {
+			isa = PBXGroup;
+			children = (
+				DA425E5517070B6700728523 /* UIViewController+HCPushBackAnimation.h */,
+				DA425E5617070B6700728523 /* UIViewController+HCPushBackAnimation.m */,
+			);
+			name = HCPushBack;
+			sourceTree = "<group>";
+		};
 		DA6BB2E216F9477B0078350E /* DDProgressView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1092,6 +1111,15 @@
 				DA6BB2E316F9478E0078350E /* DDProgressView.plist */,
 			);
 			name = DDProgressView;
+			sourceTree = "<group>";
+		};
+		DA8BC4DB1707529B0042403E /* custom */ = {
+			isa = PBXGroup;
+			children = (
+				DA8BC4DC170752C50042403E /* OSSCustomMHTabBarControllerViewController.h */,
+				DA8BC4DD170752C50042403E /* OSSCustomMHTabBarControllerViewController.m */,
+			);
+			name = custom;
 			sourceTree = "<group>";
 		};
 		DA8C8E511701B009001F8A6D /* Menu */ = {
@@ -1367,6 +1395,8 @@
 			children = (
 				DA6BB2E016F93DAB0078350E /* OSSList.plist */,
 				DA486D3F16F95C9900ACA3C9 /* OSSListDev.plist */,
+				DA425E5817071EBA00728523 /* OSSGlobal.h */,
+				DA425E5917071EBA00728523 /* OSSGlobal.m */,
 				7841286216F44F5600AC78B0 /* OSSAppDelegate.h */,
 				7841286316F44F5600AC78B0 /* OSSAppDelegate.m */,
 				7841286B16F44F5600AC78B0 /* OSSMasterViewController.h */,
@@ -1379,6 +1409,7 @@
 				DAA8490E1705C80F0025542A /* OSSFavoriteViewController.m */,
 				DAA8491D1705CD630025542A /* OSSCell.h */,
 				DAA8491E1705CD630025542A /* OSSCell.m */,
+				DA8BC4DB1707529B0042403E /* custom */,
 				7841287C16F45B6900AC78B0 /* model */,
 			);
 			name = Classes;
@@ -1963,6 +1994,9 @@
 				DAA8490F1705C80F0025542A /* OSSFavoriteViewController.m in Sources */,
 				DAA8491F1705CD630025542A /* OSSCell.m in Sources */,
 				DAA849221705D4170025542A /* OSSFavorite.m in Sources */,
+				DA425E5717070B6700728523 /* UIViewController+HCPushBackAnimation.m in Sources */,
+				DA425E5A17071EBA00728523 /* OSSGlobal.m in Sources */,
+				DA8BC4DE170752C50042403E /* OSSCustomMHTabBarControllerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

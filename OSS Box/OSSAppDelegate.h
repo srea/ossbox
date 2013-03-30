@@ -7,14 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <AKTabBarController.h>
-
-@interface OSSAppDelegate : UIResponder <UIApplicationDelegate>
+#import "OSSMasterViewController.h"
+#import "OSSFavoriteViewController.h"
+#import "OSSCustomMHTabBarControllerViewController.h"
+@interface OSSAppDelegate : UIResponder <UIApplicationDelegate,MHTabBarControllerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) AKTabBarController *tabBarController;
-
+@property (strong, nonatomic) OSSMasterViewController *masterViewController;
+@property (strong, nonatomic) OSSFavoriteViewController *favoriteViewController;
+@property (strong, nonatomic) OSSCustomMHTabBarControllerViewController *tabBarController;
 //@property (strong, nonatomic) UINavigationController *navigationController;
 
 @end

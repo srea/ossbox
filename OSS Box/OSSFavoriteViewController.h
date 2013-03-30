@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class OSSDetailViewController;
+
 @interface OSSFavoriteViewController : UITableViewController
+
+@property (strong, nonatomic) OSSDetailViewController *detailViewController;
 
 @end
