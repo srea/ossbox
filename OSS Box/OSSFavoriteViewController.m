@@ -13,11 +13,13 @@
 
 #import "UIViewController+HCPushBackAnimation.h"
 
-@interface OSSFavoriteViewController () <UINavigationBarDelegate,UINavigationControllerDelegate,UISearchBarDelegate,UIScrollViewDelegate>
+@interface OSSFavoriteViewController () <UINavigationBarDelegate,UINavigationControllerDelegate,UISearchBarDelegate,UIScrollViewDelegate,UISearchDisplayDelegate>
+@property (nonatomic, strong) UISearchDisplayController * ossSearchDisplayController;
 @property (nonatomic,strong) UISearchBar *searchBar;
 @property (nonatomic,strong) UIView *searchView;
 @property (nonatomic,strong) UITableView* tableView;
 @property (nonatomic,strong) NSMutableArray *objects;
+@property (nonatomic,strong) NSMutableArray *searchObjects;
 @property (nonatomic) BOOL isSearch;
 @end
 
@@ -27,58 +29,54 @@
 {
     self = [super init];
     if (self) {
-        // Custom initialization
         self.title = @"★Stars";
         self.objects = [OSSGlobal getMenuPlistStar];
-//        self.tableView = [[UITableView alloc]init];
-//        self.tableView.dataSource = self;
-//        self.tableView.delegate = self;
     }
     return self;
 }
-
 
 - (void)loadView
 {
     [super loadView];
     _searchView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.tableView.frame.size.width, 44.0f)];
 }
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    [super viewDidLoad];
     self.navigationController.navigationBar.tintColor = [UIColor darkGrayColor];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"About" style:UIBarButtonItemStyleBordered target:self action:@selector(aboutButtonDidPush:)];
     [self.tableView setBackgroundView:nil];
     
     // 検索
     self.searchBar = [[UISearchBar alloc]initWithFrame:CGRectZero];
     [self.searchBar setDelegate:self];
     self.searchBar.tintColor = [UIColor darkGrayColor];
+    self.searchBar.placeholder = @"Input Text";
+    self.searchBar.keyboardType = UIKeyboardTypeASCIICapable;
     [_searchView addSubview:self.searchBar];
     
-    self.tableView.tableHeaderView = _searchView;
+    
+    _ossSearchDisplayController = [[UISearchDisplayController alloc] initWithSearchBar:self.searchBar contentsController:self];
+    _ossSearchDisplayController.delegate = self;
+    _ossSearchDisplayController.searchResultsDelegate = self;
+    _ossSearchDisplayController.searchResultsDataSource = self;
+    
+    self.tableView.tableHeaderView = self.searchView;
     [self.tableView.tableHeaderView sizeToFit];
     
     // 検索バーを隠す
     [self.tableView setContentOffset:CGPointMake(0, 44)];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-//    [self setView:_tableView];
     [self refresh];
+    [self setView:self.tableView];
+    
     [self animationPopFrontScaleUp];
     [_searchView setFrame:CGRectMake(0, 0, self.tableView.frame.size.width, 44.0f)];
     [_searchBar sizeToFit];
-
 }
 
 - (void)refresh
@@ -90,24 +88,35 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return [_objects count];
+    if (tableView == self.ossSearchDisplayController.searchResultsTableView){
+        return [_searchObjects count];
+    } else {
+        return [_objects count];
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[[_objects objectAtIndex:section] objectForKey:@"rows"] count];
+    if (tableView == self.ossSearchDisplayController.searchResultsTableView) {
+        return [[[_searchObjects objectAtIndex:section] objectForKey:@"rows"] count];
+    } else {
+        return [[[_objects objectAtIndex:section] objectForKey:@"rows"] count];
+    }
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    return [[_objects objectAtIndex:section] objectForKey:@"section"];
+    if (tableView == self.ossSearchDisplayController.searchResultsTableView) {
+        return [[_searchObjects objectAtIndex:section] objectForKey:@"section"];
+    } else {
+        return [[_objects objectAtIndex:section] objectForKey:@"section"];
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -121,11 +130,33 @@
         [cell.starBtn addTarget:self action:@selector(starTapped:event:) forControlEvents:UIControlEventTouchUpInside];
     }
     
-    NSDictionary* cellData = [_objects[indexPath.section] objectForKey:@"rows"][indexPath.row];
+    NSDictionary* cellData;
+    if (tableView == self.ossSearchDisplayController.searchResultsTableView) {
+        cellData = [_searchObjects[indexPath.section] objectForKey:@"rows"][indexPath.row];
+    } else {
+        cellData = [_objects[indexPath.section] objectForKey:@"rows"][indexPath.row];
+    }
     cell.textLabel.text = [cellData objectForKey:@"name"];
     cell.detailTextLabel.text = [cellData objectForKey:@"detail"];
     cell.starBtn.selected = [OSSFavorite getStatusWitLibraryName:cell.textLabel.text];
+    
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(handleTapGesture:)];
+    cell.userInteractionEnabled = YES;
+    [cell addGestureRecognizer:singleTap];
     return cell;
+}
+
+- (void) handleTapGesture:(UITapGestureRecognizer*)sender {
+    if (sender.state == UIGestureRecognizerStateEnded){
+        CGPoint tapPoint = [sender locationInView:self.tableView];
+        //        DLog(@"%f %f",tapPoint.x,tapPoint.y );
+        if (tapPoint.x >= 250) { // ★タップのしきい値
+            [self starStatusChange:tapPoint];
+        } else {
+            NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:tapPoint];
+            [self tableView:self.tableView didSelectRowAtIndexPath:indexPath];
+        }
+    }
 }
 
 - (void)starTapped:(id)sender event:(id)event
@@ -133,7 +164,12 @@
     NSSet *touches = [event allTouches];
     UITouch *touch = [touches anyObject];
     CGPoint currentTouchPosition = [touch locationInView:self.tableView];
-    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint: currentTouchPosition];
+    [self starStatusChange:currentTouchPosition];
+}
+
+- (void)starStatusChange:(CGPoint)touchPosition
+{
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint: touchPosition];
     if (indexPath != nil)
     {
         [self tableView: self.tableView accessoryButtonTappedForRowWithIndexPath: indexPath];
@@ -146,7 +182,13 @@
     if (!self.detailViewController) {
         self.detailViewController = [[OSSDetailViewController alloc] init];
     }
-    NSDictionary *object = [_objects[indexPath.section] objectForKey:@"rows"][indexPath.row];
+    
+    NSDictionary *object;
+    if (tableView == self.ossSearchDisplayController.searchResultsTableView) {
+        object = [_searchObjects[indexPath.section] objectForKey:@"rows"][indexPath.row];
+    } else {
+        object = [_objects[indexPath.section] objectForKey:@"rows"][indexPath.row];
+    }
     self.detailViewController.detailItem = object;
     [self.navigationController pushViewController:self.detailViewController animated:YES];
 }
@@ -178,16 +220,42 @@
                                         _searchBar.frame.size.height)];
     }
 }
+
 - (void) tableView: (UITableView *) tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
 {
     OSSCell *cell = (OSSCell*)[tableView cellForRowAtIndexPath:indexPath];
     cell.starBtn.selected = !cell.starBtn.selected;
     
     // 選択した行のお気に入りを解除なり登録なりする。
-    NSString *name = [[_objects[indexPath.section] objectForKey:@"rows"][indexPath.row] objectForKey:@"name"];
+    NSString *name;
+    if (tableView == self.ossSearchDisplayController.searchResultsTableView) {
+        name = [[_searchObjects[indexPath.section] objectForKey:@"rows"][indexPath.row] objectForKey:@"name"];
+    } else {
+        name = [[_objects[indexPath.section] objectForKey:@"rows"][indexPath.row] objectForKey:@"name"];
+    }
+    
     DLog(@"save %@, status %@", name, [cell.starBtn isSelected] ? @"YES" : @"NO");
     [OSSFavorite saveToStatus:[cell.starBtn isSelected] andLibraryName:name];
-    [self refresh];
 }
 
+- (void)filterContentForSearchText:(NSString*)searchString scope:(NSString*)scope {
+    [_searchObjects removeAllObjects];
+    _searchObjects = [OSSGlobal getMenuPlistWithString:searchString];
+}
+
+- (void)searchDisplayControllerWillBeginSearch:(UISearchDisplayController *)controller
+{
+    DLog(@"search Display");
+}
+
+- (void)searchDisplayControllerDidEndSearch:(UISearchDisplayController *)controller
+{
+    DLog(@"search Display Did End Search");
+}
+
+- (BOOL)searchDisplayController:(UISearchDisplayController*)controller shouldReloadTableForSearchString:(NSString*)searchString {
+    [self filterContentForSearchText: searchString
+                               scope: [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
+    return YES;
+}
 @end

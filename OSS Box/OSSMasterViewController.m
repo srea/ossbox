@@ -41,11 +41,6 @@
     return self;
 }
 
-- (NSString *)tabTitle
-{
-    return @"OSS Libraries";
-}
-
 - (void)loadView
 {
     [super loadView];
@@ -95,6 +90,7 @@
 {
     [self.tableView reloadData];
 }
+
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
     [self.tableView setContentOffset:CGPointMake(0, 44) animated:YES];
     [self.searchBar resignFirstResponder];
@@ -243,6 +239,7 @@
                                         _searchBar.frame.size.height)];
     }
 }
+
 - (void) tableView: (UITableView *) tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
 {
     OSSCell *cell = (OSSCell*)[tableView cellForRowAtIndexPath:indexPath];
