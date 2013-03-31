@@ -177,7 +177,16 @@
 		<key>section</key>
 		<string>Web View</string>
 		<key>rows</key>
-		<array/>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>SVWebViewController</string>
+				<key>detail</key>
+				<string>シンプルなウェブブラウザー</string>
+				<key>New item</key>
+				<string></string>
+			</dict>
+		</array>
 	</dict>
 	<dict>
 		<key>section</key>
@@ -242,7 +251,7 @@
 				<key>name</key>
 				<string>iCarousel</string>
 				<key>detail</key>
-				<string></string>
+				<string>3Dカルーセル</string>
 				<key>New item</key>
 				<string></string>
 			</dict>
@@ -250,7 +259,7 @@
 				<key>name</key>
 				<string>REMenu</string>
 				<key>detail</key>
-				<string></string>
+				<string>Vine app風のメニュー</string>
 				<key>New item</key>
 				<string></string>
 			</dict>
@@ -266,7 +275,7 @@
 				<key>name</key>
 				<string>CXAImageSupport</string>
 				<key>detail</key>
-				<string></string>
+				<string>画像をサポートしたUIMenuItem</string>
 				<key>New item</key>
 				<string></string>
 			</dict>

@@ -53,12 +53,12 @@
     [box1.topLines addObject:author];
     
     // new section
-    MGStyledBox *box2 = [MGStyledBox box];
-    [_scroller.boxes addObject:box2];
-    MGBoxLine *count = [MGBoxLine line];
-
-    count.font = headerFont;
-    [box2.topLines addObject:count];
+//    MGStyledBox *box2 = [MGStyledBox box];
+//    [_scroller.boxes addObject:box2];
+//    MGBoxLine *count = [MGBoxLine line];
+//
+//    count.font = headerFont;
+//    [box2.topLines addObject:count];
     
     [_scroller drawBoxesWithSpeed:ANIM_SPEED];
     [_scroller flashScrollIndicators];

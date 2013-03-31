@@ -124,11 +124,14 @@
 		DA486D4416F9634F00ACA3C9 /* launchIcon3.5retina.png in Resources */ = {isa = PBXBuildFile; fileRef = DA486D4116F9634F00ACA3C9 /* launchIcon3.5retina.png */; };
 		DA486D4516F9634F00ACA3C9 /* launchIcon4retina.png in Resources */ = {isa = PBXBuildFile; fileRef = DA486D4216F9634F00ACA3C9 /* launchIcon4retina.png */; };
 		DA486D4616F9634F00ACA3C9 /* launchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = DA486D4316F9634F00ACA3C9 /* launchImage.png */; };
-		DA6BB2E116F93DAC0078350E /* OSSList.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA6BB2E016F93DAB0078350E /* OSSList.plist */; };
 		DA6BB2E416F9478E0078350E /* DDProgressView.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA6BB2E316F9478E0078350E /* DDProgressView.plist */; };
 		DA83121E16F9493800B18B80 /* DDProgressViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA83121C16F9493800B18B80 /* DDProgressViewViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DA83121F16F9493800B18B80 /* DDProgressViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA83121D16F9493800B18B80 /* DDProgressViewViewController.xib */; };
 		DA8BC4DE170752C50042403E /* OSSCustomMHTabBarControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BC4DD170752C50042403E /* OSSCustomMHTabBarControllerViewController.m */; };
+		DA8BC4E3170856DF0042403E /* SVWebViewController.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA8BC4E2170856DF0042403E /* SVWebViewController.plist */; };
+		DA8BC4E7170857A30042403E /* SVWebDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BC4E5170857A30042403E /* SVWebDemoViewController.m */; };
+		DA8BC4E8170857A30042403E /* SVWebDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA8BC4E6170857A30042403E /* SVWebDemoViewController.xib */; };
+		DA8BC4EA17085C3B0042403E /* OSSList.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA8BC4E917085C390042403E /* OSSList.plist */; };
 		DA8C8E581701B044001F8A6D /* broom.png in Resources */ = {isa = PBXBuildFile; fileRef = DA8C8E541701B044001F8A6D /* broom.png */; };
 		DA8C8E591701B044001F8A6D /* broom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA8C8E551701B044001F8A6D /* broom@2x.png */; };
 		DA8C8E5A1701B044001F8A6D /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = DA8C8E561701B044001F8A6D /* camera.png */; };
@@ -471,13 +474,17 @@
 		DA486D4716F963A100ACA3C9 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		DA486D4916F963A500ACA3C9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		DA486D4B16F963B400ACA3C9 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
-		DA6BB2E016F93DAB0078350E /* OSSList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OSSList.plist; sourceTree = "<group>"; };
 		DA6BB2E316F9478E0078350E /* DDProgressView.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DDProgressView.plist; sourceTree = "<group>"; };
 		DA83121B16F9493800B18B80 /* DDProgressViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDProgressViewViewController.h; sourceTree = "<group>"; };
 		DA83121C16F9493800B18B80 /* DDProgressViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDProgressViewViewController.m; sourceTree = "<group>"; };
 		DA83121D16F9493800B18B80 /* DDProgressViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DDProgressViewViewController.xib; sourceTree = "<group>"; };
 		DA8BC4DC170752C50042403E /* OSSCustomMHTabBarControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSCustomMHTabBarControllerViewController.h; sourceTree = "<group>"; };
 		DA8BC4DD170752C50042403E /* OSSCustomMHTabBarControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSSCustomMHTabBarControllerViewController.m; sourceTree = "<group>"; };
+		DA8BC4E2170856DF0042403E /* SVWebViewController.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SVWebViewController.plist; sourceTree = "<group>"; };
+		DA8BC4E4170857A30042403E /* SVWebDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVWebDemoViewController.h; sourceTree = "<group>"; };
+		DA8BC4E5170857A30042403E /* SVWebDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVWebDemoViewController.m; sourceTree = "<group>"; };
+		DA8BC4E6170857A30042403E /* SVWebDemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SVWebDemoViewController.xib; sourceTree = "<group>"; };
+		DA8BC4E917085C390042403E /* OSSList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OSSList.plist; sourceTree = "<group>"; };
 		DA8C8E541701B044001F8A6D /* broom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = broom.png; sourceTree = "<group>"; };
 		DA8C8E551701B044001F8A6D /* broom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "broom@2x.png"; sourceTree = "<group>"; };
 		DA8C8E561701B044001F8A6D /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
@@ -892,6 +899,7 @@
 		7841288016F4607D00AC78B0 /* library */ = {
 			isa = PBXGroup;
 			children = (
+				DA8BC4E0170856C10042403E /* WebBrowser */,
 				DA8BC4DF170844A70042403E /* HUD */,
 				DA425E5417070B5700728523 /* HCPushBack */,
 				DA8C8E511701B009001F8A6D /* Menu */,
@@ -1128,6 +1136,25 @@
 				DA6BB2E216F9477B0078350E /* DDProgressView */,
 			);
 			name = HUD;
+			sourceTree = "<group>";
+		};
+		DA8BC4E0170856C10042403E /* WebBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				DA8BC4E1170856CA0042403E /* SVWebViewController */,
+			);
+			name = WebBrowser;
+			sourceTree = "<group>";
+		};
+		DA8BC4E1170856CA0042403E /* SVWebViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DA8BC4E4170857A30042403E /* SVWebDemoViewController.h */,
+				DA8BC4E5170857A30042403E /* SVWebDemoViewController.m */,
+				DA8BC4E6170857A30042403E /* SVWebDemoViewController.xib */,
+				DA8BC4E2170856DF0042403E /* SVWebViewController.plist */,
+			);
+			name = SVWebViewController;
 			sourceTree = "<group>";
 		};
 		DA8C8E511701B009001F8A6D /* Menu */ = {
@@ -1401,7 +1428,7 @@
 		DAB9297216FE9F650055FB36 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				DA6BB2E016F93DAB0078350E /* OSSList.plist */,
+				DA8BC4E917085C390042403E /* OSSList.plist */,
 				DA486D3F16F95C9900ACA3C9 /* OSSListDev.plist */,
 				DA425E5817071EBA00728523 /* OSSGlobal.h */,
 				DA425E5917071EBA00728523 /* OSSGlobal.m */,
@@ -1733,7 +1760,6 @@
 				7850372116F604150045510D /* ZGParallelView.plist in Resources */,
 				7850372316F606010045510D /* ZG.png in Resources */,
 				7850372C16F6106C0045510D /* ZGParallelViewController.storyboard in Resources */,
-				DA6BB2E116F93DAC0078350E /* OSSList.plist in Resources */,
 				DA6BB2E416F9478E0078350E /* DDProgressView.plist in Resources */,
 				DA83121F16F9493800B18B80 /* DDProgressViewViewController.xib in Resources */,
 				DAD963FE16F9593E00E00D9E /* Icon-72.png in Resources */,
@@ -1918,6 +1944,9 @@
 				DAA849181705C9350025542A /* noise-dark-gray@2x.png in Resources */,
 				DAA8491B1705CD0C0025542A /* NavBarFavouriteActive.png in Resources */,
 				DAA8491C1705CD0C0025542A /* NavBarFavouriteNonActive.png in Resources */,
+				DA8BC4E3170856DF0042403E /* SVWebViewController.plist in Resources */,
+				DA8BC4E8170857A30042403E /* SVWebDemoViewController.xib in Resources */,
+				DA8BC4EA17085C3B0042403E /* OSSList.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2005,6 +2034,7 @@
 				DA425E5717070B6700728523 /* UIViewController+HCPushBackAnimation.m in Sources */,
 				DA425E5A17071EBA00728523 /* OSSGlobal.m in Sources */,
 				DA8BC4DE170752C50042403E /* OSSCustomMHTabBarControllerViewController.m in Sources */,
+				DA8BC4E7170857A30042403E /* SVWebDemoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

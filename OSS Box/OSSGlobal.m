@@ -13,7 +13,7 @@
 
 + (NSMutableArray *)getMenuPlist
 {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"OSSListDev" ofType:@"plist"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"OSSList" ofType:@"plist"];
     return [NSMutableArray arrayWithContentsOfFile:path];
 }
 
