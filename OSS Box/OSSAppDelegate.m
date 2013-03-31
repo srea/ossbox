@@ -75,6 +75,7 @@
 {
 	DLog(@"mh_tabBarController %@ shouldSelectViewController %@ at index %u", tabBarController, viewController, index);
     
+    
 	// Uncomment this to prevent "Tab 3" from being selected.
 	//return (index != 2);
     

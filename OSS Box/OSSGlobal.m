@@ -59,4 +59,25 @@
     return (NSMutableArray*)[[starArray reverseObjectEnumerator] allObjects];
 }
 
++ (NSMutableArray *)getMenuPlistStarWithString:(NSString *)string
+{
+    NSMutableArray *starArray = [NSMutableArray array];
+    NSMutableArray *object = [[OSSGlobal getMenuPlist] mutableCopy];
+    for (NSMutableDictionary*section in [object reverseObjectEnumerator]) {
+        [starArray addObject:section];
+        for (NSMutableDictionary*row in [[section objectForKey:@"rows"] reverseObjectEnumerator]) {
+            NSUInteger num = 0;
+            BOOL flag = [OSSFavorite getStatusWitLibraryName:[row objectForKey:@"name"]];
+            NSRange range = [[row objectForKey:@"name"] rangeOfString:string options:NSCaseInsensitiveSearch];
+            if(range.length <= 0 || !flag) {
+                [[section objectForKey:@"rows"] removeObject:row];
+            }
+            num++;
+        }
+        if ([[section objectForKey:@"rows"] count] <= 0) {
+            [starArray removeObject:section];
+        }
+    }
+    return (NSMutableArray*)[[starArray reverseObjectEnumerator] allObjects];
+}
 @end

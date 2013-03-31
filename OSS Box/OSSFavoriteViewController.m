@@ -46,7 +46,7 @@
     [super viewDidLoad];
     self.navigationController.navigationBar.tintColor = [UIColor darkGrayColor];
     [self.tableView setBackgroundView:nil];
-    
+    [self setView:self.tableView];
     // 検索
     self.searchBar = [[UISearchBar alloc]initWithFrame:CGRectZero];
     [self.searchBar setDelegate:self];
@@ -72,7 +72,6 @@
 {
     [super viewWillAppear:animated];
     [self refresh];
-    [self setView:self.tableView];
     
     [self animationPopFrontScaleUp];
     [_searchView setFrame:CGRectMake(0, 0, self.tableView.frame.size.width, 44.0f)];
@@ -150,7 +149,7 @@
     if (sender.state == UIGestureRecognizerStateEnded){
         CGPoint tapPoint = [sender locationInView:self.tableView];
         //        DLog(@"%f %f",tapPoint.x,tapPoint.y );
-        if (tapPoint.x >= 250) { // ★タップのしきい値
+        if (tapPoint.x >= 230) { // ★タップのしきい値
             [self starStatusChange:tapPoint];
         } else {
             NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:tapPoint];
@@ -213,6 +212,9 @@
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if (self.ossSearchDisplayController.active == YES) {
+        return;
+    }
     if (scrollView.contentOffset.y <= 0) {
         [_searchBar setFrame:CGRectMake(0,
                                         scrollView.contentOffset.y,
@@ -236,11 +238,12 @@
     
     DLog(@"save %@, status %@", name, [cell.starBtn isSelected] ? @"YES" : @"NO");
     [OSSFavorite saveToStatus:[cell.starBtn isSelected] andLibraryName:name];
+    [self refresh];
 }
 
 - (void)filterContentForSearchText:(NSString*)searchString scope:(NSString*)scope {
     [_searchObjects removeAllObjects];
-    _searchObjects = [OSSGlobal getMenuPlistWithString:searchString];
+    _searchObjects = [OSSGlobal getMenuPlistStarWithString:searchString];
 }
 
 - (void)searchDisplayControllerWillBeginSearch:(UISearchDisplayController *)controller

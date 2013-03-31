@@ -169,7 +169,7 @@
     if (sender.state == UIGestureRecognizerStateEnded){
         CGPoint tapPoint = [sender locationInView:self.tableView];
 //        DLog(@"%f %f",tapPoint.x,tapPoint.y );
-        if (tapPoint.x >= 250) { // ★タップのしきい値
+        if (tapPoint.x >= 230) { // ★タップのしきい値
             [self starStatusChange:tapPoint];
         } else {
             NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:tapPoint];
@@ -232,6 +232,9 @@
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if (self.ossSearchDisplayController.active == YES) {
+        return;
+    }
     if (scrollView.contentOffset.y <= 0) {
         [_searchBar setFrame:CGRectMake(0,
                                         scrollView.contentOffset.y,

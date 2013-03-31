@@ -12,4 +12,6 @@
 + (NSMutableArray *)getMenuPlist;
 + (NSMutableArray *)getMenuPlistStar;
 + (NSMutableArray *)getMenuPlistWithString:(NSString*)string;
++ (NSMutableArray *)getMenuPlistStarWithString:(NSString*)string;
+
 @end
