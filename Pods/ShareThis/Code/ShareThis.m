@@ -195,7 +195,7 @@ NSString *const AppWillTerminateNotificationName = @"appWillTerminate";
         switch (self.contentType) {
             case STContentTypeAll:
             case STContentTypeArticle:
-                [buttonTitles addObject:@"Add to Instapaper"];
+//                [buttonTitles addObject:@"Add to Instapaper"];
                 if (self.pocketAPIKey) {
                     [buttonTitles addObject:@"Add to Pocket"];
                     [self.actionSheetServiceButtonList addObject:[[NSNumber alloc] initWithInt:STServiceTypePocket]];
