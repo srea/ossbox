@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AppStoreFileSize</key>
+	<integer>21505725</integer>
+	<key>AppStoreFileSizeValid</key>
+	<true/>
+	<key>ApplicationProperties</key>
+	<dict>
+		<key>ApplicationPath</key>
+		<string>Applications/ossbox.app</string>
+		<key>CFBundleIdentifier</key>
+		<string>net.tamazawa.ossbox</string>
+		<key>CFBundleShortVersionString</key>
+		<string>1.0.0</string>
+		<key>CFBundleVersion</key>
+		<string>1.0.0</string>
+		<key>IconPaths</key>
+		<array>
+			<string>Applications/ossbox.app/Icon.png</string>
+			<string>Applications/ossbox.app/Icon@2x.png</string>
+		</array>
+		<key>SigningIdentity</key>
+		<string>iPhone Distribution: yuki Tamazawa</string>
+	</dict>
+	<key>ArchiveVersion</key>
+	<integer>2</integer>
+	<key>CreationDate</key>
+	<date>2013-03-31T13:05:12Z</date>
+	<key>Name</key>
+	<string>OSS Box</string>
+	<key>SchemeName</key>
+	<string>OSS Box</string>
+	<key>Status</key>
+	<string>Submitted</string>
+</dict>
+</plist>
