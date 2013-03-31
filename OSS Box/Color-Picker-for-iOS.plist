@@ -17,7 +17,7 @@
 	<key>licenseType</key>
 	<string>BSD</string>
 	<key>licenseBody</key>
-	<string></string>
+	<string>new BSD License</string>
 	<key>detailText</key>
 	<string>ColorPicker for iPhone and iPod touch.</string>
 	<key>controller</key>

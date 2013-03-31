@@ -892,6 +892,7 @@
 		7841288016F4607D00AC78B0 /* library */ = {
 			isa = PBXGroup;
 			children = (
+				DA8BC4DF170844A70042403E /* HUD */,
 				DA425E5417070B5700728523 /* HCPushBack */,
 				DA8C8E511701B009001F8A6D /* Menu */,
 				DABC3A2316FEC36E00DB3CFA /* View */,
@@ -899,13 +900,10 @@
 				DAB9297B16FEA5670055FB36 /* Popover */,
 				DAB488BC16FDD5E000DCB55D /* Camera */,
 				DAF6733F16FD5860000EE8E7 /* Color */,
-				DA6BB2E216F9477B0078350E /* DDProgressView */,
 				7850371F16F603FC0045510D /* ZGParallelView */,
 				7850370D16F58E0A0045510D /* KGStatusBar */,
 				7815F0AE16F4A7180075C77F /* Notification */,
 				7815F09816F49FA20075C77F /* iCarousel */,
-				7815F08916F484BB0075C77F /* MBProgressHUD */,
-				7815F09716F49CA30075C77F /* SVProgressHUD */,
 				7841288116F460A400AC78B0 /* UIGlossyButton.plist */,
 			);
 			name = library;
@@ -1120,6 +1118,16 @@
 				DA8BC4DD170752C50042403E /* OSSCustomMHTabBarControllerViewController.m */,
 			);
 			name = custom;
+			sourceTree = "<group>";
+		};
+		DA8BC4DF170844A70042403E /* HUD */ = {
+			isa = PBXGroup;
+			children = (
+				7815F09716F49CA30075C77F /* SVProgressHUD */,
+				7815F08916F484BB0075C77F /* MBProgressHUD */,
+				DA6BB2E216F9477B0078350E /* DDProgressView */,
+			);
+			name = HUD;
 			sourceTree = "<group>";
 		};
 		DA8C8E511701B009001F8A6D /* Menu */ = {

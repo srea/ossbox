@@ -13,6 +13,8 @@
 #import <MGBoxLine.h>
 #import <MGStyledBox.h>
 
+#import <QuartzCore/QuartzCore.h>
+
 #define ANIM_SPEED 0
 
 @interface OSSAboutViewController () <UINavigationControllerDelegate,UINavigationBarDelegate, UIScrollViewDelegate>
@@ -72,9 +74,29 @@
 - (void)loadView
 {
     [super loadView];
-    _scroller = [[MGScrollView alloc] initWithFrame:self.view.frame];
-    self.view = _scroller;
+    _scroller = [[MGScrollView alloc] initWithFrame:CGRectMake(0, 70, self.view.frame.size.width, self.view.frame.size.height)];
+    [self.view addSubview:[self logo]];
+    CALayer *layer = _scroller.layer;
+    layer.masksToBounds = NO;
+    layer.shadowColor = [[UIColor blackColor] CGColor];
+    layer.shadowOffset = CGSizeMake(1.0f, 1.0f);
+    layer.shadowRadius = 3.0f;
+    layer.shadowOpacity = 1.0f;
+//    layer.shouldRasterize = YES;
+    [self.view addSubview:_scroller];
     
+}
+
+- (UIImageView*)logo
+{
+    UIImageView*logo = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Icon"]];
+    logo.frame = CGRectMake((self.view.frame.size.width / 2) - (logo.frame.size.width / 2),
+                            10, logo.frame.size.width, logo.frame.size.height);
+    logo.layer.masksToBounds = NO;
+    logo.layer.shadowOffset = CGSizeMake(1.0f, 1.0f);
+    logo.layer.shadowRadius = 1.0f;
+    logo.layer.shadowOpacity = 0.5f;
+    return logo;
 }
 
 - (UIButton *)button:(NSString *)title for:(SEL)selector {

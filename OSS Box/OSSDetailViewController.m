@@ -150,7 +150,7 @@
     head3.font = headerFont;
     [box3.topLines addObject:head3];
     
-        UIFont *lisence = [UIFont fontWithName:@"HelveticaNeue" size:10];
+        UIFont *lisence = [UIFont fontWithName:@"HelveticaNeue" size:9];
     MGBoxLine *wordsLine = [MGBoxLine multilineWithText:[_library licenseBody] font:lisence padding:0];
     [box3.topLines addObject:wordsLine];
     
@@ -249,8 +249,7 @@
         SVModalWebViewController *webViewController = [[SVModalWebViewController alloc] initWithURL:url];
         webViewController.modalPresentationStyle = UIModalPresentationPageSheet;
         webViewController.availableActions = SVWebViewControllerAvailableActionsOpenInSafari | SVWebViewControllerAvailableActionsCopyLink | SVWebViewControllerAvailableActionsMailLink;
-        webViewController.navigationController.navigationBar.tintColor = [UIColor darkGrayColor];
-        webViewController.toolbar.tintColor = [UIColor darkGrayColor];
+        webViewController.barsTintColor = [UIColor darkGrayColor];
         [self presentModalViewController:webViewController animated:YES];
     }
 }

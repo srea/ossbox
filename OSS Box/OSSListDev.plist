@@ -11,7 +11,7 @@
 				<key>name</key>
 				<string>DLCImagePickerController</string>
 				<key>detail</key>
-				<string></string>
+				<string>GPUImageを使ったInstagramのようなカメラ</string>
 				<key>New item</key>
 				<string></string>
 			</dict>
@@ -19,7 +19,7 @@
 				<key>name</key>
 				<string>GPUImage</string>
 				<key>detail</key>
-				<string></string>
+				<string>OpenGLを利用したリアルタイムフィルタ</string>
 				<key>New item</key>
 				<string></string>
 			</dict>
@@ -27,7 +27,7 @@
 				<key>name</key>
 				<string>Aviary</string>
 				<key>detail</key>
-				<string></string>
+				<string>多くのPlatformに対応しているフォトエディタ</string>
 				<key>New item</key>
 				<string></string>
 			</dict>
@@ -42,7 +42,7 @@
 				<key>name</key>
 				<string>MBProgressHUD</string>
 				<key>detail</key>
-				<string></string>
+				<string>イケてるインジケーター</string>
 				<key>New item</key>
 				<string></string>
 			</dict>
@@ -50,7 +50,7 @@
 				<key>name</key>
 				<string>SVProgressHUD</string>
 				<key>detail</key>
-				<string></string>
+				<string>シンプルで使いやすいインジケーター</string>
 				<key>New item</key>
 				<string></string>
 			</dict>
@@ -58,7 +58,7 @@
 				<key>name</key>
 				<string>DDProgressView</string>
 				<key>detail</key>
-				<string></string>
+				<string>Twitterに似たプログレスバー</string>
 				<key>New item</key>
 				<string></string>
 			</dict>
@@ -73,7 +73,7 @@
 				<key>name</key>
 				<string>KLNoteViewController</string>
 				<key>detail</key>
-				<string></string>
+				<string>Evernoteに似たUI</string>
 				<key>New item</key>
 				<string></string>
 			</dict>
@@ -81,7 +81,7 @@
 				<key>name</key>
 				<string>MCSwipeTableViewCell</string>
 				<key>detail</key>
-				<string></string>
+				<string>Mailboxに似たスワイプ機能を持ったUI</string>
 				<key>New item</key>
 				<string></string>
 			</dict>
@@ -89,7 +89,7 @@
 				<key>name</key>
 				<string>SVSegmentedControl</string>
 				<key>detail</key>
-				<string></string>
+				<string>UISegmentedControlのカスタム版</string>
 				<key>New item</key>
 				<string></string>
 			</dict>
@@ -105,7 +105,7 @@
 				<key>name</key>
 				<string>TMQuiltView</string>
 				<key>detail</key>
-				<string></string>
+				<string>Pinterest風のTableView</string>
 				<key>New item</key>
 				<string></string>
 			</dict>
@@ -113,7 +113,7 @@
 				<key>name</key>
 				<string>KNSemiModalViewController</string>
 				<key>detail</key>
-				<string></string>
+				<string>モーダル表示時にアニメーション効果を追加する</string>
 				<key>New item</key>
 				<string></string>
 			</dict>
@@ -128,7 +128,7 @@
 				<key>name</key>
 				<string>NoticeView</string>
 				<key>detail</key>
-				<string></string>
+				<string>TweetBot風のNoticeコンポーネント</string>
 				<key>New item</key>
 				<string></string>
 			</dict>
@@ -136,7 +136,7 @@
 				<key>name</key>
 				<string>AJNotificationView</string>
 				<key>detail</key>
-				<string></string>
+				<string>キレイなアニメーションがついたNoticeコンポーネント</string>
 				<key>New item</key>
 				<string></string>
 			</dict>
@@ -144,7 +144,7 @@
 				<key>name</key>
 				<string>KGStatusBar</string>
 				<key>detail</key>
-				<string></string>
+				<string>MailBox app風ステータスバー</string>
 				<key>New item</key>
 				<string></string>
 			</dict>
@@ -159,7 +159,7 @@
 				<key>name</key>
 				<string>FPPopover</string>
 				<key>detail</key>
-				<string></string>
+				<string>カスタマイズが簡単なUIPopoverController</string>
 				<key>New item</key>
 				<string></string>
 			</dict>
@@ -167,7 +167,7 @@
 				<key>name</key>
 				<string>WEPopover</string>
 				<key>detail</key>
-				<string></string>
+				<string>汎用的なUIPopoverController</string>
 				<key>New item</key>
 				<string></string>
 			</dict>
@@ -188,7 +188,7 @@
 				<key>name</key>
 				<string>EDColor</string>
 				<key>detail</key>
-				<string></string>
+				<string>UIColorをHex,HSB,HSL,LABに対応できる</string>
 				<key>New item</key>
 				<string></string>
 			</dict>
@@ -212,7 +212,7 @@
 				<key>name</key>
 				<string>ColorPopover</string>
 				<key>detail</key>
-				<string></string>
+				<string>Popoverで色を選択できる</string>
 				<key>New item</key>
 				<string></string>
 			</dict>
@@ -227,7 +227,7 @@
 				<key>name</key>
 				<string>GrowingTextView</string>
 				<key>detail</key>
-				<string></string>
+				<string>SMS app風TextView</string>
 				<key>New item</key>
 				<string></string>
 			</dict>

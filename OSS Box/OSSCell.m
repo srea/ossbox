@@ -23,6 +23,8 @@
         [_starBtn setImage:[UIImage imageNamed:@"NavBarFavouriteActive.png"] forState:UIControlStateSelected];
         [_starBtn sizeToFit];
         self.accessoryView = _starBtn;
+        
+        self.detailTextLabel.font = [UIFont fontWithName:@"HiraKakuProN-W3" size:12];
     }
     return self;
 }
