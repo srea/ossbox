@@ -77,7 +77,7 @@
     WBNoticeOperation *operation = [NSOperationQueue addNoticeView:notice filterDuplicates:YES];
     __block WBNoticeOperation *weakOperation = operation;
     operation.completionBlock = ^{
-        NSLog(@"Queued notice operation dismissed! Interactively: %@", weakOperation.dismissedInteractively ? @"YES" : @"NO");
+        DLog(@"Queued notice operation dismissed! Interactively: %@", weakOperation.dismissedInteractively ? @"YES" : @"NO");
     };
 }
 
@@ -85,7 +85,7 @@
 {
     WBErrorNoticeView *notice = [WBErrorNoticeView errorNoticeInView:self.view title:@"Network Error" message:@"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."];
     [notice setDismissalBlock:^(BOOL dismissedInteractively) {
-        NSLog(@"showLargeErrorNotice dismissed!");
+        DLog(@"showLargeErrorNotice dismissed!");
     }];
     [notice show];
 }
@@ -100,7 +100,7 @@
 {
     WBStickyNoticeView *notice = [WBStickyNoticeView stickyNoticeInView:self.view title:@"7 New Tweets."];
     [notice setDismissalBlock:^(BOOL dismissedInteractively) {
-        NSLog(@"showSmallStickyNotice dismissed!");
+        DLog(@"showSmallStickyNotice dismissed!");
     }];
     [notice show];
 }

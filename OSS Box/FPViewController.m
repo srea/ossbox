@@ -52,7 +52,7 @@
 
 -(IBAction)popover:(id)sender
 {
-    //NSLog(@"popover retain count: %d",[popover retainCount]);
+    //DLog(@"popover retain count: %d",[popover retainCount]);
 
     SAFE_ARC_RELEASE(popover); popover=nil;
     
@@ -182,7 +182,7 @@
 
 -(void)selectedTableRow:(NSUInteger)rowNum
 {
-    NSLog(@"SELECTED ROW %d",rowNum);
+    DLog(@"SELECTED ROW %d",rowNum);
     [popover dismissPopoverAnimated:YES];
 }
 

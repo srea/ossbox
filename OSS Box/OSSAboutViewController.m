@@ -53,7 +53,8 @@
     // new section
     MGStyledBox *box2 = [MGStyledBox box];
     [_scroller.boxes addObject:box2];
-    MGBoxLine *count = [MGBoxLine lineWithLeft:@"Count" right:@"10"];
+    MGBoxLine *count = [MGBoxLine line];
+
     count.font = headerFont;
     [box2.topLines addObject:count];
     

@@ -162,7 +162,24 @@
     cell.textLabel.text = [cellData objectForKey:@"name"];
     cell.detailTextLabel.text = [cellData objectForKey:@"detail"];
     cell.starBtn.selected = [OSSFavorite getStatusWitLibraryName:cell.textLabel.text];
+    
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(handleTapGesture:)];
+    cell.userInteractionEnabled = YES;
+    [cell addGestureRecognizer:singleTap];
     return cell;
+}
+
+- (void) handleTapGesture:(UITapGestureRecognizer*)sender {
+    if (sender.state == UIGestureRecognizerStateEnded){
+        CGPoint tapPoint = [sender locationInView:self.tableView];
+//        DLog(@"%f %f",tapPoint.x,tapPoint.y );
+        if (tapPoint.x >= 250) { // ★タップのしきい値
+            [self starStatusChange:tapPoint];
+        } else {
+            NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:tapPoint];
+            [self tableView:self.tableView didSelectRowAtIndexPath:indexPath];
+        }
+    }
 }
 
 - (void)starTapped:(id)sender event:(id)event
@@ -170,7 +187,12 @@
     NSSet *touches = [event allTouches];
     UITouch *touch = [touches anyObject];
     CGPoint currentTouchPosition = [touch locationInView:self.tableView];
-    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint: currentTouchPosition];
+    [self starStatusChange:currentTouchPosition];
+}
+
+- (void)starStatusChange:(CGPoint)touchPosition
+{
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint: touchPosition];
     if (indexPath != nil)
     {
         [self tableView: self.tableView accessoryButtonTappedForRowWithIndexPath: indexPath];
@@ -234,7 +256,7 @@
         name = [[_objects[indexPath.section] objectForKey:@"rows"][indexPath.row] objectForKey:@"name"];
     }
 
-    NSLog(@"save %@, status %@", name, [cell.starBtn isSelected] ? @"YES" : @"NO");
+    DLog(@"save %@, status %@", name, [cell.starBtn isSelected] ? @"YES" : @"NO");
     [OSSFavorite saveToStatus:[cell.starBtn isSelected] andLibraryName:name];
 }
 
@@ -245,12 +267,12 @@
 
 - (void)searchDisplayControllerWillBeginSearch:(UISearchDisplayController *)controller
 {
-    NSLog(@"search Display");
+    DLog(@"search Display");
 }
 
 - (void)searchDisplayControllerDidEndSearch:(UISearchDisplayController *)controller
 {
-    NSLog(@"search Display Did End Search");
+    DLog(@"search Display Did End Search");
 }
 
 - (BOOL)searchDisplayController:(UISearchDisplayController*)controller shouldReloadTableForSearchString:(NSString*)searchString {

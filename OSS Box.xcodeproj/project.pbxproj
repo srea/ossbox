@@ -388,7 +388,7 @@
 		787B092C16F4A9F60099D96D /* pattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pattern.png; sourceTree = "<group>"; };
 		787B092D16F4A9F60099D96D /* pattern@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pattern@2X.png"; sourceTree = "<group>"; };
 		787B092E16F4A9F60099D96D /* AJNotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJNotificationViewController.h; sourceTree = "<group>"; };
-		787B092F16F4A9F60099D96D /* AJNotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJNotificationViewController.m; sourceTree = "<group>"; };
+		787B092F16F4A9F60099D96D /* AJNotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AJNotificationViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		787B093416F4ABC50099D96D /* NoticeView.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NoticeView.plist; sourceTree = "<group>"; };
 		787B094D16F4AD170099D96D /* NoticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticeViewController.h; sourceTree = "<group>"; };
 		787B094E16F4AD170099D96D /* NoticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticeViewController.m; sourceTree = "<group>"; };
@@ -440,8 +440,8 @@
 		DA231A8416FEB0E2003CF385 /* Icon_Home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon_Home@2x.png"; sourceTree = "<group>"; };
 		DA231A8516FEB0E2003CF385 /* Icon_Profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_Profile.png; sourceTree = "<group>"; };
 		DA231A8616FEB0E2003CF385 /* Icon_Profile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon_Profile@2x.png"; sourceTree = "<group>"; };
-		DA231A8F16FEB125003CF385 /* FPPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPPopoverController.m; sourceTree = "<group>"; };
-		DA231A9016FEB125003CF385 /* FPPopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPPopoverView.m; sourceTree = "<group>"; };
+		DA231A8F16FEB125003CF385 /* FPPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FPPopoverController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		DA231A9016FEB125003CF385 /* FPPopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FPPopoverView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		DA231A9116FEB125003CF385 /* FPPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPPopoverController.h; sourceTree = "<group>"; };
 		DA231A9216FEB125003CF385 /* FPPopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPPopoverView.h; sourceTree = "<group>"; };
 		DA231A9316FEB125003CF385 /* FPTouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPTouchView.h; sourceTree = "<group>"; };
@@ -603,7 +603,7 @@
 		DAB927A816FE01DC0055FB36 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
 		DAB927A916FE01DC0055FB36 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
 		DAB927AA16FE01DD0055FB36 /* DLCImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLCImagePickerController.h; sourceTree = "<group>"; };
-		DAB927AB16FE01DD0055FB36 /* DLCImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLCImagePickerController.m; sourceTree = "<group>"; };
+		DAB927AB16FE01DD0055FB36 /* DLCImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DLCImagePickerController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		DAB927AE16FE02380055FB36 /* DLCImagePicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLCImagePicker.xib; sourceTree = "<group>"; };
 		DAB9296416FE0DE00055FB36 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		DAB9296616FE0DE90055FB36 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };

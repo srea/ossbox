@@ -8,14 +8,16 @@
 
 #import "OSSCell.h"
 
+@interface OSSCell ()
+
+@end
+
 @implementation OSSCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        // Initialization code
-        
         _starBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [_starBtn setImage:[UIImage imageNamed:@"NavBarFavouriteNonActive.png"] forState:UIControlStateNormal];
         [_starBtn setImage:[UIImage imageNamed:@"NavBarFavouriteActive.png"] forState:UIControlStateSelected];
@@ -25,19 +27,27 @@
     return self;
 }
 
+- (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated
+{
+    [super setHighlighted:highlighted animated:animated];
+}
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
 }
-//
-//- (void)layoutSubviews
-//{
-//    [super layoutSubviews];
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    self.contentView.frame = CGRectMake(0,
+                                        0,
+                                        self.contentView.frame.size.width - self.accessoryView.frame.size.width,
+                                        self.contentView.frame.size.height);
+
 //    CGRect frame = self.accessoryView.frame;
 //    frame.origin.x -= 10;
 //    [self.accessoryView setFrame:frame];
-//}
+}
 
 @end

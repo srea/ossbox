@@ -63,7 +63,6 @@
     
     // 検索バーを隠す
     [self.tableView setContentOffset:CGPointMake(0, 44)];
-    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -186,7 +185,7 @@
     
     // 選択した行のお気に入りを解除なり登録なりする。
     NSString *name = [[_objects[indexPath.section] objectForKey:@"rows"][indexPath.row] objectForKey:@"name"];
-    NSLog(@"save %@, status %@", name, [cell.starBtn isSelected] ? @"YES" : @"NO");
+    DLog(@"save %@, status %@", name, [cell.starBtn isSelected] ? @"YES" : @"NO");
     [OSSFavorite saveToStatus:[cell.starBtn isSelected] andLibraryName:name];
     [self refresh];
 }

@@ -10,4 +10,5 @@
 
 @interface OSSCell : UITableViewCell
 @property (nonatomic, strong)UIButton *starBtn;
+@property (nonatomic, strong) UIView *touchZone;
 @end

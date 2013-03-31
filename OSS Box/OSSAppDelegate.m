@@ -12,6 +12,7 @@
 #import "OSSAboutViewController.h"
 #import "UIViewController+HCPushBackAnimation.h"
 #import <ShareThis.h>
+#import <QuartzCore/QuartzCore.h>
 
 @implementation OSSAppDelegate
 
@@ -36,7 +37,7 @@
 	navController.navigationBar.tintColor = [UIColor blackColor];
     _tabBarController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"About" style:UIBarButtonItemStyleBordered target:self action:@selector(aboutButtonDidPush:)];
 
-    
+    navController.view.layer.cornerRadius = 5.0f;
     self.window.rootViewController = navController;
     [self.window makeKeyAndVisible];
     return YES;
@@ -72,7 +73,7 @@
 #pragma mark tab delegate
 - (BOOL)mh_tabBarController:(MHTabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController atIndex:(NSUInteger)index
 {
-	NSLog(@"mh_tabBarController %@ shouldSelectViewController %@ at index %u", tabBarController, viewController, index);
+	DLog(@"mh_tabBarController %@ shouldSelectViewController %@ at index %u", tabBarController, viewController, index);
     
 	// Uncomment this to prevent "Tab 3" from being selected.
 	//return (index != 2);
@@ -82,7 +83,7 @@
 
 - (void)mh_tabBarController:(MHTabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController atIndex:(NSUInteger)index
 {
-	NSLog(@"mh_tabBarController %@ didSelectViewController %@ at index %u", tabBarController, viewController, index);
+	DLog(@"mh_tabBarController %@ didSelectViewController %@ at index %u", tabBarController, viewController, index);
 }
 
 

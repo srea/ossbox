@@ -56,18 +56,18 @@
 
 - (void) semiModalResized:(NSNotification *) notification {
   if(notification.object == self){
-    NSLog(@"The view controller presented was been resized");
+    DLog(@"The view controller presented was been resized");
   }
 }
 
 - (void)semiModalPresented:(NSNotification *) notification {
   if (notification.object == self) {
-    NSLog(@"This view controller just shown a view with semi modal annimation");
+    DLog(@"This view controller just shown a view with semi modal annimation");
   }
 }
 - (void)semiModalDismissed:(NSNotification *) notification {
   if (notification.object == self) {
-    NSLog(@"A view controller was dismissed with semi modal annimation");
+    DLog(@"A view controller was dismissed with semi modal annimation");
   }
 }
 

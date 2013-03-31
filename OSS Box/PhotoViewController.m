@@ -63,10 +63,10 @@
         [library writeImageDataToSavedPhotosAlbum:[info objectForKey:@"data"] metadata:nil completionBlock:^(NSURL *assetURL, NSError *error)
          {
              if (error) {
-                 NSLog(@"ERROR: the image failed to be written");
+                 DLog(@"ERROR: the image failed to be written");
              }
              else {
-                 NSLog(@"PHOTO SAVED - assetURL: %@", assetURL);
+                 DLog(@"PHOTO SAVED - assetURL: %@", assetURL);
              }
          }];
     }

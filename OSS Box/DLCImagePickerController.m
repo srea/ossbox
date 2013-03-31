@@ -145,7 +145,7 @@
         });
     } else {
         // No camera
-        NSLog(@"No camera");
+        DLog(@"No camera");
         runOnMainQueueWithoutDeadlocking(^{
             [self prepareFilter];
         });
@@ -505,7 +505,7 @@
                 
                 [device unlockForConfiguration];
 			} else {
-                NSLog(@"ERROR = %@", error);
+                DLog(@"ERROR = %@", error);
 			}
 		}
 	}

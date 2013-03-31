@@ -4,6 +4,37 @@
 <array>
 	<dict>
 		<key>section</key>
+		<string>Camera</string>
+		<key>rows</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>DLCImagePickerController</string>
+				<key>detail</key>
+				<string></string>
+				<key>New item</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>GPUImage</string>
+				<key>detail</key>
+				<string></string>
+				<key>New item</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Aviary</string>
+				<key>detail</key>
+				<string></string>
+				<key>New item</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>section</key>
 		<string>Progress</string>
 		<key>rows</key>
 		<array>
@@ -81,37 +112,6 @@
 			<dict>
 				<key>name</key>
 				<string>KNSemiModalViewController</string>
-				<key>detail</key>
-				<string></string>
-				<key>New item</key>
-				<string></string>
-			</dict>
-		</array>
-	</dict>
-	<dict>
-		<key>section</key>
-		<string>Camera</string>
-		<key>rows</key>
-		<array>
-			<dict>
-				<key>name</key>
-				<string>DLCImagePickerController</string>
-				<key>detail</key>
-				<string></string>
-				<key>New item</key>
-				<string></string>
-			</dict>
-			<dict>
-				<key>name</key>
-				<string>GPUImage</string>
-				<key>detail</key>
-				<string></string>
-				<key>New item</key>
-				<string></string>
-			</dict>
-			<dict>
-				<key>name</key>
-				<string>Aviary</string>
 				<key>detail</key>
 				<string></string>
 				<key>New item</key>

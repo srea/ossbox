@@ -1450,7 +1450,7 @@
             
             [(GPUImageAverageColor *)filter setColorAverageProcessingFinishedBlock:^(CGFloat redComponent, CGFloat greenComponent, CGFloat blueComponent, CGFloat alphaComponent, CMTime frameTime) {
                 [colorGenerator setColorRed:redComponent green:greenComponent blue:blueComponent alpha:alphaComponent];
-//                NSLog(@"Average color: %f, %f, %f, %f", redComponent, greenComponent, blueComponent, alphaComponent);
+//                DLog(@"Average color: %f, %f, %f, %f", redComponent, greenComponent, blueComponent, alphaComponent);
             }];
             
             [colorGenerator addTarget:filterView];
@@ -1624,7 +1624,7 @@
 
 - (void)grepFacesForSampleBuffer:(CMSampleBufferRef)sampleBuffer{
     faceThinking = TRUE;
-    NSLog(@"Faces thinking");
+    DLog(@"Faces thinking");
     CVPixelBufferRef pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
 	CFDictionaryRef attachments = CMCopyDictionaryOfAttachments(kCFAllocatorDefault, sampleBuffer, kCMAttachmentMode_ShouldPropagate);
 	CIImage *convertedImage = [[CIImage alloc] initWithCVPixelBuffer:pixelBuffer options:(__bridge NSDictionary *)attachments];
@@ -1685,8 +1685,8 @@
     
 	imageOptions = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:exifOrientation] forKey:CIDetectorImageOrientation];
 
-    NSLog(@"Face Detector %@", [self.faceDetector description]);
-    NSLog(@"converted Image %@", [convertedImage description]);
+    DLog(@"Face Detector %@", [self.faceDetector description]);
+    DLog(@"converted Image %@", [convertedImage description]);
     NSArray *features = [self.faceDetector featuresInImage:convertedImage options:imageOptions];
     
     
@@ -1706,7 +1706,7 @@
                  andOrientation:(UIDeviceOrientation)curDeviceOrientation
 {
     dispatch_async(dispatch_get_main_queue(), ^{
-        NSLog(@"Did receive array");
+        DLog(@"Did receive array");
     
         CGRect previewBox = self.view.frame;
 	
@@ -1721,7 +1721,7 @@
             // find the correct position for the square layer within the previewLayer
             // the feature box originates in the bottom left of the video frame.
             // (Bottom right if mirroring is turned on)
-            NSLog(@"%@", NSStringFromCGRect([faceFeature bounds]));
+            DLog(@"%@", NSStringFromCGRect([faceFeature bounds]));
             
             //Update face bounds for iOS Coordinate System
             CGRect faceRect = [faceFeature bounds];
