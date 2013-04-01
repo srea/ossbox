@@ -302,7 +302,6 @@
 		DAE943AF16FAC8B500CBCD57 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA486D4B16F963B400ACA3C9 /* Default@2x.png */; };
 		DAE943B016FAC8B800CBCD57 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA486D4916F963A500ACA3C9 /* Default-568h@2x.png */; };
 		DAF6734216FD590A000EE8E7 /* EDColor.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAF6734116FD590A000EE8E7 /* EDColor.plist */; };
-		DAF6734A16FD5A16000EE8E7 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = DAF6734416FD5A16000EE8E7 /* background.png */; };
 		DAF6734B16FD5A16000EE8E7 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAF6734516FD5A16000EE8E7 /* background@2x.png */; };
 		DAF6734C16FD5A16000EE8E7 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = DAF6734616FD5A16000EE8E7 /* first.png */; };
 		DAF6734D16FD5A16000EE8E7 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAF6734716FD5A16000EE8E7 /* first@2x.png */; };
@@ -1796,7 +1795,6 @@
 				DAE943AF16FAC8B500CBCD57 /* Default@2x.png in Resources */,
 				DAE943B016FAC8B800CBCD57 /* Default-568h@2x.png in Resources */,
 				DAF6734216FD590A000EE8E7 /* EDColor.plist in Resources */,
-				DAF6734A16FD5A16000EE8E7 /* background.png in Resources */,
 				DAF6734B16FD5A16000EE8E7 /* background@2x.png in Resources */,
 				DAF6734C16FD5A16000EE8E7 /* first.png in Resources */,
 				DAF6734D16FD5A16000EE8E7 /* first@2x.png in Resources */,
