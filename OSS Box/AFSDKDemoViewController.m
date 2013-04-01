@@ -242,7 +242,7 @@
     ALAssetRepresentation * representation = [asset defaultRepresentation];
     
     CGImageRef image = [representation fullResolutionImage];
-    UIImageOrientation orientation = [representation orientation];
+    UIImageOrientation orientation = (UIImageOrientation)[representation orientation];
     CGFloat scale = [representation scale];
     
     return [UIImage imageWithCGImage:image scale:scale orientation:orientation];

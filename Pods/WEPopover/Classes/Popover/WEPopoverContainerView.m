@@ -275,6 +275,8 @@ permittedArrowDirections:(UIPopoverArrowDirection)permittedArrowDirections
 					theArrowRect = CGRectMake(xArrowOffset, yArrowOffset, rightArrowImage.size.width, rightArrowImage.size.height);
 					
 					break;
+                default:
+                    break;
 			}
 			
 			CGRect bgFrame = CGRectOffset(theBgRect, theOffset.x, theOffset.y);
@@ -356,6 +358,8 @@ permittedArrowDirections:(UIPopoverArrowDirection)permittedArrowDirections
 		case UIPopoverArrowDirectionRight:
 			arrowImage = [rightArrowImage retain];
 			break;
+        default:
+            break;
 	}
 }
 
