@@ -287,6 +287,7 @@
 		DABC3A6816FF57A500DB3CFA /* temp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DABC3A6716FF57A400DB3CFA /* temp.jpg */; };
 		DABC3A6B16FF5B9A00DB3CFA /* UIViewController+KNSemiModal.m in Sources */ = {isa = PBXBuildFile; fileRef = DABC3A6A16FF5B9A00DB3CFA /* UIViewController+KNSemiModal.m */; };
 		DABC3A6D16FF612900DB3CFA /* memo_KNSemiModalView.txt in Resources */ = {isa = PBXBuildFile; fileRef = DABC3A6C16FF612800DB3CFA /* memo_KNSemiModalView.txt */; };
+		DAD48BAD1709A97000280756 /* libCrittercism_v3_5_1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAD48BAC1709A97000280756 /* libCrittercism_v3_5_1.a */; };
 		DAD963FE16F9593E00E00D9E /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = DAD963F416F9593E00E00D9E /* Icon-72.png */; };
 		DAD963FF16F9593E00E00D9E /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAD963F516F9593E00E00D9E /* Icon-72@2x.png */; };
 		DAD9640016F9593E00E00D9E /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = DAD963F616F9593E00E00D9E /* Icon-Small-50.png */; };
@@ -673,6 +674,9 @@
 		DABC3A6916FF5B9A00DB3CFA /* UIViewController+KNSemiModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+KNSemiModal.h"; sourceTree = "<group>"; };
 		DABC3A6A16FF5B9A00DB3CFA /* UIViewController+KNSemiModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+KNSemiModal.m"; sourceTree = "<group>"; };
 		DABC3A6C16FF612800DB3CFA /* memo_KNSemiModalView.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = memo_KNSemiModalView.txt; sourceTree = "<group>"; };
+		DAD48BAA1709A97000280756 /* Crittercism.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Crittercism.h; sourceTree = "<group>"; };
+		DAD48BAB1709A97000280756 /* CrittercismDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrittercismDelegate.h; sourceTree = "<group>"; };
+		DAD48BAC1709A97000280756 /* libCrittercism_v3_5_1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCrittercism_v3_5_1.a; sourceTree = "<group>"; };
 		DAD963F416F9593E00E00D9E /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		DAD963F516F9593E00E00D9E /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
 		DAD963F616F9593E00E00D9E /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
@@ -734,6 +738,7 @@
 				7841285816F44F5600AC78B0 /* CoreGraphics.framework in Frameworks */,
 				D089809BEB2D4EDD828FFF4C /* libPods.a in Frameworks */,
 				DAA848E51705B8EC0025542A /* libAviarySDK.a in Frameworks */,
+				DAD48BAD1709A97000280756 /* libCrittercism_v3_5_1.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -840,6 +845,7 @@
 		7841285216F44F5600AC78B0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DAD48BA91709A97000280756 /* CrittercismSDK */,
 				DAA848DA1705B8EC0025542A /* AviarySDK */,
 				DAA848D81705B8C90025542A /* SystemConfiguration.framework */,
 				DAA848D61705B8B70025542A /* StoreKit.framework */,
@@ -1585,6 +1591,16 @@
 			name = KNTabs;
 			sourceTree = "<group>";
 		};
+		DAD48BA91709A97000280756 /* CrittercismSDK */ = {
+			isa = PBXGroup;
+			children = (
+				DAD48BAA1709A97000280756 /* Crittercism.h */,
+				DAD48BAB1709A97000280756 /* CrittercismDelegate.h */,
+				DAD48BAC1709A97000280756 /* libCrittercism_v3_5_1.a */,
+			);
+			path = CrittercismSDK;
+			sourceTree = "<group>";
+		};
 		DAD963EB16F9583200E00D9E /* icon */ = {
 			isa = PBXGroup;
 			children = (
@@ -2123,6 +2139,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/AviarySDK\"",
+					"\"$(SRCROOT)/CrittercismSDK\"",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2136,8 +2153,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A662BBC36E794E1F92D28E49 /* Pods.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yuki Tamazawa (K2FHF83NHZ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yuki Tamazawa (K2FHF83NHZ)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OSS Box/OSS Box-Prefix.pch";
 				INFOPLIST_FILE = "OSS Box/OSS Box-Info.plist";
@@ -2145,10 +2162,11 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/AviarySDK\"",
+					"\"$(SRCROOT)/CrittercismSDK\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "E4996DFA-28F3-457F-BBB0-EFDEF794E96E";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E4996DFA-28F3-457F-BBB0-EFDEF794E96E";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

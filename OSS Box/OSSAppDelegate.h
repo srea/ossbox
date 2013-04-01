@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Crittercism.h"
+
 #import "OSSMasterViewController.h"
 #import "OSSFavoriteViewController.h"
 #import "OSSCustomMHTabBarControllerViewController.h"
+
+
 @interface OSSAppDelegate : UIResponder <UIApplicationDelegate,MHTabBarControllerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
