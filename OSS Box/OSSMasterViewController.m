@@ -165,34 +165,51 @@
     return cell;
 }
 
-- (void) handleTapGesture:(UITapGestureRecognizer*)sender {
-    if (sender.state == UIGestureRecognizerStateEnded){
-        CGPoint tapPoint = [sender locationInView:self.tableView];
-//        DLog(@"%f %f",tapPoint.x,tapPoint.y );
-        if (tapPoint.x >= 230) { // ★タップのしきい値
-            [self starStatusChange:tapPoint];
-        } else {
-            NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:tapPoint];
-            [self tableView:self.tableView didSelectRowAtIndexPath:indexPath];
-        }
+- (void) handleTapGesture:(UITapGestureRecognizer*)sender
+{
+    if (sender.state == UIGestureRecognizerStateEnded)
+    {
+        [self callTableViewWithBlock:^(UITableView *activeTableView) {
+            CGPoint tapPoint = [sender locationInView:activeTableView];
+            DLog(@"%f %f",tapPoint.x,tapPoint.y );
+            if (tapPoint.x >= 220) { // ★タップのしきい値
+                [self starStatusChange:tapPoint];
+            } else {
+                NSIndexPath *indexPath = [activeTableView indexPathForRowAtPoint:tapPoint];
+                [self tableView:activeTableView didSelectRowAtIndexPath:indexPath];
+            }
+        }];
+    }
+}
+
+- (void)callTableViewWithBlock:(void(^)(UITableView*activeTableView))block
+{
+    if (self.ossSearchDisplayController.isActive) {
+        block(self.ossSearchDisplayController.searchResultsTableView);
+    } else {
+        block(self.tableView);
     }
 }
 
 - (void)starTapped:(id)sender event:(id)event
 {
-    NSSet *touches = [event allTouches];
-    UITouch *touch = [touches anyObject];
-    CGPoint currentTouchPosition = [touch locationInView:self.tableView];
-    [self starStatusChange:currentTouchPosition];
+    [self callTableViewWithBlock:^(UITableView *activeTableView) {
+        NSSet *touches = [event allTouches];
+        UITouch *touch = [touches anyObject];
+        CGPoint currentTouchPosition = [touch locationInView:activeTableView];
+        [self starStatusChange:currentTouchPosition];
+    }];
 }
 
 - (void)starStatusChange:(CGPoint)touchPosition
 {
-    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint: touchPosition];
-    if (indexPath != nil)
-    {
-        [self tableView: self.tableView accessoryButtonTappedForRowWithIndexPath: indexPath];
-    }
+    [self callTableViewWithBlock:^(UITableView *activeTableView) {
+        NSIndexPath *indexPath = [activeTableView indexPathForRowAtPoint: touchPosition];
+        if (indexPath != nil)
+        {
+            [self tableView:activeTableView accessoryButtonTappedForRowWithIndexPath:indexPath];
+        }
+    }];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -258,6 +275,7 @@
 
     DLog(@"save %@, status %@", name, [cell.starBtn isSelected] ? @"YES" : @"NO");
     [OSSFavorite saveToStatus:[cell.starBtn isSelected] andLibraryName:name];
+    [self refresh];
 }
 
 - (void)filterContentForSearchText:(NSString*)searchString scope:(NSString*)scope {
