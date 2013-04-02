@@ -21,7 +21,9 @@ pod 'ShareThis', '~> 1.0.0'
 pod 'TMQuiltView', '0.0.1'
 #progress
 pod 'DDProgressView','0.1'
+pod 'DACircularProgress', '~> 2.0.0'
 #menu
+pod 'AwesomeMenu', '~> 1.0.0'
 pod 'REMenu', '1.2.4'
 pod 'MFSideMenu', '0.4.1'
 #status bar

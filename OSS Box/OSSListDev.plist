@@ -273,6 +273,14 @@
 			</dict>
 			<dict>
 				<key>name</key>
+				<string>AwesomeMenu</string>
+				<key>detail</key>
+				<string>CoreAnimationを使ったPath2.0のメニュー</string>
+				<key>New item</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>name</key>
 				<string>CXAImageSupport</string>
 				<key>detail</key>
 				<string>画像をサポートしたUIMenuItem</string>
