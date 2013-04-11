@@ -1,5 +1,0 @@
-EDColorViewControllerはNSObjectでtabbarcontrollerを貸すためだけのクラス
-
-EDFirstViewControllerのxibファイルで#から始まるとうまく処理してくれなかったので、
-#はTextLabelの方に移動している。
-あとxibの文字の大きさとかも調整した。

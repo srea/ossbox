@@ -1,1 +1,0 @@
-WEPopoverTableViewControllerをそのまま指定してもサンプルが動く
