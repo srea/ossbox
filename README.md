@@ -6,35 +6,34 @@ I will help iOS developers.
 * Favorited 
 
 #Libraries
-*DLCImagePickerController
-*GPUImage
-*Aviary
-*MBProgressHUD
-*SVProgressHUD
-*DDProgressView
-*KLNoteViewController
-*MCSwipeTableViewCell
-*SVSegmentedControl
-*ZGParallelView (test)
-*TMQuiltView
-*KNSemiModalViewController
-*NoticeView
-*AJNotificationView
-*KGStatusBar
-*FPPopover
-*WEPopover
-*SVWebViewController
-*EDColor
-*KZColorPicker (test)
-*Color-Picker-for-iOS
-*ColorPopover
-*GrowingTextView
-*iCarousel
-*REMenu
-*MFSideMenu
-*AwesomeMenu
-*AwesomeMenu
-*CXAImageSupport
+* DLCImagePickerController
+* GPUImage
+* Aviary
+* MBProgressHUD
+* SVProgressHUD
+* DDProgressView
+* KLNoteViewController
+* MCSwipeTableViewCell
+* SVSegmentedControl
+* ZGParallelView (test)
+* TMQuiltView
+* KNSemiModalViewController
+* NoticeView
+* AJNotificationView
+* KGStatusBar
+* FPPopover
+* WEPopover
+* SVWebViewController
+* EDColor
+* KZColorPicker (test)
+* Color-Picker-for-iOS
+* ColorPopover
+* GrowingTextView
+* iCarousel
+* REMenu
+* MFSideMenu
+* AwesomeMenu
+* CXAImageSupport
 
 
 #Contributing
