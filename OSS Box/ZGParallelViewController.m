@@ -24,7 +24,7 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    NSLog(@"asd");
+    DLog(@"asd");
 }
 
 - (void)viewDidLoad

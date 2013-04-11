@@ -63,7 +63,7 @@
     NSIndexPath* index = [noteViewController indexPathForControllerCard: controllerCard];
     NSDictionary* navDict = [self.viewControllerData objectAtIndex: index.row];
     
-    NSLog(@"%@ changed state %ld", [navDict objectForKey:@"title"], toState);
+    DLog(@"%@ changed state %ld", [navDict objectForKey:@"title"], toState);
     
 }
 

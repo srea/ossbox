@@ -1,9 +1,1 @@
-//
-//  Created by matt on 9/11/12.
-//
-
-@interface NSAttributedString (MGTrim)
-
-- (NSAttributedString *)attributedStringByTrimming:(NSCharacterSet *)set;
-
-@end
+../../MGBox2/MGBox/Categories/NSAttributedString+MGTrim.h

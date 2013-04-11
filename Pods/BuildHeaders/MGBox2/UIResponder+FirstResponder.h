@@ -1,9 +1,1 @@
-//
-//  By VJK on Stack Overflow: http://stackoverflow.com/a/10358135/790036
-//
-
-@interface UIResponder (FirstResponder)
-
-- (id)currentFirstResponder;
-
-@end
+../../MGBox2/MGBox/Categories/UIResponder+FirstResponder.h

@@ -19,5 +19,5 @@
 @property (nonatomic, strong) NSString *licenseBody;
 @property (nonatomic, strong) NSString *detailText;
 @property (nonatomic, strong) NSString *controller;
-
+@property (nonatomic) NSInteger pageType; // 画面遷移タイプ
 @end

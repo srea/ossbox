@@ -14,11 +14,9 @@
 #import <MGBoxLine.h>
 #import <MGStyledBox.h>
 
-#import "HudDemoViewController.h"
-#import "iCarouselExampleViewController.h"
-#import "NoticeViewController.h"
-#import "SVProgressHUDViewController.h"
-#import "AJNotificationViewController.h"
+#import <ShareThis.h>
+
+#import <SVWebViewController.h>
 
 #define ANIM_SPEED 0
 
@@ -64,19 +62,20 @@
 - (void)loadView
 {
     [super loadView];
+    UIBarButtonItem *shareBtn = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(shareBtn:)];
+    self.navigationItem.rightBarButtonItem = shareBtn;
     _scroller = [[MGScrollView alloc] initWithFrame:self.view.frame];
     self.view = _scroller;
-
 }
 
 - (UIButton *)button:(NSString *)title for:(SEL)selector {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:16];
+    button.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:17];
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [button setTitleShadowColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
-    button.titleLabel.shadowOffset = CGSizeMake(0, -1);
+    button.titleLabel.shadowOffset = CGSizeMake(0, 1);
     CGSize size = [title sizeWithFont:button.titleLabel.font];
-    button.frame = CGRectMake(0, 0, size.width + 20, 26);
+    button.frame = CGRectMake(0, 0, size.width + 40, 30);
     [button setTitle:title forState:UIControlStateNormal];
     [button addTarget:self action:selector forControlEvents:UIControlEventTouchUpInside];
     button.layer.cornerRadius = 3;
@@ -91,10 +90,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.title = [_library name];
     [self.view setBackgroundColor: [UIColor colorWithPatternImage:[UIImage imageNamed:@"background-dark-gray-tex.png"]]];
     
     UIFont *headerFont = [UIFont fontWithName:@"HelveticaNeue-Bold" size:16];
-    
+
+    [_scroller.boxes removeAllObjects];
     _scroller.alwaysBounceVertical = YES;
     _scroller.delegate = self;
     
@@ -103,15 +109,15 @@
     // new section
     MGStyledBox *box1 = [MGStyledBox box];
     [_scroller.boxes addObject:box1];
-    MGBoxLine *head1 = [MGBoxLine lineWithLeft:[_library name] right:[self button:@"Demo" for:@selector(demoView:)]];
+    MGBoxLine *head1 = [MGBoxLine lineWithLeft:[_library name] right:[self button:@"Run" for:@selector(demoView:)]];
     head1.font = headerFont;
     [box1.topLines addObject:head1];
     MGBoxLine *author = [MGBoxLine lineWithLeft:@"Author" right:[_library author]];
     author.font = headerFont;
     [box1.topLines addObject:author];
-    //    MGBoxLine *author_url = [MGBoxLine lineWithLeft:nil right:[self button:@"Github" for:@selector(demoView:)]];
-    //    author_url.font = headerFont;
-    //    [box1.topLines addObject:author_url];
+    MGBoxLine *author_url = [MGBoxLine lineWithLeft:@"Link" right:[self button:@"WebPage" for:@selector(webView:)]];
+    author_url.font = headerFont;
+    [box1.topLines addObject:author_url];
     
     MGStyledBox *info = [MGStyledBox box];
     [_scroller.boxes addObject:info];
@@ -144,13 +150,13 @@
     head3.font = headerFont;
     [box3.topLines addObject:head3];
     
-        UIFont *lisence = [UIFont fontWithName:@"HelveticaNeue" size:10];
+        UIFont *lisence = [UIFont fontWithName:@"HelveticaNeue" size:9];
     MGBoxLine *wordsLine = [MGBoxLine multilineWithText:[_library licenseBody] font:lisence padding:0];
     [box3.topLines addObject:wordsLine];
     
     [_scroller drawBoxesWithSpeed:ANIM_SPEED];
     [_scroller flashScrollIndicators];
-    
+    [_scroller setContentOffset:CGPointMake(0, 0)];
 }
 
 - (void)addBox:(UIButton *)sender {
@@ -166,13 +172,6 @@
     
     [_scroller drawBoxesWithSpeed:ANIM_SPEED];
     [_scroller flashScrollIndicators];
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    
-    self.title = [_detailItem objectForKey:@"name"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -236,7 +235,23 @@
     Class class = NSClassFromString([_library controller]);
     id controller = [[class alloc]init];
     [controller setTitle:[_library name]];
-    [self.navigationController pushViewController:controller animated:YES];
+    if ([_library pageType] == 1) {
+        [self.navigationController presentModalViewController:controller animated:YES];
+    } else {
+        [self.navigationController pushViewController:controller animated:YES];        
+    }
+}
+
+- (void)webView:(id)sender
+{
+    if ([[_library url] length] > 0) {
+        NSURL *url = [NSURL URLWithString:[_library url]];
+        SVModalWebViewController *webViewController = [[SVModalWebViewController alloc] initWithURL:url];
+        webViewController.modalPresentationStyle = UIModalPresentationPageSheet;
+        webViewController.availableActions = SVWebViewControllerAvailableActionsOpenInSafari | SVWebViewControllerAvailableActionsCopyLink | SVWebViewControllerAvailableActionsMailLink;
+        webViewController.barsTintColor = [UIColor darkGrayColor];
+        [self presentModalViewController:webViewController animated:YES];
+    }
 }
 
 - (MGBox *)parentBoxOf:(UIView *)view {
@@ -249,4 +264,10 @@
     return (MGBox *)view.superview;
 }
 
+
+- (void)shareBtn:(id)sender
+{
+    NSURL *url = [[NSURL alloc]initWithString:[_library url]];
+    [ShareThis showShareOptionsToShareUrl:url title:[_library name] image:nil onViewController:self];
+}
 @end

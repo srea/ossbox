@@ -53,7 +53,7 @@
                                                        image:[UIImage imageNamed:@"Icon_Home"]
                                             highlightedImage:nil
                                                       action:^(REMenuItem *item) {
-                                                          NSLog(@"Item: %@", item);
+                                                          DLog(@"Item: %@", item);
                                                       }];
     
     REMenuItem *exploreItem = [[REMenuItem alloc] initWithTitle:@"Explore"
@@ -61,7 +61,7 @@
                                                           image:[UIImage imageNamed:@"Icon_Explore"]
                                                highlightedImage:nil
                                                          action:^(REMenuItem *item) {
-                                                             NSLog(@"Item: %@", item);
+                                                             DLog(@"Item: %@", item);
                                                          }];
     
     REMenuItem *activityItem = [[REMenuItem alloc] initWithTitle:@"Activity"
@@ -69,14 +69,14 @@
                                                            image:[UIImage imageNamed:@"Icon_Activity"]
                                                 highlightedImage:nil
                                                           action:^(REMenuItem *item) {
-                                                              NSLog(@"Item: %@", item);
+                                                              DLog(@"Item: %@", item);
                                                           }];
     
     REMenuItem *profileItem = [[REMenuItem alloc] initWithTitle:@"Profile"
                                                           image:[UIImage imageNamed:@"Icon_Profile"]
                                                highlightedImage:nil
                                                          action:^(REMenuItem *item) {
-                                                             NSLog(@"Item: %@", item);
+                                                             DLog(@"Item: %@", item);
                                                          }];
     
     homeItem.tag = 0;

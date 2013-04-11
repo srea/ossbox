@@ -4,7 +4,11 @@
 .\#*
 *.swp
 .idea
-xcuserdata
+
 *.xcodeproj/*
 !*.xcodeproj/project.pbxproj
+
+*.xcworkspace/*
 !*.xcworkspace/contents.xcworkspacedata
+xcuserdata
+*~.nib

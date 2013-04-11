@@ -12,3 +12,6 @@
   #import <CoreServices/CoreServices.h>
 #endif
 #endif /* __OBJC__*/
+#ifdef __OBJC__
+#import "ARCMacro.h"
+#endif
