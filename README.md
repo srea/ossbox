@@ -2,6 +2,13 @@
 OSSBox is a introduce  iOS Open Source Libraries.  
 I will help iOS developers.
 
+#説明
+OSSBoxはiOSアプリ開発者を助けるためのアプリです。  
+世に公開されている様々な素晴らしいアプリを１つのアプリとして紹介しています。  
+ある機能を実装したいとき、このアプリを使えば最高のライブラリにであるでしょう。  
+お気に入りのライブラリには星をつけたりすることもできます。  
+ぜひお試し下さい。  
+
 #Feature
 * Favorited 
 
