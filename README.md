@@ -1,6 +1,7 @@
 #OSS Box
 OSSBox is a introduce  iOS Open Source Libraries.  
 I will help iOS developers.
+iOS5.0 ~  
 
 #説明
 OSSBoxはiOSアプリ開発者を助けるためのアプリです。  
