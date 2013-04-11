@@ -7,19 +7,38 @@
 //
 
 #import "OSSAppDelegate.h"
-
 #import "OSSMasterViewController.h"
+#import "OSSFavoriteViewController.h"
+#import "OSSAboutViewController.h"
+#import "UIViewController+HCPushBackAnimation.h"
+#import <ShareThis.h>
+#import <QuartzCore/QuartzCore.h>
 
 @implementation OSSAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [Crittercism enableWithAppID: @"515261ba5f721601b2000006"];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
 
-    OSSMasterViewController *masterViewController = [[OSSMasterViewController alloc]init];
-    self.navigationController = [[UINavigationController alloc] initWithRootViewController:masterViewController];
-    self.window.rootViewController = self.navigationController;
+    _masterViewController = [[OSSMasterViewController alloc]init];
+    _favoriteViewController = [[OSSFavoriteViewController alloc]init];
+    
+//    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:masterViewController];
+
+    NSArray *viewControllers = @[_masterViewController, _favoriteViewController];
+//    NSArray *viewControllers = @[[[UITableViewController alloc]init], [[UITableViewController alloc]init]];
+	_tabBarController = [[OSSCustomMHTabBarControllerViewController alloc] init];
+	_tabBarController.viewControllers = viewControllers;
+    _tabBarController.delegate = self;
+	_tabBarController.title = @"OSS Box";
+	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:_tabBarController];
+	navController.navigationBar.tintColor = [UIColor blackColor];
+    _tabBarController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"About" style:UIBarButtonItemStyleBordered target:self action:@selector(aboutButtonDidPush:)];
+
+    navController.view.layer.cornerRadius = 5.0f;
+    self.window.rootViewController = navController;
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -50,5 +69,33 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+#pragma mark tab delegate
+- (BOOL)mh_tabBarController:(MHTabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController atIndex:(NSUInteger)index
+{
+	DLog(@"mh_tabBarController %@ shouldSelectViewController %@ at index %u", tabBarController, viewController, index);
+    
+    
+	// Uncomment this to prevent "Tab 3" from being selected.
+	//return (index != 2);
+    
+	return YES;
+}
+
+- (void)mh_tabBarController:(MHTabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController atIndex:(NSUInteger)index
+{
+	DLog(@"mh_tabBarController %@ didSelectViewController %@ at index %u", tabBarController, viewController, index);
+}
+
+
+- (void)aboutButtonDidPush:(id)sender
+{
+    OSSAboutViewController *aboutController = [[OSSAboutViewController alloc]init];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:aboutController];
+    nav.navigationBar.tintColor = [UIColor darkGrayColor];
+    [_tabBarController presentModalViewController:nav animated:YES];
+    [_tabBarController animationPushBackScaleDown];
+}
+
 
 @end

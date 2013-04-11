@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Color-Picker-for-iOS</string>
+	<key>author</key>
+	<string>Ryota Hayashi</string>
+	<key>url</key>
+	<string>https://github.com/hayashi311/Color-Picker-for-iOS</string>
+	<key>version</key>
+	<string>0.1.1</string>
+	<key>arc</key>
+	<true/>
+	<key>targetOS</key>
+	<string>&gt;= iOS4.3</string>
+	<key>licenseType</key>
+	<string>BSD</string>
+	<key>licenseBody</key>
+	<string>new BSD License</string>
+	<key>detailText</key>
+	<string>ColorPicker for iPhone and iPod touch.</string>
+	<key>controller</key>
+	<string>ColorPickerForiOSViewController</string>
+</dict>
+</plist>

@@ -10,7 +10,7 @@
 
 @class OSSDetailViewController;
 
-@interface OSSMasterViewController : UITableViewController
+@interface OSSMasterViewController : UIViewController
 
 @property (strong, nonatomic) OSSDetailViewController *detailViewController;
 

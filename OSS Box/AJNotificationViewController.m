@@ -42,7 +42,7 @@
 }
 
 - (void)detailDisclosureButtonPressed:(NSNotification*)notification{
-    NSLog(@"Detail disclosure button pressed");
+    DLog(@"Detail disclosure button pressed");
 }
 ////////////////////////////////////////////////////////////////////////
 #pragma mark - Demo
@@ -77,7 +77,7 @@
                                hideAfter:2.5f
                                 response:^{
                                     //This block is called when user taps in the notification
-                                    NSLog(@"Response block");
+                                    DLog(@"Response block");
                                 }
      ];
 }
@@ -92,7 +92,7 @@
                                   offset:50.0f
                                    delay:1.0f
                                 response:^{
-                                    NSLog(@"Response block");
+                                    DLog(@"Response block");
                                 }
      ];
 }
@@ -151,7 +151,7 @@
                          linedBackground:AJLinedBackgroundTypeAnimated
                                hideAfter:2.5f offset:0.0f delay:0.0f detailDisclosure:YES
                                 response:^{
-                                    NSLog(@"Response block");
+                                    DLog(@"Response block");
                                 }
      ];
 }
