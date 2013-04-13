@@ -10,6 +10,13 @@ OSSBoxはiOSアプリ開発者を助けるためのアプリです。
 お気に入りのライブラリには星をつけたりすることもできます。  
 ぜひお試し下さい。  
 
+#Setup
+* install ruby+gem
+
+####[CocoaPodsのインストール](https://github.com/CocoaPods/CocoaPods/blob/master/README.md)
+* [sudo] gem install cocoapods
+* brew install appledoc
+
 #Feature
 * Favorited 
 
